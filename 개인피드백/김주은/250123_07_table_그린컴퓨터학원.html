@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>그린컴퓨터학원</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        color: #565656;
+      }
+      @font-face {
+        font-family: NotoSans;
+        src: url(./webfonts/NotoSans-Regular.woff);
+      }
+      table {
+        width: 1080px;
+        border-collapse: collapse;
+        margin: 10px auto 0;
+        table-layout: fixed;
+      }
+      .title a {
+        display: inline-block;
+        text-decoration: none;
+        letter-spacing: -1px;
+        padding: 18px 30px 10px 30px;
+        font-family: "NotoSans", sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .title a:hover {
+        color: #006cba;
+      }
+      tr:nth-child(2n + 1) {
+        border-top: 1px solid #565656;
+      }
+      tr:nth-child(2n) td:first {
+        padding: 10px 0;
+      }
+      tr:last-child {
+        border-bottom: 1px solid #565656;
+      }
+      /* 장소, 날짜 */
+      .place {
+        padding: 10px 0 18px 30px;
+        width: 10px;
+      }
+      .place span:last-child {
+        margin-left: 80px;
+      }
+      .place span {
+        font-family: "NotoSans", sans-serif;
+        font-size: 16px;
+        letter-spacing: -1px;
+      }
+      /* 화살표 */
+      .arrow {
+        text-align: center;
+        width: 70px;
+      }
+      .arrow img {
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td class="title">
+          <a href="">
+            [광주캠퍼스] 241231_산대특)스마트홈 네트워크를 활용한
+            인테리어디자인_특례 수료식
+          </a>
+        </td>
+        <td rowspan="2" class="arrow">
+          <img
+            src="https://greenart.co.kr/assets/_img/sub/community/arrow_r.png"
+            alt=""
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="place"><span>광주(서구)</span> <span>2025.01.02</span></td>
+      </tr>
+      <tr>
+        <td class="title">
+          <a href="">
+            [광주캠퍼스] 포폴발표회 241231_산대특)스마트홈 네트워크를 활용한
+            인테리어디자인_특례
+          </a>
+        </td>
+        <td rowspan="2" class="arrow">
+          <img
+            src="https://greenart.co.kr/assets/_img/sub/community/arrow_r.png"
+            alt=""
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="place"><span>광주(서구)</span> <span>2025.01.02</span></td>
+      </tr>
+    </table>
+  </body>
+</html>
