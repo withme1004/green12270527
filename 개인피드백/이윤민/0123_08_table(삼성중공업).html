@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <style>
+      @font-face {
+        font-family: Pretendard;
+        src: url(./webfonts/Pretendard-Regular.woff2);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        width: 1400px;
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+      table td:first-child,
+      table td:first-child {
+        border-left: 0;
+      }
+      table td:last-child,
+      table td:last-child {
+        border-right: 0;
+      }
+      table tr td:first-child {
+        font-weight: bold;
+        color: #333;
+      }
+      table tr:first-child td {
+        color: #333;
+      }
+      table td {
+        border: 1px solid #b3b3b3;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+      }
+      .head td {
+        border-top: 2px solid#333;
+        background: #f4f6f8;
+        font-weight: bold;
+        color: #666666;
+      }
+
+      .foot td {
+        color: #0c4da2;
+        font-weight: bold;
+        border-top: 2px solid#0c4da2;
+        border-bottom: 2px solid#0c4da2;
+        background: #f0f6fc;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr class="head">
+        <td>주식의 종류</td>
+        <td>발행주식 총수(주)</td>
+        <td>액면총액(천원)</td>
+        <td>비고</td>
+      </tr>
+      <tr class="con">
+        <td>보통주</td>
+        <td>880,000,000</td>
+        <td>880,000,000</td>
+        <td></td>
+      </tr>
+      <tr class="con">
+        <td>우선주</td>
+        <td>114,845</td>
+        <td>114,845</td>
+        <td></td>
+      </tr>
+      <tr class="foot">
+        <td>합 계</td>
+        <td>880,114,845</td>
+        <td>880,114,845</td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
