@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>그린스터디2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       @font-face {
         font-family: NotoSans_Bold;
-        src: url(./webfonts/NotoSans_Bold.woff2) format(woff2);
+        src: url(./webfonts/NotoSans_Bold.woff2) format("woff2");
       }
       @font-face {
         font-family: NotoSans_Medium;
-        src: url(./webfonts/NotoSans_Medium.woff2);
+        src: url(./webfonts/NotoSans_Medium.woff2) format("woff2");
       }
       table {
         border-collapse: collapse;
@@ -33,7 +38,9 @@
         padding: 0 30px;
       }
       h2 {
-        font-family: NotoSans_Bold;
+        /* font-family: NotoSans_Bold; */
+        font-family: "Noto Sans KR", serif;
+        font-weight: 900;
         font-size: 22px;
       }
       p {
