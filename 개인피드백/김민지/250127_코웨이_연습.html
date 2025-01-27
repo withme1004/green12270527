@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>코웨이</title>
+    <style>
+      @font-face {
+        font-family: Pretendard;
+        src: url(./webfonts/Pretendard-Regular.woff);
+      }
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Pretendard;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+      .all {
+        width: 1120px;
+        margin: 50px auto;
+      }
+      .txt {
+        margin-bottom: 40px;
+      }
+      .txt h1 {
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 31px;
+      }
+      .txt p {
+        color: #333333;
+        line-height: 26px;
+        font-size: 16px;
+      }
+
+      .con li {
+        list-style: none;
+        float: left;
+        width: 373px;
+        height: 410px;
+        text-align: center;
+        position: relative;
+      }
+
+      .con a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 80px auto;
+      }
+
+      .con li a h1 {
+        font-size: 22px;
+      }
+
+      .con1 {
+        background-image: url(https://sustainability.coway.co.kr/images/main/policy-img-1.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .con2 {
+        background-image: url(https://sustainability.coway.co.kr/images/main/policy-img-2.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .con3 {
+        background-image: url(https://sustainability.coway.co.kr/images/main/policy-img-3.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <div class="txt">
+        <h1>ESG Policy & Performance</h1>
+        <p>
+          코웨이의 ESG는 환경, 사회, 지배구조에 대한 차별화된 접근 방식을
+          반영하며,<br />
+          이를 통해 장기적인 성과와 지속가능한 가치 창출을 추구합니다.
+        </p>
+      </div>
+      <ul class="con">
+        <li class="con1">
+          <a href="#">
+            <h1>Environmental</h1>
+            <h1>+</h1>
+          </a>
+        </li>
+        <li class="con2">
+          <a href="#">
+            <h1>Social</h1>
+            <h1>+</h1>
+          </a>
+        </li>
+        <li class="con3">
+          <a href="#">
+            <h1>Governance</h1>
+            <h1>+</h1>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
