@@ -21,6 +21,8 @@
       }
       ul {
         list-style: none;
+      }
+      ul.one {
         height: 500px;
       }
       ul li {
@@ -30,12 +32,16 @@
         border-radius: 12px;
         margin-right: 16px;
         box-sizing: border-box;
+        position: relative;
       }
       ul li p {
         font-size: 24px;
         font-family: "Noto Sans KR", serif;
         text-align: center;
-        padding-top: 220px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         color: #ffff;
         font-weight: bold;
       }
@@ -76,7 +82,7 @@
   </head>
   <body>
     <div class="wrap">
-      <ul>
+      <ul class="one">
         <li>
           <p>Package</p>
         </li>
