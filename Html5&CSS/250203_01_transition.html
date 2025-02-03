@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        margin: 20px;
+        /* transition-property: width, height;
+        transition-duration: 1000ms, 2s;
+        transition-timing-function: linear;
+        transition-delay: -1s, 2s; */
+        /* transition: width 1s linear 1s, height 2s; */
+        /* transition: all 1s; */
+        transition: 1s;
+      }
+      p:hover {
+        width: 200px;
+        height: 400px;
+      }
+      ul li {
+        width: 100px;
+        background: #ccc;
+        margin: 20px;
+        transition: 2s;
+      }
+      ul:hover li {
+        width: 200px;
+      }
+      ul li:first-child {
+      }
+      ul li:nth-child(2) {
+        transition-timing-function: ease;
+      }
+      ul li:nth-child(3) {
+        transition-timing-function: ease-in;
+      }
+      ul li:nth-child(4) {
+        transition-timing-function: ease-out;
+      }
+      ul li:nth-child(5) {
+        transition-timing-function: ease-in-out;
+      }
+      ul li:nth-child(6) {
+        transition-timing-function: linear;
+      }
+      ul li:nth-child(7) {
+        transition-timing-function: cubic-bezier(1, 0.25, 0, 0.61);
+      }
+      a {
+        background: #ccc;
+        padding: 5px;
+        color: #fff;
+        border-radius: 5px;
+      }
+      a:hover {
+        background: #ff0088;
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <ul>
+      <li>default</li>
+      <li>ease</li>
+      <li>easein</li>
+      <li>easeout</li>
+      <li>easeinout</li>
+      <li>linear</li>
+      <li>cubicbezier</li>
+    </ul>
+    <a href="">GO!</a>
+  </body>
+</html>
