@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+      ul.star {
+        width: 1180px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      ul.star li {
+        width: 280px;
+        transition: 0.5s;
+      }
+      ul.star li:first-child {
+        width: 580px;
+      }
+      ul.star li img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        object-position: center;
+        /* border-radius: 20px; */
+      }
+      ul.star li:hover {
+        width: 580px;
+      }
+      ul.star:hover li:not(:hover) {
+        width: 280px;
+      }
+      ul.star li > a > p {
+        border-radius: 30px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="star">
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.starfield.co.kr/assets/images/starfield/main-library-img01.jpg"
+              alt="img"
+            />
+          </p>
+          <div class="txt">
+            <p>별마당 도서관</p>
+            <p>휴식과 만남, 그리고 책을 주제로 소통하는 문화 감성 공간</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>
+            <img
+              src="https://www.starfield.co.kr/assets/images/starfield/main-library-img02.jpg"
+              alt="img"
+            />
+          </p>
+          <div class="txt">
+            <p>별마당 키즈</p>
+            <p>
+              책과 공연을 중심으로 아동심리학자와 함께 만든 키즈다감각체험 공간
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <p>
+            <img
+              src="https://www.starfield.co.kr/assets/images/starfield/main-library-img03.jpg"
+              alt="img"
+            />
+          </p>
+          <div class="txt">
+            <p>강연&공연</p>
+            <p>가슴에 별을 품은 이들을 위한 다양한 이야기</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

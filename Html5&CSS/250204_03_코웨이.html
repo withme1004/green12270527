@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+      ul.esg {
+        width: 1120px;
+        margin: 50px auto;
+        height: 410px;
+        display: flex;
+      }
+      ul.esg li {
+        width: calc(100% / 3);
+        height: 100%;
+        text-align: center;
+        padding-top: 100px;
+        box-sizing: border-box;
+        color: #fff;
+        transition: 0.5s;
+      }
+      ul.esg li:first-child {
+        background: url(https://sustainability.coway.co.kr/images/main/policy-img-1.jpg)
+          center/cover;
+      }
+      ul.esg li:nth-child(2) {
+        background: url(https://sustainability.coway.co.kr/images/main/policy-img-2.jpg)
+          center/cover;
+      }
+      ul.esg li:nth-child(3) {
+        background: url(https://sustainability.coway.co.kr/images/main/policy-img-3.jpg)
+          center/cover;
+      }
+      ul.esg li .txt {
+        display: none;
+        /* opacity: 0; */
+        /* visibility: hidden; */
+      }
+      ul.esg li:hover {
+        width: 40%;
+        padding-top: 50px;
+      }
+      ul.esg li:hover .txt {
+        display: block;
+      }
+      ul.esg li:hover a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: #ccc;
+        border-radius: 50%;
+        line-height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="esg">
+      <li>
+        <div>
+          <p>Environmental</p>
+          <div class="txt">
+            <p>환경경영</p>
+            <p>기후변화 대응</p>
+            <p>친환경 제품 및 자원순환</p>
+            <p>환경관리</p>
+          </div>
+          <a href=""
+            ><img
+              src="https://sustainability.coway.co.kr/images/main/policy-icon-more.png"
+              alt=""
+          /></a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Environmental</p>
+          <div class="txt">
+            <p>환경경영</p>
+            <p>기후변화 대응</p>
+            <p>친환경 제품 및 자원순환</p>
+            <p>환경관리</p>
+          </div>
+          <a href=""
+            ><img
+              src="https://sustainability.coway.co.kr/images/main/policy-icon-more.png"
+              alt=""
+          /></a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p>Environmental</p>
+          <div class="txt">
+            <p>환경경영</p>
+            <p>기후변화 대응</p>
+            <p>친환경 제품 및 자원순환</p>
+            <p>환경관리</p>
+          </div>
+          <a href=""
+            ><img
+              src="https://sustainability.coway.co.kr/images/main/policy-icon-more.png"
+              alt=""
+          /></a>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
