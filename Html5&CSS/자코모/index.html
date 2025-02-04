@@ -27,9 +27,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: 0.8s;
       }
       ul.card li:hover > p img {
-        filter: brightness(100%);
+        filter: brightness(60%);
       }
       ul.card li::after {
         content: "";
@@ -70,9 +71,6 @@
       ul.card li .txt p:nth-child(2) {
         font-size: 38px;
         font-weight: bold;
-      }
-      ul.card li:hover .bg {
-        opacity: 0;
       }
       ul.card li:hover .txt {
         padding-top: 100px;
