@@ -48,7 +48,8 @@
       ul.star:hover li:not(:hover) {
         width: 280px;
       }
-      ul.star li > a > p::after {
+      ul.star li > a > p::after,
+      ul.star:hover li:not(:hover) > a > p::after {
         content: "";
         position: absolute;
         left: 0;
@@ -58,7 +59,8 @@
         background: rgba(0, 0, 0, 0.25);
         transition: 0.5s 0.5s;
       }
-      ul.star li:hover > a > p::after {
+      ul.star li:hover > a > p::after,
+      ul.star li:first-child > a > p::after {
         background: rgba(0, 0, 0, 0);
       }
     </style>
