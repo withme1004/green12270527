@@ -36,6 +36,7 @@
       ul li a .line {
         position: absolute;
         background: #07348c;
+        transition: 0.5s ease-in-out;
       }
       ul li a .top {
         width: 100%;
@@ -43,12 +44,9 @@
         left: 0;
         top: 0;
         transform: scaleX(0);
-        transform-origin: 0 0;
-        transition: 0.5s ease-in-out 1.5s;
       }
       ul li:hover a .top {
         transform: scaleX(1);
-        transition: 0.5s ease-in-out;
       }
       ul li a .right {
         width: 5px;
@@ -56,12 +54,9 @@
         right: 0;
         top: 0;
         transform: scaleY(0);
-        transform-origin: 0 0;
-        transition: 0.5s ease-in-out 1s;
       }
       ul li:hover a .right {
         transform: scaleY(1);
-        transition: 0.5s ease-in-out 0.5s;
       }
       ul li a .bottom {
         width: 100%;
@@ -69,12 +64,9 @@
         left: 0;
         bottom: 0;
         transform: scaleX(0);
-        transform-origin: 100% 100%;
-        transition: 0.5s ease-in-out 0.5s;
       }
       ul li:hover a .bottom {
         transform: scaleX(1);
-        transition: 0.5s ease-in-out 1s;
       }
       ul li a .left {
         width: 5px;
@@ -82,12 +74,38 @@
         left: 0;
         top: 0;
         transform: scaleY(0);
-        transform-origin: 100% 100%;
-        transition: 0.5s ease-in-out;
       }
       ul li:hover a .left {
         transform: scaleY(1);
-        transition: 0.5s ease-in-out 1.5s;
+      }
+      section {
+        width: 500px;
+        height: 500px;
+        background: #000;
+      }
+      section p {
+        width: 300px;
+        height: 300px;
+        background: #f00;
+        transform: scaleX(0);
+        transition: 0.5s;
+      }
+      section:hover p {
+        transform: scaleX(1);
+      }
+      article p {
+        transition: 1s;
+      }
+      article p:hover {
+        content: url(./images/photo2.jpg);
+      }
+      h3 {
+        height: 300px;
+        background: url(./images/photo3.jpg);
+        transition: 1s;
+      }
+      h3:hover {
+        background: url(./images/photo4.jpg);
       }
     </style>
   </head>
@@ -112,5 +130,12 @@
         </a>
       </li>
     </ul>
+    <section>
+      <p></p>
+    </section>
+    <article>
+      <p><img src="./images/photo1.jpg" alt="photo1" /></p>
+    </article>
+    <h3></h3>
   </body>
 </html>
