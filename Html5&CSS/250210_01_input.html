@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :focus {
+        outline: none;
+      }
+      input[type="search"] {
+        width: 200px;
+        padding: 12px 20px 12px 40px;
+        border-radius: 50px;
+        border: 2px solid #ccc;
+        background-image: url(./images/searchicon.png);
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+      }
+      /*input[type="search"]:focus {
+        width: 500px;
+      }*/
+      input[type="search"]:hover {
+        border-color: transparent;
+      }
+      img {
+        width: 300px;
+      }
+      .google input[type="search"] {
+        width: 750px;
+        background-image: url(./images/carmera.svg), url(./images/mic.svg),
+          url(./images/keyboard.png);
+        background-position: 98% 0, 90% 5px, 85% 0;
+        background-size: 40px, 20px, 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img src="./images/mic.png" alt="png" />
+    <img src="./images/mic.svg" alt="svg" />
+    <img src="./images/carmera.svg" alt="svg" />
+    <img src="./images/keyboard.png" alt="svg" /> -->
+    <form action="" method="">
+      <input
+        type="search"
+        placeholder="Search..."
+        onfocus="this.placeholder=''"
+      />
+      <p class="google">
+        <input
+          type="search"
+          placeholder="Search..."
+          onfocus="this.placeholder=''"
+        />
+      </p>
+    </form>
+  </body>
+</html>
