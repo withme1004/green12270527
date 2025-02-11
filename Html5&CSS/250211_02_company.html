@@ -23,30 +23,37 @@
         display: flex;
         gap: 40px;
       }
-
+      .core ul:last-child {
+        margin-top: 40px;
+      }
+      .core ul {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
       .core ul li {
         border-radius: 70px 0 70px 0;
         width: 450px;
         height: 480px;
         display: flex;
-        flex-direction: column;
+        align-items: center;
       }
       .core ul:first-child li:first-child {
         background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_1.jpg);
       }
-      .core ul:first-child li:first-child {
+      .core ul:last-child li:first-child {
         background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_2.jpg);
       }
-      ul.core li:nth-child(3) {
+      .core ul:first-child li:last-child {
         background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_3.jpg);
       }
-      ul.core li:nth-child(4) {
+      .core ul:last-child li:last-child {
         background: url(https://www.shinsegaefood.com/images/background/bg_vs_value_4.jpg);
       }
       ul.core li:nth-child(2n) {
         margin-top: 40px;
       }
-      ul.core li .txt {
+      .core ul li .txt {
         background: rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
@@ -54,6 +61,7 @@
         text-align: center;
         width: 100%;
         padding: 40px 0;
+        color: #fff;
       }
     </style>
   </head>
