@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신세계푸드비즈니스</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        list-style: none;
+      }
+      .wrap {
+        margin: 0 auto;
+        width: 1789px;
+        height: 884.5px;
+        display: flex;
+        gap: 20px;
+      }
+      .zero {
+        width: 885px;
+        height: 100%;
+        background: url(https://spc.co.kr/img/front/main/eat.webp) center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .zero p {
+        font-size: 146px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .zero p:first-child {
+        color: #fff;
+      }
+      .zero p:nth-child(2),
+      .zero p:nth-child(3) {
+        color: #fff;
+        opacity: 0.5;
+        transition: 0.5s;
+      }
+      .zero p:nth-child(2):hover,
+      .zero p:nth-child(3):hover {
+        color: #fff;
+        opacity: 1;
+      }
+      .one ul {
+        width: 884px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .one ul li {
+        width: 432px;
+        height: 432.5px;
+        border-radius: 30px;
+        transition: 1s;
+        background-size: 100%;
+        background-position: center;
+        cursor: pointer;
+      }
+      .one ul li:hover {
+        background-size: 120%;
+      }
+      .one ul li:first-child {
+        text-align: center;
+        padding-top: 100px;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .one ul li p {
+        border-radius: 30px;
+        overflow: hidden;
+        font-size: 0;
+      }
+      .one ul li:first-child p:first-child {
+        font-size: 48px;
+        font-weight: bold;
+      }
+      .one ul li:first-child p:last-child {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .one ul li:first-child::after {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "< 01/06 >";
+        font-weight: bold;
+        width: 165px;
+        height: 45px;
+        left: 130px;
+        top: 250px;
+        border: 1px solid none;
+        background-color: rgb(245, 245, 245);
+        border-radius: 50px;
+      }
+      .one ul li:nth-child(2) {
+        background-image: url(https://spc.co.kr/files/brand/2024/06/2702a0a8-0b1e-42f7-a055-bd6749696c7c.png);
+        font-size: 34px;
+        font-weight: bold;
+        color: #fff;
+        padding: 20px 0 0 20px;
+        box-sizing: border-box;
+        text-shadow: 1px 1px 3px #ccc;
+      }
+      .one ul li:nth-child(3) {
+        background-image: url(https://spc.co.kr/files/brand/2024/06/d96a9ce4-a1a7-42a1-836f-fa4580f21f58.jpg);
+        font-size: 34px;
+        font-weight: bold;
+        color: #fff;
+        padding: 20px 0 0 20px;
+        box-sizing: border-box;
+        text-shadow: 1px 1px 3px #ccc;
+      }
+      .one ul li:nth-child(4) {
+        background-image: url(https://spc.co.kr/files/brand/2024/06/b59cd9b1-6acb-4deb-8d6a-7999988968bb.jpg);
+        font-size: 34px;
+        font-weight: bold;
+        color: #fff;
+        padding: 20px 0 0 20px;
+        box-sizing: border-box;
+        text-shadow: 1px 1px 3px #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="zero">
+        <p>먹고</p>
+        <p>마시고</p>
+        <p>즐기자</p>
+      </div>
+
+      <div class="one">
+        <ul>
+          <li>
+            <p>BRAND</p>
+            <p>SPC그룹의 다양한 브랜드를 만나보세요.</p>
+          </li>
+          <li>삼립</li>
+          <li>파리바게트</li>
+          <li>배스킨라빈스</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
