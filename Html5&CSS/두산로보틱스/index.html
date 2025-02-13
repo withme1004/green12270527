@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .edu {
+        width: 1680px;
+        height: 780px;
+        display: flex;
+        gap: 24px;
+      }
+      .edu > div.left {
+        flex: 1;
+        background: #ccc;
+        border-radius: 20px;
+        overflow: hidden;
+        background: url(./images/robot-training-img01.png) center/cover;
+      }
+      .edu > div.right {
+        flex: 3;
+        background: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .edu > div.right > div.inner {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        gap: 24px;
+      }
+      .edu > div.right > div.inner > div {
+        /* flex: 1; */
+        background: #f00;
+      }
+      .edu > div.right > div.inner:first-child > div:first-child {
+        width: 398px;
+      }
+      .edu > div.right > div.inner:first-child > div:last-child {
+        flex: 2;
+      }
+      .edu > div.right > div.inner:last-child > div {
+        flex: 1;
+      }
+      .edu > div.right > div.inner .txt {
+        height: 100%;
+        padding: 50px 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="edu">
+      <div class="left"></div>
+      <div class="right">
+        <div class="inner">
+          <div>
+            <div class="txt">
+              <h1>초보자부터 전문가까지 수준별 교육 제공</h1>
+              <p>
+                초보자부터 현업 엔지니어 및 교수까지 수준별로 들을 수 있는
+                맞춤형 교육이 마련돼 있습니다.
+              </p>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <div class="inner">
+          <div></div>
+          <div></div>
+          <div>
+            <div class="txt">
+              <h1>초보자부터 전문가까지 수준별 교육 제공</h1>
+              <p>
+                초보자부터 현업 엔지니어 및 교수까지 수준별로 들을 수 있는
+                맞춤형 교육이 마련돼 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

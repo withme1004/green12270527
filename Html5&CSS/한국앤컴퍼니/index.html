@@ -69,39 +69,9 @@
       .story .right p:last-child {
         background-image: url(./images/main_b06.jpg);
       }
-      .tech {
-        display: inline-block;
-        border: 1px solid #ccc;
-        padding: 10px 20px;
-        margin: 20px;
-        color: #333;
-        position: relative;
-        overflow: hidden;
-        transition: color 0.5s ease-in-out;
-        z-index: 1;
-      }
-      .tech::after {
-        content: "";
-        position: absolute;
-        left: -150%;
-        top: 0;
-        width: 130%;
-        height: 100%;
-        background: #000;
-        transform: skewX(-16deg);
-        z-index: -1;
-        transition: all 0.5s ease-in-out;
-      }
-      .tech:hover {
-        color: #fff;
-      }
-      .tech:hover::after {
-        left: -10%;
-      }
     </style>
   </head>
   <body>
-    <a href="" class="tech">#High-tech</a>
     <div class="story">
       <div class="left">
         <p>

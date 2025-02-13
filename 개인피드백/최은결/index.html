@@ -23,11 +23,25 @@
         margin: 0 auto;
         display: flex;
       }
-      .spc div:first-child img {
+      .spc > div {
+        flex: 1;
+      }
+      .spc > div:first-child {
+        background: #ccc;
+      }
+      /* .spc div:first-child img {
         width: 885px;
         height: 884.5px;
+      } */
+      .con {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
       }
-      .con,
+      .con p {
+        flex: 1 1 40%;
+      }
+      /*.con,
       .foot img {
         width: 432px;
         height: 432px;
@@ -42,7 +56,7 @@
       .con p img {
         width: 432px;
         height: 432px;
-      }
+      }*/
     </style>
   </head>
   <body>
@@ -58,8 +72,7 @@
         </p>
 
         <p><img src="./brand03.jpg" alt="ho02" /></p>
-      </div>
-      <div class="foot">
+
         <p><img src="./ho02.png" alt="brand03" /></p>
         <p><img src="./br04.jpg" alt="br" /></p>
       </div>
