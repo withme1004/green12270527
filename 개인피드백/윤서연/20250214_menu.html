@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      input {
+        display: none;
+      }
+      .brand {
+        background: steelblue;
+        width: 1280px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .brand .menu {
+        background: violet;
+        margin: 50px 0;
+      }
+      .brand .menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .brand .menu ul li {
+        background: turquoise;
+        padding: 0 20px;
+      }
+      .brand .menu ul li a:hover {
+        color: green;
+      }
+      .brand .menu ul li a label {
+        cursor: pointer;
+      }
+      .brand .con {
+        position: relative;
+      }
+      .brand .con ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        gap: 47px;
+        opacity: 0;
+      }
+      .brand .con ul img {
+        width: 218px;
+      }
+      #a01:checked ~ .brand .menu ul li:first-child a,
+      #a02:checked ~ .brand .menu ul li:nth-child(2) a,
+      #a03:checked ~ .brand .menu ul li:nth-child(3) a,
+      #a04:checked ~ .brand .menu ul li:nth-child(4) a,
+      #a05:checked ~ .brand .menu ul li:nth-child(5) a,
+      #a06:checked ~ .brand .menu ul li:nth-child(6) a,
+      #a07:checked ~ .brand .menu ul li:nth-child(7) a,
+      #a08:checked ~ .brand .menu ul li:nth-child(8) a {
+        color: green;
+      }
+      .brand .menu ul li::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 3px;
+        background: green;
+        opacity: 0;
+      }
+      #a01:checked ~ .brand .menu ul:first-child:after,
+      #a02:checked ~ .brand .menu ul:nth-child(2):after,
+      #a03:checked ~ .brand .menu ul:nth-child(3):after,
+      #a04:checked ~ .brand .menu ul:nth-child(4):after,
+      #a05:checked ~ .brand .menu ul:nth-child(5):after,
+      #a06:checked ~ .brand .menu ul:nth-child(6):after,
+      #a07:checked ~ .brand .menu ul:nth-child(7):after,
+      #a08:checked ~ .brand .menu ul:nth-child(8):after {
+        opacity: 1;
+        border-bottom: 3px solid green;
+      }
+      #a01:checked ~ .brand .con ul:first-child,
+      #a02:checked ~ .brand .con ul:nth-child(2),
+      #a03:checked ~ .brand .con ul:nth-child(3),
+      #a04:checked ~ .brand .con ul:nth-child(4),
+      #a05:checked ~ .brand .con ul:nth-child(5),
+      #a06:checked ~ .brand .con ul:nth-child(6),
+      #a07:checked ~ .brand .con ul:nth-child(7),
+      #a08:checked ~ .brand .con ul:nth-child(8) {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="brand" id="a01" checked />
+    <input type="radio" name="brand" id="a02" />
+    <input type="radio" name="brand" id="a03" />
+    <input type="radio" name="brand" id="a04" />
+    <input type="radio" name="brand" id="a05" />
+    <input type="radio" name="brand" id="a06" />
+    <input type="radio" name="brand" id="a07" />
+    <input type="radio" name="brand" id="a08" />
+    <div class="brand">
+      <h1>웅진브랜드</h1>
+      <p>맛있고 건강한 웅진식품 대표 브랜드를 확인해보세요</p>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#"><label for="a01">주스</label></a>
+          </li>
+          <li>
+            <a href="#"><label for="a02">차</label></a>
+          </li>
+          <li>
+            <a href="#"><label for="a03">곡물</label></a>
+          </li>
+          <li>
+            <a href="#"><label for="a04">어린이</label></a>
+          </li>
+          <li>
+            <a href="#"><label for="a05">생수/탄산/이온</label></a>
+          </li>
+          <li>
+            <a href="#"><label for="a06">홍삼/건강/드링크</label></a>
+          </li>
+          <li>
+            <a href="#"><label for="a07">제과</label></a>
+          </li>
+          <li>
+            <a href="#"><label for="a08">해외수입제품</label></a>
+          </li>
+        </ul>
+      </div>
+      <div class="con">
+        <ul>
+          <li>
+            <p><img src="../images/a01.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/a02.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/a03.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/a04.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/a05.png" alt="" /></p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p><img src="../images/b01.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/b02.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/b03.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/b04.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/b05.png" alt="" /></p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p><img src="../images/c01.png" alt="" /></p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p><img src="../images/d01.png" alt="" /></p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p><img src="../images/e01.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/e02.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/e03.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/e04.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/e05.png" alt="" /></p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p><img src="../images/f01.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/f02.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/f03.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/f04.png" alt="" /></p>
+          </li>
+          <li>
+            <p><img src="../images/f05.png" alt="" /></p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p><img src="../images/g01.png" alt="" /></p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <p><img src="../images/h01.png" alt="" /></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
