@@ -46,6 +46,7 @@
       }
       .brand .con {
         position: relative;
+        height: 218px;
       }
       .brand .con ul {
         position: absolute;
@@ -68,9 +69,9 @@
       #a08:checked ~ .brand .menu ul li:nth-child(8) a {
         /* width: 100%;
         display: block; */
-        padding: 0 20px 20px;
+        /* padding: 0 20px 20px; */
         color: green;
-        border-bottom: 3px solid green;
+        /* border-bottom: 3px solid green; */
       }
       .brand .menu ul li::after {
         content: "";
@@ -102,6 +103,28 @@
       #a07:checked ~ .brand .con ul:nth-child(7),
       #a08:checked ~ .brand .con ul:nth-child(8) {
         opacity: 1;
+      }
+      .con::before {
+        content: "";
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        border-width: 0 0 2px 2px;
+        border-style: solid;
+        transform: rotate(45deg) translateY(-50%);
+      }
+      .con::after {
+        content: "";
+        position: absolute;
+        right: -50px;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        border-width: 2px 2px 0 0;
+        border-style: solid;
+        transform: rotate(45deg) translateY(-50%);
       }
     </style>
   </head>
