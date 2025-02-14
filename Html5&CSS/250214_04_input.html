@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input {
+        display: none;
+      }
+      .photo {
+        width: 500px;
+        height: 300px;
+        position: relative;
+      }
+      .photo p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .photo p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+      }
+      .menu {
+        width: 500px;
+        display: flex;
+      }
+      .menu label {
+        flex: 1;
+        text-align: center;
+        background: #9cc;
+        /* padding: 20px 0; */
+        height: 60px;
+        line-height: 60px;
+      }
+      #photo1:checked ~ .photo p:first-child img,
+      #photo2:checked ~ .photo p:nth-child(2) img,
+      #photo3:checked ~ .photo p:nth-child(3) img,
+      #photo4:checked ~ .photo p:nth-child(4) img,
+      #photo5:checked ~ .photo p:nth-child(5) img,
+      #photo6:checked ~ .photo p:nth-child(6) img {
+        display: block;
+      }
+      #photo1:checked ~ .menu label:first-child,
+      #photo2:checked ~ .menu label:nth-child(2),
+      #photo3:checked ~ .menu label:nth-child(3),
+      #photo4:checked ~ .menu label:nth-child(4),
+      #photo5:checked ~ .menu label:nth-child(5),
+      #photo6:checked ~ .menu label:nth-child(6) {
+        background: #699;
+      }
+      .menu label:hover {
+        background: #669;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="photo" id="photo1" checked />
+    <input type="radio" name="photo" id="photo2" />
+    <input type="radio" name="photo" id="photo3" />
+    <input type="radio" name="photo" id="photo4" />
+    <input type="radio" name="photo" id="photo5" />
+    <input type="radio" name="photo" id="photo6" />
+    <div class="photo">
+      <p><img src="./images/photo1.jpg" alt="photo" /></p>
+      <p><img src="./images/photo2.jpg" alt="photo" /></p>
+      <p><img src="./images/photo3.jpg" alt="photo" /></p>
+      <p><img src="./images/photo4.jpg" alt="photo" /></p>
+      <p><img src="./images/photo5.jpg" alt="photo" /></p>
+      <p><img src="./images/photo6.jpg" alt="photo" /></p>
+    </div>
+    <div class="menu">
+      <label for="photo1">photo1</label>
+      <label for="photo2">photo2</label>
+      <label for="photo3">photo3</label>
+      <label for="photo4">photo4</label>
+      <label for="photo5">photo5</label>
+      <label for="photo6">photo6</label>
+    </div>
+  </body>
+</html>

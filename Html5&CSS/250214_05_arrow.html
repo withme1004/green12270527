@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        position: relative;
+        margin: 50px;
+      }
+      p::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        border-width: 0px 0px 1px 1px;
+        border-style: solid;
+        transform: rotate(45deg);
+      }
+      p::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        border-width: 1px 1px 0px 0px;
+        border-style: solid;
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+  </body>
+</html>
