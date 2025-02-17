@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .ds {
+        /* width: 100%; */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+      input {
+        display: none;
+      }
+      body {
+        background: url(https://www.doosanrobotics.com/images/sub/sub-bg13.jpg)
+          no-repeat;
+      }
+      label {
+        padding-top: 11px;
+        box-sizing: border-box;
+        cursor: pointer;
+        background: #000;
+        width: 220px;
+        height: 50px;
+        color: #fff;
+      }
+      .con {
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        margin: 0 auto;
+        background: #fff;
+        width: 440px;
+        height: 0;
+      }
+      .con .nav1,
+      .con .nav2 {
+        height: 0;
+        overflow: hidden;
+        width: 220px;
+        transition: 1s;
+      }
+      .con p {
+        padding: 10px 0;
+      }
+      #menu1:checked ~ .con .nav1,
+      #menu2:checked ~ .con .nav2 {
+        height: 180px;
+        cursor: pointer;
+        background: #fff;
+        border: 1px solid #eee;
+      }
+
+      .con .nav1 p:hover {
+        color: rgb(0, 94, 184);
+      }
+      .con .nav2 p:hover {
+        color: rgb(0, 94, 184);
+      }
+      h1 {
+        text-align: center;
+        color: #fff;
+        padding: 250px;
+        font-size: 72px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="menu" id="menu1" />
+    <input type="radio" name="menu" id="menu2" />
+    <h1>두산 로봇 교육</h1>
+    <div class="ds">
+      <label for="menu1"> 교육 & 서비스 </label>
+      <label for="menu2"> 두산 로봇 교육 </label>
+    </div>
+    <div class="con">
+      <div class="nav1">
+        <p>제품 & 솔루션</p>
+        <p>교육 & 서비스</p>
+        <p>투자정보</p>
+        <p>회사소개</p>
+      </div>
+      <div class="nav2">
+        <p>두산 로봇 교육</p>
+        <p>다운로드 센터</p>
+        <p>A/S 신청</p>
+        <p>파트너 서비스</p>
+      </div>
+    </div>
+  </body>
+</html>
