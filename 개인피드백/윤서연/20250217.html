@@ -141,21 +141,21 @@
       width: 1061px;
       height: 32px;
     }
-    .sub2 div {
+    .sub2 > div {
       display: none;
     }
-    #li1:checked ~ .sub2 > div:nth-child(1),
-    #li2:checked ~ .sub2 > div:nth-child(2),
-    #li3:checked ~ .sub2 > div:nth-child(3),
-    #li4:checked ~ .sub2 > div:nth-child(4),
-    #li5:checked ~ .sub2 > div:nth-child(5),
-    #li6:checked ~ .sub2 > div:nth-child(6) {
+    #li1:checked ~ .sub .sub2 > div:nth-child(1),
+    #li2:checked ~ .sub .sub2 > div:nth-child(2),
+    #li3:checked ~ .sub .sub2 > div:nth-child(3),
+    #li4:checked ~ .sub .sub2 > div:nth-child(4),
+    #li5:checked ~ .sub .sub2 > div:nth-child(5),
+    #li6:checked ~ .sub .sub2 > div:nth-child(6) {
       display: block;
     }
   </style>
   <body>
     <div class="main">
-      <input type="radio" name="photo" id="li1" />
+      <input type="radio" name="photo" id="li1" checked />
       <input type="radio" name="photo" id="li2" />
       <input type="radio" name="photo" id="li3" />
       <input type="radio" name="photo" id="li4" />
