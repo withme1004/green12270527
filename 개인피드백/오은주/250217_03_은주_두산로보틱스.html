@@ -18,21 +18,31 @@
         display: none;
       }
       .wrap {
-        /* width: 440px; */
         height: 500px;
-        /* margin: 0 auto; */
         display: flex;
-        background: url(https://www.doosanrobotics.com/images/sub/sub-bg13.jpg);
+        background: url(https://www.doosanrobotics.com/images/sub/sub-bg13.jpg)
+          center 100% / cover;
         justify-content: center;
+        position: relative;
+      }
+      .wrap h1 {
+        font-size: 72px;
+        color: #fff;
+        line-height: 450px;
       }
       .wrap .con1,
       .wrap .con2 {
         width: 220px;
-        /* height: 500px; */
-        /* display: flex;
-        flex-direction: column;
-        align-items: center; */
+        top: 75%;
+        position: absolute;
       }
+      .wrap .con1 {
+        right: 50%;
+      }
+      .wrap .con2 {
+        left: 50%;
+      }
+
       .one,
       .two {
         display: flex;
@@ -41,29 +51,53 @@
         width: 220px;
         height: 60px;
         background: rgb(20, 20, 20);
+        opacity: 0.8;
       }
       .one label,
       .two label {
         color: #fff;
       }
 
+      .wrap .con1 .one label {
+        position: relative;
+      }
+      .wrap .con1 .one label::after {
+        position: absolute;
+        content: "";
+        background: #ccc;
+        width: 1px;
+        height: 10px;
+        right: -74px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
       .wrap .list1,
       .wrap .list2 {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        background: #fff;
         height: 0;
+        border: 0px solid #ccc;
         transition: 1s;
         overflow: hidden;
+        align-items: center;
+        line-height: 30px;
       }
 
-      #menu1:checked ~ .wrap .list1,
-      #menu2:checked ~ .wrap .list2 {
-        height: 220px;
+      .wrap .list1 a:hover,
+      .wrap .list2 a:hover {
+        color: #097cd3;
       }
 
       #menu1:checked ~ .wrap .con1 .one p {
         content: url(https://www.doosanrobotics.com/images/arrow-down-light.svg);
+      }
+      #menu1:checked ~ .wrap .list1,
+      #menu2:checked ~ .wrap .list2 {
+        height: 120px;
+        padding: 20px 0;
+        border: 1px solid #ccc;
       }
     </style>
   </head>
@@ -71,6 +105,7 @@
     <input type="radio" name="menu" id="menu1" />
     <input type="radio" name="menu" id="menu2" />
     <div class="wrap">
+      <h1>두산 로봇 교육</h1>
       <div class="con1">
         <div class="one">
           <label for="menu1">교육&서비스</label>
@@ -99,10 +134,10 @@
           </p>
         </div>
         <div class="list2">
-          <a href="#">제품 & 솔루션</a>
-          <a href="#">교육 & 서비스</a>
-          <a href="#">투자정보</a>
-          <a href="#">회사소개</a>
+          <a href="#">두산 로봇 교육</a>
+          <a href="#">다운로드 센터</a>
+          <a href="#">A/S 신청</a>
+          <a href="#">파트너 서비스</a>
         </div>
       </div>
     </div>
