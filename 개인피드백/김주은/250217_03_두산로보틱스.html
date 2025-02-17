@@ -27,16 +27,19 @@
       }
 
       .wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 100%;
         height: 500px;
         background: url(https://www.doosanrobotics.com/images/sub/sub-bg13.jpg)
           center/cover no-repeat;
         font-family: Pretendard, serif;
       }
-
+      .wrap .inner {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        height: 100%;
+        justify-content: flex-end;
+      }
       .menulist {
         display: flex;
       }
@@ -107,30 +110,41 @@
     <input type="radio" name="menu" id="menu1" />
     <input type="radio" name="menu" id="menu2" />
     <div class="wrap">
-      <div class="menulist">
-        <label for="menu1">교육 & 서비스</label>
-        <label for="menu2">두산 로봇 교육</label>
-      </div>
-      <div class="con">
-        <ul>
-          <li><a href="#">제품 & 솔루션</a></li>
-          <li><a href="#">교육 & 서비스</a></li>
-          <li><a href="#">투자정보</a></li>
-          <li><a href="#">회사소개</a></li>
-        </ul>
-        <ul>
-          <li><a href="#">두산 로봇 교육</a></li>
-          <li><a href="#">다운로드 센터</a></li>
-          <li><a href="#">A/S 신청</a></li>
-          <li>
-            <a href="#"
-              >파트너 서비스<span class="material-symbols-outlined">
-                arrow_outward
-              </span></a
-            >
-          </li>
-        </ul>
+      <div class="inner">
+        <div class="menulist">
+          <label for="menu1">교육 & 서비스</label>
+          <label for="menu2">두산 로봇 교육</label>
+        </div>
+        <div class="con">
+          <ul>
+            <li><a href="#">제품 & 솔루션</a></li>
+            <li><a href="#">교육 & 서비스</a></li>
+            <li><a href="#">투자정보</a></li>
+            <li><a href="#">회사소개</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">두산 로봇 교육</a></li>
+            <li><a href="#">다운로드 센터</a></li>
+            <li><a href="#">A/S 신청</a></li>
+            <li>
+              <a href="#"
+                >파트너 서비스<span class="material-symbols-outlined">
+                  arrow_outward
+                </span></a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <section>
+      <p>다음섹션입니다.</p>
+      <p>다음섹션입니다.</p>
+      <p>다음섹션입니다.</p>
+      <p>다음섹션입니다.</p>
+      <p>다음섹션입니다.</p>
+      <p>다음섹션입니다.</p>
+      <p>다음섹션입니다.</p>
+    </section>
   </body>
 </html>
