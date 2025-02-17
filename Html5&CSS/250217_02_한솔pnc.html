@@ -28,7 +28,7 @@
         width: 1220px;
         margin: 20px auto;
       }
-      .con p {
+      .con > div {
         position: absolute;
         left: 0;
         top: 0;
@@ -42,12 +42,12 @@
       #menu6:checked ~ .menu label:nth-child(6) {
         border-bottom: 2px solid #ccc;
       }
-      #menu1:checked ~ .con p:nth-child(1),
-      #menu2:checked ~ .con p:nth-child(2),
-      #menu3:checked ~ .con p:nth-child(3),
-      #menu4:checked ~ .con p:nth-child(4),
-      #menu5:checked ~ .con p:nth-child(5),
-      #menu6:checked ~ .con p:nth-child(6) {
+      #menu1:checked ~ .con > div:nth-child(1),
+      #menu2:checked ~ .con > div:nth-child(2),
+      #menu3:checked ~ .con > div:nth-child(3),
+      #menu4:checked ~ .con > div:nth-child(4),
+      #menu5:checked ~ .con > div:nth-child(5),
+      #menu6:checked ~ .con > div:nth-child(6) {
         display: block;
       }
     </style>
@@ -68,42 +68,46 @@
       <label for="menu6">기계/금속</label>
     </div>
     <div class="con">
-      <p>
+      <div>
         <img
           src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-01.jpg"
           alt="01"
         />
-      </p>
-      <p>
+        <div class="task">첫번재 task</div>
+        <div class="sol">첫번째 솔루션</div>
+      </div>
+      <div>
         <img
           src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-02.jpg"
           alt="02"
         />
-      </p>
-      <p>
+        <div class="task">두번재 task</div>
+        <div class="sol">두번째 솔루션</div>
+      </div>
+      <div>
         <img
           src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-03.jpg"
           alt="03"
         />
-      </p>
-      <p>
+      </div>
+      <div>
         <img
           src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-04.jpg"
           alt="04"
         />
-      </p>
-      <p>
+      </div>
+      <div>
         <img
           src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-05.jpg"
           alt="05"
         />
-      </p>
-      <p>
+      </div>
+      <div>
         <img
           src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-06.jpg"
           alt="06"
         />
-      </p>
+      </div>
     </div>
   </body>
 </html>
