@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      height: 9452.38px;
+      background: wheat;
+      display: block;
+      position: relative;
+      max-width: 1220px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 0 60px;
+    }
+    .main h4 {
+      width: 1220px;
+      height: 72px;
+      font-weight: 800;
+      font-size: 48px;
+    }
+    .sub {
+      background: whitesmoke;
+      height: 1531px;
+      width: 1220px;
+      font-size: 14px;
+      font-weight: 400;
+      display: block;
+    }
+    .sub1 {
+      list-style: none;
+      margin-top: 44px;
+      display: flex;
+      background: turquoise;
+      height: 59px;
+      width: 100%;
+    }
+    .sub1 li {
+      width: 100%;
+      background: salmon;
+      text-align: left;
+      height: 30px;
+      flex: 1;
+      list-style: none;
+      cursor: pointer;
+      line-height: 28px;
+      font-weight: 400;
+      font-size: 16px;
+      color: slategray;
+      padding: 14px 8px;
+      border-bottom: 1px solid #e9e9e9;
+    }
+    .sub li label {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background: turquoise;
+    }
+    .sub2 {
+      position: absolute;
+      height: 1442px;
+      width: 100%;
+      display: block;
+      list-style: none;
+      margin-top: 30px;
+    }
+    .sub2 li .box {
+      display: block;
+      height: 1342px;
+      width: 100%;
+    }
+    .img {
+      height: 660px;
+      vertical-align: top;
+      width: 100%;
+    }
+    .in-box h6 {
+      height: 40px;
+      width: 100%;
+      font-weight: 800;
+      font-size: 24px;
+      margin-top: 40px;
+    }
+    .list {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      list-style: none;
+      font-weight: 400;
+      font-size: 14px;
+      width: 100%;
+      height: 244px;
+    }
+    .list li {
+      text-align: center;
+      padding: 24px 0;
+      flex: 0 0 calc(50% - 4px);
+      border-radius: 4px;
+      background: thistle;
+      font-size: 16px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      width: 606px;
+      height: 28px;
+    }
+    .text {
+      margin-top: 20px;
+      margin-bottom: 40px;
+      border-radius: 4px;
+      background: steelblue;
+      padding: 48px 78px;
+      display: block;
+      list-style: none;
+      width: 1064px;
+      height: 132px;
+    }
+    .text ul {
+      height: 100%;
+      width: 100%;
+      list-style: none;
+    }
+    .text ul li {
+      padding-left: 3px;
+      color: green;
+      font-size: 18px;
+      font-weight: 400px;
+      list-style: square;
+      display: list-item;
+      width: 1061px;
+      height: 32px;
+    }
+    .sub2 div {
+      display: none;
+    }
+    #li1:checked ~ .sub2 > div:nth-child(1),
+    #li2:checked ~ .sub2 > div:nth-child(2),
+    #li3:checked ~ .sub2 > div:nth-child(3),
+    #li4:checked ~ .sub2 > div:nth-child(4),
+    #li5:checked ~ .sub2 > div:nth-child(5),
+    #li6:checked ~ .sub2 > div:nth-child(6) {
+      display: block;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <input type="radio" name="photo" id="li1" />
+      <input type="radio" name="photo" id="li2" />
+      <input type="radio" name="photo" id="li3" />
+      <input type="radio" name="photo" id="li4" />
+      <input type="radio" name="photo" id="li5" />
+      <input type="radio" name="photo" id="li6" />
+      <div class="sub">
+        <h4>적용산업</h4>
+        <ul class="sub1">
+          <li><label for="li1">반도체</label></li>
+          <li><label for="li2">전기/전자</label></li>
+          <li><label for="li3">2차 전지</label></li>
+          <li><label for="li4">식음료/제약</label></li>
+          <li><label for="li5">화약</label></li>
+          <li><label for="li6">기계/금속</label></li>
+        </ul>
+        <ul class="sub2">
+          <div class="in-01">
+            <div class="in-box">
+              <div class="img">
+                <img
+                  src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-01.jpg"
+                  alt=""
+                />
+              </div>
+              <h6>Task</h6>
+              <ul class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <h6>Solution</h6>
+              <div class="text">
+                <ul>
+                  <li>
+                    반도체 업종 특화 MES는 전 공정에서 글로번 표준MES와 대용량
+                    데이터를 활용한 품질분석 솔루션을 제공
+                  </li>
+                  <li>
+                    자동화된 시스템을 통한 품질체크, 자동화 시스템을 연계한
+                    RMS(Recipe Management System) 온라인 관리를 제공
+                  </li>
+                  <li>
+                    FDC(Fault Detection &amp; Classification)을 통한 실시간 공정
+                    파라미터 데이터 분석 및 공정 개선 기능 제공
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="in-02">
+            <div class="in-box">
+              <div class="img">
+                <img
+                  src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-02.jpg"
+                  alt=""
+                />
+              </div>
+              <h6>Task</h6>
+              <ul class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <h6>Solution</h6>
+              <div class="text">
+                <ul>
+                  <li>
+                    반도체 업종 특화 MES는 전 공정에서 글로번 표준MES와 대용량
+                    데이터를 활용한 품질분석 솔루션을 제공
+                  </li>
+                  <li>
+                    자동화된 시스템을 통한 품질체크, 자동화 시스템을 연계한
+                    RMS(Recipe Management System) 온라인 관리를 제공
+                  </li>
+                  <li>
+                    FDC(Fault Detection &amp; Classification)을 통한 실시간 공정
+                    파라미터 데이터 분석 및 공정 개선 기능 제공
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="in-03">
+            <div class="in-box">
+              <div class="img">
+                <img
+                  src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-03.jpg"
+                  alt=""
+                />
+              </div>
+              <h6>Task</h6>
+              <ul class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <h6>Solution</h6>
+              <div class="text">
+                <ul>
+                  <li>
+                    반도체 업종 특화 MES는 전 공정에서 글로번 표준MES와 대용량
+                    데이터를 활용한 품질분석 솔루션을 제공
+                  </li>
+                  <li>
+                    자동화된 시스템을 통한 품질체크, 자동화 시스템을 연계한
+                    RMS(Recipe Management System) 온라인 관리를 제공
+                  </li>
+                  <li>
+                    FDC(Fault Detection &amp; Classification)을 통한 실시간 공정
+                    파라미터 데이터 분석 및 공정 개선 기능 제공
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="in-04">
+            <div class="in-box">
+              <div class="img">
+                <img
+                  src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-04.jpg"
+                  alt=""
+                />
+              </div>
+              <h6>Task</h6>
+              <ul class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <h6>Solution</h6>
+              <div class="text">
+                <ul>
+                  <li>
+                    반도체 업종 특화 MES는 전 공정에서 글로번 표준MES와 대용량
+                    데이터를 활용한 품질분석 솔루션을 제공
+                  </li>
+                  <li>
+                    자동화된 시스템을 통한 품질체크, 자동화 시스템을 연계한
+                    RMS(Recipe Management System) 온라인 관리를 제공
+                  </li>
+                  <li>
+                    FDC(Fault Detection &amp; Classification)을 통한 실시간 공정
+                    파라미터 데이터 분석 및 공정 개선 기능 제공
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="in-05">
+            <div class="in-box">
+              <div class="img">
+                <img
+                  src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-05.jpg"
+                  alt=""
+                />
+              </div>
+              <h6>Task</h6>
+              <ul class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <h6>Solution</h6>
+              <div class="text">
+                <ul>
+                  <li>
+                    반도체 업종 특화 MES는 전 공정에서 글로번 표준MES와 대용량
+                    데이터를 활용한 품질분석 솔루션을 제공
+                  </li>
+                  <li>
+                    자동화된 시스템을 통한 품질체크, 자동화 시스템을 연계한
+                    RMS(Recipe Management System) 온라인 관리를 제공
+                  </li>
+                  <li>
+                    FDC(Fault Detection &amp; Classification)을 통한 실시간 공정
+                    파라미터 데이터 분석 및 공정 개선 기능 제공
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="in-06">
+            <div class="in-box">
+              <div class="img">
+                <img
+                  src="https://www.hansolpns.com/assets/resources/front/images/contents/smart_factory/industry-06.jpg"
+                  alt=""
+                />
+              </div>
+              <h6>Task</h6>
+              <ul class="list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <h6>Solution</h6>
+              <div class="text">
+                <ul>
+                  <li>
+                    반도체 업종 특화 MES는 전 공정에서 글로번 표준MES와 대용량
+                    데이터를 활용한 품질분석 솔루션을 제공
+                  </li>
+                  <li>
+                    자동화된 시스템을 통한 품질체크, 자동화 시스템을 연계한
+                    RMS(Recipe Management System) 온라인 관리를 제공
+                  </li>
+                  <li>
+                    FDC(Fault Detection &amp; Classification)을 통한 실시간 공정
+                    파라미터 데이터 분석 및 공정 개선 기능 제공
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
