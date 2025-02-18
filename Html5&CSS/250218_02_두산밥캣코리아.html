@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overflow: hidden;
+      }
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        z-index: -1;
+      }
+      .bg video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .con h1 {
+        color: #fff;
+        font-size: 70px;
+        padding: 250px 0 0 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <video autoplay muted loop>
+        <source
+          src="https://www.doosan-iv.com/common/images/main/main-visual-video2.mp4"
+        />
+      </video>
+    </div>
+    <div class="con">
+      <h1>BUILT TO LAST<br />MADE TO PERFORM</h1>
+    </div>
+  </body>
+</html>
