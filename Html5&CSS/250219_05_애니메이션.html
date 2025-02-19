@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        animation-name: move;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      p:nth-child(1) {
+        animation-timing-function: ease;
+      }
+      p:nth-child(1) {
+        animation-timing-function: ease;
+      }
+      p:nth-child(2) {
+        animation-timing-function: ease-in;
+      }
+      p:nth-child(3) {
+        animation-timing-function: ease-out;
+      }
+      p:nth-child(4) {
+        animation-timing-function: ease-in-out;
+      }
+      p:nth-child(5) {
+        animation-timing-function: linear;
+      }
+      p:nth-child(6) {
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      @keyframes move {
+        0% {
+          /*from{}*/
+          left: 0;
+        }
+        100% {
+          /*to{}*/
+          left: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>ease</p>
+    <p>ease-in</p>
+    <p>ease-out</p>
+    <p>ease-in-out</p>
+    <p>linear</p>
+    <p>cubic-bezier</p>
+  </body>
+</html>

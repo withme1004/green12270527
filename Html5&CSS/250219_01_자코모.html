@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .head {
+        position: relative;
+        height: 100vh;
+      }
+      .head .bg {
+        width: 100%;
+        height: 100%;
+      }
+      .head .bg video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .head .txt {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 100px;
+      }
+      .modal {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin: 0 20px 20px 0;
+      }
+      .modal img {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body onload="popup()">
+    <div class="head">
+      <div class="bg">
+        <video autoplay muted loop>
+          <source
+            src="https://www.jakomosofa.com/_File/popBanner//file_1736235204_0.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+      <div class="txt">
+        <h1>
+          1등 소파만의 독보적 퀄리티<br />
+          소파는 결국, 자코모
+        </h1>
+        <p>We Make Quality JAKOMO.</p>
+      </div>
+    </div>
+    <!-- <script>
+      function popup() {
+        window.open(
+          "popup.html",
+          "new",
+          "toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=700, height=700, left=0, top=0"
+        );
+      }
+    </script> -->
+    <div class="modal">
+      <p>
+        <img
+          src="https://www.jakomosofa.com/_File/popBanner//file_1737333806_0.jpg"
+          alt="modal_img"
+        />
+      </p>
+      <a href="#">닫기</a>
+    </div>
+  </body>
+</html>
