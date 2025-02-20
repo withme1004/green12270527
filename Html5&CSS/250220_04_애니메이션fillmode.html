@@ -15,10 +15,11 @@
         height: 100px;
         background: #ccc;
         position: relative;
-        animation-name: move;
-        animation-duration: 2s;
+        /* animation-name: move;
+        animation-duration: 10s; */
         margin: 10px;
-        animation-delay: 2s;
+        /* animation-delay: 2s; */
+        animation: move 10s linear 2s;
       }
       p.none {
         animation-fill-mode: none;
@@ -42,9 +43,14 @@
           background: #ff0;
         }
       }
+      #start:checked ~ p {
+        animation-play-state: paused;
+      }
     </style>
   </head>
   <body>
+    <input type="checkbox" name="start" id="start" />
+    <label for="start">시작/중지</label>
     <p class="none">none</p>
     <p class="forwards">forwards</p>
     <p class="backwards">backwards</p>
