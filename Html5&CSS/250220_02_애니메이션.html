@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .scroll {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: linear-gradient(rgb(62, 104, 255), rgb(110, 124, 255));
+      }
+      .scroll p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .scroll p:first-child {
+        width: 90%;
+        height: 90%;
+      }
+      .scroll p:first-child img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation-name: rotate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll">
+      <p><img src="./images/scroll_down.png" alt="scroll" /></p>
+      <p><img src="./images/down.png" alt="down" /></p>
+    </div>
+  </body>
+</html>
