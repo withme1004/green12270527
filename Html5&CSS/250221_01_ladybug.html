@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ladybug {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 200px;
+        width: 288px;
+        height: 320px;
+        font-size: 160px; /* definition em size */
+        border: 1px solid #000;
+        /* border-radius */
+        border-radius: 50%;
+        background: radial-gradient(
+            rgba(0, 0, 0, 1) 30%,
+            transparent 33%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 50%,
+            transparent 55%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 50%,
+            transparent 55%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 40%,
+            transparent 43%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 40%,
+            transparent 43%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 45%,
+            transparent 50%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 45%,
+            transparent 50%,
+            transparent 100%
+          );
+        background-color: #e11;
+        background-repeat: no-repeat;
+        background-position: 105px 32px, 48px 96px, 160px 96px, 144px 176px,
+          64px 176px, 176px 240px, 32px 240px; /* 1, 2, ... */
+        background-size: 80px 80px;
+      }
+      .ladybug::before {
+        content: "";
+        /* display: block; */
+        position: absolute;
+        left: 48px;
+        top: -38px;
+        width: 192px;
+        height: 80px;
+        background: #000;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0; /*
+             border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; border-bottom-left-radius: 0 0; border-bottom-right-radius: 0 0; */
+      }
+      .ladybug::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 80px;
+        top: -16px;
+        height: 16px;
+        width: 16px;
+        background: #000;
+        border-radius: 50%;
+        box-shadow: 0 0 0 16px #fff, 0 0 0 20px #000, 112px 0 0 0 #000,
+          112px 0 0 16px #fff, 112px 0 0 20px #000, 192px 80px 0 3px #000,
+          216px 176px 0 3px #000, 192px 264px 0 3px #000, -80px 80px 0 3px #000,
+          -104px 176px 0 3px #000, -80px 264px 0 3px #000;
+      }
+      .ladybug:hover {
+        animation: ladybug 1s;
+      }
+      @keyframes ladybug {
+        0%,
+        100% {
+          background-position: 105px 32px, 48px 96px, 160px 96px, 144px 176px,
+            64px 176px, 176px 240px, 32px 240px;
+        }
+        50% {
+          background-position: 105px 128px, 105px 128px, 105px 128px,
+            105px 128px, 105px 128px, 105px 128px, 105px 128px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ladybug"></div>
+  </body>
+</html>
