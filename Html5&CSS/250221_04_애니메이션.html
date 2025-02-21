@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 500px;
+        height: 327px;
+        background: url(./images/cloud.gif);
+        animation: ani 3s steps(3) infinite;
+      }
+      @keyframes ani {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -1500px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+  </body>
+</html>

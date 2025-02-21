@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .txt {
+        position: relative;
+        font-size: 70px;
+        font-weight: bold;
+        display: inline-block;
+      }
+      .black {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: txt 2s infinite;
+        border: 1px solid;
+      }
+      .gray {
+        color: #e6e6e6;
+        white-space: nowrap;
+      }
+      @keyframes txt {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      h1 {
+        font-family: "맑은 고딕";
+        font-size: 100px;
+        -webkit-text-stroke: 2px red;
+        text-stroke: 1px red;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="txt">
+      <p class="black">Harness Your Data to Harness Your Data to</p>
+      <p class="gray">Harness Your Data to Harness Your Data to</p>
+    </div>
+    <h1>text-stroke 텍스트 짱 신기하다 맑은고딕</h1>
+  </body>
+</html>
