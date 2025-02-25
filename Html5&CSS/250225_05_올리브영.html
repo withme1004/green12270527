@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        position: absolute;
+        width: 960px;
+        height: 640px;
+        object-fit: cover;
+        transition: 1s;
+      }
+      img:nth-child(2):hover {
+        transform: scale(10);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./images/photo1.jpg" alt="" />
+    <img src="./images/shape.svg" alt="" />
+  </body>
+</html>

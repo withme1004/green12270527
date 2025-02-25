@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .imgBox {
+        width: 500px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+      }
+      .img1 {
+        filter: blur(5px);
+      }
+      .blurbox {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: inset(0);
+        z-index: 2;
+        transition: 0.5s;
+      }
+      .imgBox:hover .blurbox {
+        clip-path: inset(10px 20px round 250px 250px 0 0);
+      }
+      .imgBox img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .imgBox::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="imgBox">
+      <img src="./images/photo1.jpg" alt="photo1" class="img1" />
+      <p class="blurbox"><img src="./images/photo1.jpg" alt="" /></p>
+    </div>
+  </body>
+</html>
