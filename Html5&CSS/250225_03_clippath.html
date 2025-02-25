@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+      }
+      p {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .img1 {
+        filter: blur(20px);
+      }
+      p img {
+        /* clip-path: inset(50px round 100px 300px); */
+        /* clip-path: ellipse(100px 200px); */
+        clip-path: circle(1000px);
+        transition: 0.5s;
+      }
+      p img:hover {
+        clip-path: circle(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./images/photo1.jpg" alt="photo1" class="img1" />
+      <p><img src="./images/photo1.jpg" alt="" /></p>
+    </div>
+  </body>
+</html>
