@@ -23,6 +23,7 @@
         height: 300px;
         background-position: center;
         opacity: 0;
+        transition: 1s;
       }
       .con ul li:nth-child(1) {
         background-image: url(./images/business_daelim2.png),
@@ -57,7 +58,13 @@
         left: 1002px;
         top: -194px;
       }
-      #menu1:checked ~ .con ul li:nth-child(1) {
+      #menu1:checked ~ .con ul li:nth-child(1),
+      #menu2:checked ~ .con ul li:nth-child(2),
+      #menu3:checked ~ .con ul li:nth-child(3),
+      #menu4:checked ~ .con ul li:nth-child(4),
+      #menu5:checked ~ .con ul li:nth-child(5),
+      #menu6:checked ~ .con ul li:nth-child(6),
+      #menu7:checked ~ .con ul li:nth-child(7) {
         opacity: 1;
       }
     </style>
