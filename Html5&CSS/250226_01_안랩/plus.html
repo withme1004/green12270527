@@ -5,6 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        background: #111;
+      }
+      .plus {
+        height: 1000px;
+      }
+      .plus .inner {
+        position: relative;
+        width: 1200px;
+        height: 100%;
+        margin: 50px auto;
+        /* padding-top: 50px; */
+      }
+      .plus .inner ul {
+        width: 45%;
+      }
+      .plus .inner ul li {
+        width: 100%;
+        border-bottom: 1px solid #363636;
+      }
+      .plus .inner ul li a {
+        line-height: 80px;
+        color: #989898;
+        font-size: 20px;
+        transition: 0.5s;
+      }
+      .plus .inner ul li:hover a {
+        font-size: 24px;
+      }
+      .plus .inner ul li:nth-child(1):hover a {
+        color: #2970ff;
+      }
+      .plus .inner ul li:nth-child(2):hover a {
+        color: #2ccbe5;
+      }
+      .plus .inner ul li:nth-child(3):hover a {
+        color: #2ca8fc;
+      }
+      .plus .inner ul li:nth-child(4):hover a {
+        ccolor: #8ab1ff;
+      }
+      .plus .inner ul li:nth-child(5):hover a {
+        color: #55d8c5;
+      }
+      .plus .inner ul li:nth-child(6):hover a {
+        color: #95a1bd;
+      }
+      .plus .inner ul li:nth-child(1):hover a::after {
+        content: url(./images/ahn-plus-connect-after.png);
+        margin-left: 30px;
+      }
+      .plus .inner ul li:nth-child(2):hover a::after {
+        content: url(./images/ahn-plus-cloud-after.png);
+        margin-left: 30px;
+      }
+      .plus .inner ul li:nth-child(3):hover a::after {
+        content: url(./images/ahn-plus-endpoint-after.png);
+        margin-left: 30px;
+      }
+      .plus .inner ul li:nth-child(4):hover a::after {
+        content: url(./images/ahn-plus-network-after.png);
+        margin-left: 30px;
+      }
+      .plus .inner ul li:nth-child(5):hover a::after {
+        content: url(./images/ahn-plus-service-after.png);
+        margin-left: 30px;
+      }
+      .plus .inner ul li:nth-child(6):hover a::after {
+        content: url(./images/ahn-plus-connect-after.png);
+        margin-left: 30px;
+      }
+      .plus .inner ul li .sub {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none;
+        width: 50%;
+        background: #111;
+      }
+
+      .plus .inner ul li:hover .sub,
+      .plus .inner ul li:first-child .sub {
+        display: block;
+      }
+      .plus .inner ul li::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      .plus .inner ul li:first-child::after {
+        content: url(./images/ahn-plus-connect-bg.svg);
+      }
+      .plus .inner ul li:nth-child(1):hover::after {
+        content: url(./images/ahn-plus-connect-bg.svg);
+      }
+      .plus .inner ul li:nth-child(2):hover::after {
+        content: url(./images/ahn-plus-cloud-bg.svg);
+      }
+    </style>
   </head>
   <body>
     <div class="plus">
