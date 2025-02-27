@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .menu {
+        width: 200px;
+      }
+      .menu > ul {
+        width: 90%;
+        margin: 50px auto;
+        position: relative;
+      }
+      .menu > ul > li {
+        line-height: 50px;
+        border: 1px solid #333;
+        text-align: center;
+        border-bottom: none;
+      }
+      .menu > ul > li:last-child {
+        border-bottom: 1px solid #333;
+      }
+      .menu > ul > li:hover > a,
+      .menu > ul > li .sub li a:hover {
+        background: #000;
+        color: #fff;
+        display: block;
+      }
+      .menu > ul > li .sub {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        left: 180px;
+        top: -20px;
+        background: #000;
+      }
+      .menu > ul > li:hover .sub {
+        height: 300px;
+      }
+      .menu > ul > li .sub li {
+        line-height: 30px;
+      }
+      .menu > ul > li .sub li a {
+        color: #fff;
+      }
+      .menu > ul > li .sub li a:hover {
+        background: #fff;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="#">이용안내</a>
+          <ul class="sub">
+            <li><a href="#">이용방법</a></li>
+            <li><a href="#">이용시간</a></li>
+            <li><a href="#">이용요금</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이벤트정보</a>
+          <ul class="sub">
+            <li><a href="#">현장이벤트</a></li>
+            <li><a href="#">온라인이벤트</a></li>
+            <li><a href="#">이벤트예약</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">프로그램</a>
+          <ul class="sub">
+            <li><a href="#">프로그램안내</a></li>
+            <li><a href="#">온라인예약</a></li>
+            <li><a href="#">단체예약상담</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객센터</a>
+          <ul class="sub">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">자주묻는질문</a></li>
+            <li><a href="#">자료실</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
