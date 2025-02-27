@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid {
+        width: 1680px;
+        margin: 50px auto;
+        height: 780px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 24px;
+        grid-template-areas: "one two three three" "one four five six";
+        font-size: 0;
+      }
+      .one {
+        grid-area: one;
+        background: #aaa;
+      }
+      .two {
+        grid-area: two;
+        background: #bbb;
+      }
+      .three {
+        grid-area: three;
+        background: #ccc;
+        /*border-radius: 20px;
+        background: url(https://www.doosanrobotics.com/images/services/robot-training-img02.png);*/
+      }
+      .four {
+        grid-area: four;
+        background: #ddd;
+      }
+      .five {
+        grid-area: five;
+        background: #eee;
+      }
+      .six {
+        grid-area: six;
+        background: #aaa;
+      }
+      img {
+        width: 828px;
+        height: 378px;
+        /* object-fit: cover;
+        vertical-align: middle; */
+      }
+      section {
+        width: 828px;
+        height: 378px;
+        background: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three">
+        <img
+          src="https://www.doosanrobotics.com/images/services/robot-training-img02.png"
+          alt=""
+        />
+      </div>
+      <div class="four"></div>
+      <div class="five"></div>
+      <div class="six"></div>
+    </div>
+    <section>
+      <img
+        src="https://www.doosanrobotics.com/images/services/robot-training-img02.png"
+        alt=""
+      />
+    </section>
+  </body>
+</html>

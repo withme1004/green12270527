@@ -1,0 +1,142 @@
+https://www.w3schools.com
+
+www.lipsum.com(영문 문서 생성기)
+http://guny.kr/stuff/klorem/(한글문서생성기)
+
+---------------------------------------------------------------------------------------------------------------------
+폰트크기비교
+https://pxtoem.com.au/
+
+무료호스팅
+http://www.dothome.co.kr
+https://github.com/
+
+www.cubic-bezier.com
+
+https://placehold.co/
+
+https://960.gs/         그리드 시스템
+http://gridcalculator.dk/    그리드 계산
+
+-+-----------------------------------------------+-
+
+* 참고 사이트 *
+
+디자인참고사이트
+http://www.dbcut.com
+http://www.jungle.co.kr
+https://www.loud.kr
+https://www.imagetalk.co.kr
+https://mangotree.co.kr
+https://www.dynamixer.co.kr
+https://www.leejeonghun.com/
+http://www.gdweb.co.kr
+https://uxarchive.com/
+https://dribbble.com/
+
+무료이미지사이트
+https://pixabay.com/ko/
+https://www.pexels.com/ko-kr/
+https://www.freepik.com/
+https://www.crowdpic.net/
+https://unsplash.com/ko
+https://burst.shopify.com/
+https://www.shutterstock.com/
+https://www.graphicsfuel.com/
+https://picjumbo.com/
+https://freedesignresources.net/
+https://www.pinterest.co.kr/
+
+무료 목업 사이트(목업:실제품을 만들어 보기 전, 디자인 검토를 위해 실물과 비슷하게 시제품을 제작하는 작업의 과정과 결과물을 통칭)
+https://www.ls.graphics/free-mockups
+https://www.mockupworld.co/
+https://freedesignresources.net/
+https://psdrepo.com/tag/free-psd-mockups/
+https://www.graphberry.com/
+https://www.pixeden.com/
+https://mockups-design.com/
+
+색상 조합 사이트
+color.adobe.com
+paletton.com
+colorhunt.co
+www.color-hex.com
+BrandColors.net
+moviesincolor.com
+www.design-seeds.com
+https://color.hailpixel.com
+https://www.flatuicolorpicker.com
+
+그라데이션 무료 사이트
+webgradients.com
+www.colinkeany.com/blend/
+mycolor.space
+uigradients.com
+www.eggradients.com
+cssgradient.io
+haikei.app
+
+무료패턴
+http://subtlepatterns.com
+
+무료브러쉬
+https://www.deviantart.com/ (brush 검색)
+https://www.brusheezy.com/
+https://www.brushlovers.com/
+https://myphotoshopbrushes.com/
+https://fbrushes.com/
+https://www.brushking.eu/
+https://qbrushes.net/
+https://freedesignfile.com -->Freedesignile은 무료 벡터를 제공하는데 전념하고 있다. 
+포토샵 섹션에는 포토샵 브러시가 있고 2000개 이상의 무료 브러시를 다운로드할 수 있다.
+
+자동으로 누끼 따기
+www.remove.bg/ko
+
+아이콘문자
+fontawesome.com
+
+무료폰트
+https://fonts.google.com/
+https://sangsangfont.com/
+https://github.com/zesstype/Black-Han-Sans
+http://www.swagger.kr/font.html
+https://www.fontfabric.com/free-fonts/
+https://noonnu.cc/
+https://www.dafont.com/
+http://www.jeongseonfont.com/
+http://tvn10festival.tving.com/playground/tvn10font
+https://www.woowahan.com/#/fonts
+
+무료 웹 템플릿 사이트
+https://startbootstrap.com/
+https://bootstrapthemes.co/items/free-bootstrap-templates/
+https://www.webjangi.com/
+https://html5up.net/
+https://www.creative-tim.com/templates-->free검색
+https://webflow.com/templates/free-website-templates
+
+사진을 그림으로 바꿔주는 사이트
+https://huggingface.co/spaces/akhaliq/ArcaneGAN
+https://huggingface.co/spaces/akhaliq/AnimeGANv2
+
+webp변환
+https://ezgif.com/webp-maker
+
+미리캔버스
+https://www.miricanvas.com/ko
+
+이미지다운로드
+https://chrome.google.com/webstore/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj
+ImageAssistant Batch Image Downloader
+
+
+
+
+
+
+
+
+
+
+
