@@ -25,11 +25,13 @@
         margin: 50px auto;
       }
       .menu > ul > li {
+        height: 50px;
         line-height: 50px;
         position: relative;
         border: 1px solid #333;
         text-align: center;
         border-bottom: none;
+        box-sizing: border-box;
       }
       .menu > ul > li:last-child {
         border-bottom: 1px solid #333;
@@ -46,6 +48,7 @@
         left: 180px;
         height: 0;
         top: 0px;
+        z-index: 1;
         /* background: #000; */
       }
       .menu > ul:hover > li .sub {
@@ -63,6 +66,17 @@
       .menu > ul > li .sub li a:hover {
         background: #fff;
         color: #333;
+      }
+      .menu .bg {
+        position: absolute;
+        width: calc(100% - 190px);
+        height: 0;
+        left: 190px;
+        top: 50px;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .menu > ul:hover ~ .bg {
+        height: 200px;
       }
     </style>
   </head>
@@ -102,6 +116,7 @@
           </ul>
         </li>
       </ul>
+      <div class="bg"></div>
     </div>
   </body>
 </html>
