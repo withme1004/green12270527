@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 200px 400px auto;
+        grid-template-areas:
+          "left middle right"
+          "footlogo footmenu footmenu"
+          "footlogo copyright copyright";
+        grid-template-rows: auto 60px 60px;
+      }
+      .left {
+        grid-area: left;
+        background: #aaa;
+      }
+      .middle {
+        grid-area: middle;
+        background: #bbb;
+      }
+      .right {
+        grid-area: right;
+        background: #ccc;
+      }
+      .footlogo {
+        grid-area: footlogo;
+        background: #ddd;
+      }
+      .footmenu {
+        grid-area: footmenu;
+        background: #eee;
+      }
+      .copyright {
+        grid-area: copyright;
+        background: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="left">left</div>
+      <div class="middle">middle</div>
+      <div class="right">right</div>
+      <div class="footlogo">logo</div>
+      <div class="footmenu">footmenu</div>
+      <div class="copyright">copyright</div>
+    </div>
+  </body>
+</html>

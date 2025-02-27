@@ -14,11 +14,12 @@
         display: grid;
         width: 1200px;
         margin: 0 auto;
+        grid-template-columns: repeat(6, 200px);
         grid-template-areas:
-          "toplogo nav nav nav nav"
-          "slide slide slide slide slide"
-          "notice notice banner go go"
-          "footlogo copyright copyright copyright sns";
+          "toplogo nav nav nav nav nav"
+          "slide slide slide slide slide slide"
+          "notice notice banner banner go go"
+          "footlogo copyright copyright copyright copyright sns";
         grid-template-rows: 100px 300px 200px 100px;
       }
       .grid-item {

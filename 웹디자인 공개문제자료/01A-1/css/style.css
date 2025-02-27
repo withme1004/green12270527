@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;color: #333;}
+.contents{width: 1200px;margin: 50px auto;height: 200px;}
+.contents>div{width: calc(100% /3);float: left;position: relative;}
+.contents>div.left input[type="radio"]{display: none;}
+.contents>div.left ul.title li{position: absolute;width: 100px;background: #ccc;text-align: center;line-height: 40px;border: 1px solid #333;z-index: 1;}
+.contents>div.left ul.title li:nth-child(1){
+	left: 10px;
+}
+.contents>div.left ul.title li:nth-child(2){
+	left: 110px;
+}
+.contents>div.left ul.title li label{
+	display: block;width: 100%;height: 100%;
+	cursor: pointer;
+}
+.contents>div.left ul.content{
+	position: relative;
+	top: 41px;
+	border: 1px solid #333;
+	width: 100%;
+	height: 150px;
+}
+.contents>div.left ul.content>li{
+	position: absolute;
+	display: none;
+	font-size: 14px;
+	width: 100%;
+}
+.contents>div.left ul.content>li table{
+	width: 90%;table-layout: fixed;margin: 10px auto 0;
+}
+.contents>div.left ul.content>li table td:first-child{width: 70%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.contents>div.left ul.content>li table td:last-child{width: 30%;text-align: right;}
+.contents>div.left ul.content>li ul{text-align: center;width: 100%;}
+.contents>div.left ul.content>li ul li{display: inline-block;
+	height: 150px;
+	line-height: 150px;}
+.contents>div.left ul.content li img{
+	width: 120px;
+	vertical-align: middle;
+}
+#notice:checked ~ ul.title li:first-child,
+#gallery:checked ~ ul.title li:last-child
+{
+	background: #fff;border-bottom: none;padding-bottom: 1px;
+}
+#notice:checked ~ul.content>li:first-child,
+#gallery:checked ~ul.content>li:last-child
+{display: block;}
+
+
+#popup{position: fixed;left: 0;top: 0;width: 100%;height: 100%;display: none;background: rgba(0,0,0,0.3);z-index: 2;}
+
+#popup .popWindow{width: 600px;height: 400px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);border: 1px solid;background: #fff;}
+#popup .popWindow h1{border-bottom: 1px solid;padding: 20px;font-size: 24px;}
+#popup .popWindow .txt{padding: 20px;}
+#popup .popWindow .txt p{
+	padding-top: 10px;
+}
+#popup .popWindow .txt a{float: right;border: 1px solid;padding: 10px 20px;}
+#popup:target{display: block;}
