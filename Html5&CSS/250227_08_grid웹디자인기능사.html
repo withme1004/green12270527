@@ -78,9 +78,11 @@
         height: 0;
         overflow: hidden;
         background: #fff;
+        border-left: 1px solid #333;
+        border-right: 1px solid #333;
         transition: 1s;
       }
-      .menu > ul:hover > li .sub {
+      .menu > ul > li:hover .sub {
         height: 160px;
         border-bottom: 1px solid #333;
       }
@@ -88,12 +90,6 @@
         line-height: 40px;
         display: block;
         width: 100%;
-      }
-      .menu > ul > li:first-child .sub {
-        border-left: 1px solid #333;
-      }
-      .menu > ul > li:last-child .sub {
-        border-right: 1px solid #333;
       }
       .slide {
         grid-area: slide;
