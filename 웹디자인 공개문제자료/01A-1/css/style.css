@@ -108,6 +108,32 @@ body {
 .wrap .c1 {
   grid-area: c1;
 }
+.wrap .c1 .notice {
+  width: 90%;
+  margin: 10px auto;
+}
+.wrap .c1 .notice input {
+  display: none;
+}
+.wrap .c1 .notice .btn {
+  position: relative;
+  height: 40px;
+}
+.wrap .c1 .notice .btn li {
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  border: 1px solid #333;
+}
+.wrap .c1 .notice .btn li:last-child {
+  left: 100px;
+}
+.wrap .c1 .notice .con {
+  position: relative;
+}
+.wrap .c1 .notice .con li {
+  position: absolute;
+}
 .wrap .c3 {
   grid-area: c3;
 }
