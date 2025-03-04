@@ -122,17 +122,57 @@ body {
 .wrap .c1 .notice .btn li {
   position: absolute;
   width: 100px;
+  height: 100%;
+  line-height: 40px;
   text-align: center;
   border: 1px solid #333;
+  border-right: none;
+  background: #fff;
+  box-sizing: border-box;
 }
 .wrap .c1 .notice .btn li:last-child {
   left: 100px;
+  border-right: 1px solid #333;
 }
 .wrap .c1 .notice .con {
   position: relative;
+  height: 140px;
+  border: 1px solid #333;
 }
 .wrap .c1 .notice .con li {
   position: absolute;
+  display: none;
+}
+#notice:checked ~ .con li:first-child table {
+  font-size: 14px;
+  width: 100%;
+  table-layout: fixed;
+}
+#notice:checked ~ .con li:first-child table td {
+  padding: 2px;
+}
+#notice:checked ~ .con li:first-child table td:first-child {
+  width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#notice:checked ~ .con li:first-child table td:last-child {
+  text-align: right;
+}
+#notice:checked ~ .con li:first-child,
+#gallery:checked ~ .con li:last-child {
+  display: block;
+}
+.wrap .c1 .notice .con li div {
+  display: flex;
+  width: 360px;
+  height: 140px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.wrap .c1 .notice .con img {
+  width: 100px;
 }
 .wrap .c3 {
   grid-area: c3;
