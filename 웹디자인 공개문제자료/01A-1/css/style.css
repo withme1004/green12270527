@@ -110,7 +110,7 @@ body {
 }
 .wrap .c1 .notice {
   width: 90%;
-  margin: 10px auto;
+  margin: 10px auto 0;
 }
 .wrap .c1 .notice input {
   display: none;
@@ -118,6 +118,7 @@ body {
 .wrap .c1 .notice .btn {
   position: relative;
   height: 40px;
+  z-index: 1;
 }
 .wrap .c1 .notice .btn li {
   position: absolute;
@@ -127,26 +128,42 @@ body {
   text-align: center;
   border: 1px solid #333;
   border-right: none;
-  background: #fff;
+  background: #ccc;
   box-sizing: border-box;
 }
+.wrap .c1 .notice .btn li label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.wrap .c1 .notice .btn li:first-child {
+  left: 10px;
+}
 .wrap .c1 .notice .btn li:last-child {
-  left: 100px;
+  left: 110px;
   border-right: 1px solid #333;
 }
 .wrap .c1 .notice .con {
   position: relative;
   height: 140px;
   border: 1px solid #333;
+  top: -1px;
 }
 .wrap .c1 .notice .con li {
   position: absolute;
   display: none;
 }
+#notice:checked ~ .btn li:first-child,
+#gallery:checked ~ .btn li:last-child {
+  border-bottom: none;
+  background: #fff;
+}
 #notice:checked ~ .con li:first-child table {
   font-size: 14px;
-  width: 100%;
+  width: 95%;
   table-layout: fixed;
+  margin: 0 auto;
 }
 #notice:checked ~ .con li:first-child table td {
   padding: 2px;
@@ -188,4 +205,41 @@ body {
 }
 .wrap .sns {
   grid-area: sns;
+}
+
+#popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: none;
+}
+#popup .inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 350px;
+  background: #fff;
+}
+#popup .inner h3 {
+  padding: 20px;
+  border-bottom: 1px solid #000;
+}
+#popup .inner p {
+  padding: 20px 20px 0;
+}
+#popup .inner p.close {
+  text-align: right;
+}
+#popup .inner p.close a {
+  border: 1px solid #333;
+  padding: 10px 20px;
+}
+#popup:target {
+  display: block;
 }
