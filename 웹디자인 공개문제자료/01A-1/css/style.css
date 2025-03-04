@@ -1,65 +1,125 @@
 @charset "utf-8";
-
-*{margin: 0;padding: 0;}
-ul{list-style: none;}
-a{text-decoration: none;color: #333;}
-.contents{width: 1200px;margin: 50px auto;height: 200px;}
-.contents>div{width: calc(100% /3);float: left;position: relative;}
-.contents>div.left input[type="radio"]{display: none;}
-.contents>div.left ul.title li{position: absolute;width: 100px;background: #ccc;text-align: center;line-height: 40px;border: 1px solid #333;z-index: 1;}
-.contents>div.left ul.title li:nth-child(1){
-	left: 10px;
+* {
+  margin: 0;
+  padding: 0;
 }
-.contents>div.left ul.title li:nth-child(2){
-	left: 110px;
+ul {
+  list-style: none;
 }
-.contents>div.left ul.title li label{
-	display: block;width: 100%;height: 100%;
-	cursor: pointer;
+a {
+  text-decoration: none;
+  color: #333;
 }
-.contents>div.left ul.content{
-	position: relative;
-	top: 41px;
-	border: 1px solid #333;
-	width: 100%;
-	height: 150px;
+body {
+  font-family: Arial, 돋움, Dotum, sans-serif;
 }
-.contents>div.left ul.content>li{
-	position: absolute;
-	display: none;
-	font-size: 14px;
-	width: 100%;
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: 100px 300px 200px 100px;
+  grid-template-areas: "logo menu menu menu menu menu" " slide slide slide slide slide slide" "c1 c1 c3 c3 c4 c4" "ftlogo copy copy copy copy sns";
 }
-.contents>div.left ul.content>li table{
-	width: 90%;table-layout: fixed;margin: 10px auto 0;
+.wrap .logo {
+  grid-area: logo;
+  line-height: 100px;
 }
-.contents>div.left ul.content>li table td:first-child{width: 70%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
-.contents>div.left ul.content>li table td:last-child{width: 30%;text-align: right;}
-.contents>div.left ul.content>li ul{text-align: center;width: 100%;}
-.contents>div.left ul.content>li ul li{display: inline-block;
-	height: 150px;
-	line-height: 150px;}
-.contents>div.left ul.content li img{
-	width: 120px;
-	vertical-align: middle;
+.wrap .logo img {
+  vertical-align: middle;
 }
-#notice:checked ~ ul.title li:first-child,
-#gallery:checked ~ ul.title li:last-child
-{
-	background: #fff;border-bottom: none;padding-bottom: 1px;
+.wrap .menu {
+  position: relative;
+  grid-area: menu;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-#notice:checked ~ul.content>li:first-child,
-#gallery:checked ~ul.content>li:last-child
-{display: block;}
-
-
-#popup{position: fixed;left: 0;top: 0;width: 100%;height: 100%;display: none;background: rgba(0,0,0,0.3);z-index: 2;}
-
-#popup .popWindow{width: 600px;height: 400px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);border: 1px solid;background: #fff;}
-#popup .popWindow h1{border-bottom: 1px solid;padding: 20px;font-size: 24px;}
-#popup .popWindow .txt{padding: 20px;}
-#popup .popWindow .txt p{
-	padding-top: 10px;
+.wrap .menu > ul {
+  display: flex;
+  width: 600px;
+  height: 50px;
 }
-#popup .popWindow .txt a{float: right;border: 1px solid;padding: 10px 20px;}
-#popup:target{display: block;}
+.wrap .menu > ul > li {
+  position: relative;
+  width: 25%;
+}
+.wrap .menu > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #333;
+  border-left: none;
+  box-sizing: border-box;
+}
+.wrap .menu > ul > li:hover > a,
+.wrap .menu > ul > li .sub li a:hover {
+  background: #000;
+  color: #fff;
+}
+.wrap .menu > ul > li:nth-child(1) > a {
+  border-left: 1px solid #333;
+}
+.wrap .menu > ul > li .sub {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  /* background: #fff; */
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1;
+}
+.wrap .menu > ul:hover > li .sub {
+  height: 120px;
+  border-bottom: 1px solid #333;
+}
+.wrap .menu > ul > li:nth-child(1) .sub {
+  border-left: 1px solid #333;
+}
+.wrap .menu > ul > li:nth-child(4) .sub {
+  border-right: 1px solid #333;
+}
+.wrap .menu > ul > li .sub li a {
+  line-height: 30px;
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+.wrap .menu .bg {
+  position: absolute;
+  left: -200px;
+  top: 75px;
+  width: 1200px;
+  height: 0;
+  background: #000;
+  transition: 0.5s;
+}
+.wrap .menu > ul:hover ~ .bg {
+  height: 120px;
+}
+.wrap .slide {
+  grid-area: slide;
+}
+.wrap .c1 {
+  grid-area: c1;
+}
+.wrap .c3 {
+  grid-area: c3;
+}
+.wrap .c4 {
+  grid-area: c4;
+}
+.wrap .ftlogo {
+  grid-area: ftlogo;
+}
+.wrap .copy {
+  grid-area: copy;
+}
+.wrap .sns {
+  grid-area: sns;
+}
