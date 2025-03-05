@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        display: grid;
+        grid-template: 100px 300px 200px 100px/200px 200px 400px 200px 200px;
+        border: 1px solid;
+        margin: 20px;
+      }
+      ul li:first-child {
+        grid-column-start: 3;
+      }
+      ul:first-child {
+        grid-auto-flow: column;
+      }
+      ul:nth-child(2) {
+        grid-auto-flow: row;
+      }
+      ul:nth-child(3) {
+        grid-auto-flow: dense;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>logo</li>
+      <li>menu</li>
+      <li>slide</li>
+      <li>notice</li>
+      <li>gallery</li>
+      <li>바로가기</li>
+      <li>로고</li>
+      <li>copyright</li>
+      <li>sns</li>
+    </ul>
+    <ul>
+      <li>logo</li>
+      <li>menu</li>
+      <li>slide</li>
+      <li>notice</li>
+      <li>gallery</li>
+      <li>바로가기</li>
+      <li>로고</li>
+      <li>copyright</li>
+      <li>sns</li>
+    </ul>
+    <ul>
+      <li>logo</li>
+      <li>menu</li>
+      <li>slide</li>
+      <li>notice</li>
+      <li>gallery</li>
+      <li>바로가기</li>
+      <li>로고</li>
+      <li>copyright</li>
+      <li>sns</li>
+    </ul>
+    <ul>
+      <li>logo</li>
+      <li>menu</li>
+      <li>slide</li>
+      <li>notice</li>
+      <li>gallery</li>
+      <li>바로가기</li>
+      <li>로고</li>
+      <li>copyright</li>
+      <li>sns</li>
+    </ul>
+  </body>
+</html>
