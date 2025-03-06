@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .con {
+        width: 90%;
+        max-width: 1520px;
+        margin: 50px auto;
+      }
+      .con .list li label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 95px;
+        cursor: pointer;
+      }
+      .con .list li label span:first-child {
+        font-size: 32px;
+        letter-spacing: -2px;
+      }
+      .con .list li label span:last-child {
+        position: relative;
+        display: block;
+        width: 23px;
+      }
+      .con .list li label span:last-child::before,
+      .con .list li label span:last-child::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #000;
+        border-radius: 2px;
+      }
+      .con .list li label span:last-child::before {
+        width: 23px;
+        height: 3px;
+      }
+      .con .list li label span:last-child::after {
+        width: 3px;
+        height: 23px;
+        transition: 0.2s linear;
+      }
+      .con .list li .contents {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      #power:checked ~ .list li:first-child label span:last-child::after,
+      #energy:checked ~ .list li:last-child label span:last-child::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+        opacity: 0;
+      }
+      #power:checked ~ .list li:first-child .contents,
+      #energy:checked ~ .list li:last-child .contents {
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <input type="radio" name="list" id="power" />
+      <input type="radio" name="list" id="energy" />
+      <ul class="list">
+        <li>
+          <label for="power">
+            <span class="title">인천파워</span>
+            <span></span>
+          </label>
+          <div class="contents">
+            <p>
+              <img
+                src="https://www.gsenergy.co.kr/pub/images/img_collective_a01.jpg"
+                alt="01"
+              />
+            </p>
+          </div>
+        </li>
+        <li>
+          <label for="energy">
+            <span class="title">인천종합에너지</span>
+            <span></span>
+          </label>
+          <div class="contents">
+            <p>
+              <img
+                src="https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg"
+                alt="02"
+              />
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
