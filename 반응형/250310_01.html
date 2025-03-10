@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #ccc;
+      }
+      .wrap {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+        background: #000;
+        height: 500px;
+      }
+      @media screen and (max-width: 1280px) {
+        body {
+          background: #f00;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        body {
+          background: #ff0;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          background: #f0f;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        body {
+          background: #0ff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap"></div>
+  </body>
+</html>

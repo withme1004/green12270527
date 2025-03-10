@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .eco {
+        width: 98%;
+        max-width: 940px;
+        margin: 0 auto;
+      }
+      .eco ul {
+        display: flex;
+        flex-wrap: wrap;
+        /* gap: 4%; */
+      }
+      .eco ul li {
+        flex: 1 1 40%;
+        padding-top: 4%;
+      }
+      .eco ul li:nth-child(2n) {
+        padding-left: 4%;
+      }
+      .eco ul li > p {
+        border: 1px solid #acacac;
+      }
+      .eco ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* vertical-align: baseline; default*/
+        vertical-align: middle;
+      }
+      .eco ul li .txt {
+        margin-top: 35px;
+        padding-left: 18px;
+        position: relative;
+      }
+      .eco ul li .txt::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 90%;
+        background: #cbcbcb;
+      }
+      @media screen and (max-width: 640px) {
+        .eco ul li:nth-child(2n) {
+          padding-left: 0;
+        }
+        .eco ul li {
+          flex-basis: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="eco">
+      <h1>친환경 활동 실천</h1>
+      <ul>
+        <li>
+          <p>
+            <img
+              src="https://www.shinsegaefood.com/images/background/bg_evf_img_01.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>음성공장 태양열발전</p>
+            <p>
+              음성공장 상부 유휴부지를 활용하여 신재생에너지를 생산하여
+              가스(LNG)를 대체하여 사용하고 있습니다.
+            </p>
+            <p><a href="#">태양열에너지 사용현황</a></p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.shinsegaefood.com/images/background/bg_evf_img_01.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>음성공장 태양열발전</p>
+            <p>
+              음성공장 상부 유휴부지를 활용하여 신재생에너지를 생산하여
+              가스(LNG)를 대체하여 사용하고 있습니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.shinsegaefood.com/images/background/bg_evf_img_01.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>음성공장 태양열발전</p>
+            <p>
+              음성공장 상부 유휴부지를 활용하여 신재생에너지를 생산하여
+              가스(LNG)를 대체하여 사용하고 있습니다.
+            </p>
+            <p><a href="#">태양열에너지 사용현황</a></p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.shinsegaefood.com/images/background/bg_evf_img_01.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>음성공장 태양열발전</p>
+            <p>
+              음성공장 상부 유휴부지를 활용하여 신재생에너지를 생산하여
+              가스(LNG)를 대체하여 사용하고 있습니다.
+            </p>
+            <p><a href="#">태양열에너지 사용현황</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
