@@ -27,20 +27,53 @@
         display: flex;
         justify-content: space-between;
         padding: 0 3vw;
+        position: relative;
+      }
+      .con ul li::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: #ddd;
+      }
+      .con ul li:last-child::after {
+        width: 0;
       }
       .con ul li .txt {
         flex: 1;
       }
       .con ul li .txt p {
         word-break: keep-all;
+        margin: 20px 0 40px;
       }
       @media screen and (max-width: 1280px) {
         .con ul li:first-child,
         .con ul li:nth-child(2) {
           flex-basis: 40%;
+          border-bottom: 1px solid #ddd;
+          padding: 20px;
+        }
+        .con ul li:nth-child(2)::after {
+          width: 0;
         }
         .con ul li:nth-child(3) {
           flex-basis: 80%;
+          padding: 20px;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        .con ul li:first-child,
+        .con ul li:nth-child(2) {
+          flex-basis: 80%;
+          padding: 16px;
+        }
+        .con ul li:first-child::after {
+          width: 0;
+        }
+        .con ul li:nth-child(3) {
+          padding: 16px;
         }
       }
     </style>
