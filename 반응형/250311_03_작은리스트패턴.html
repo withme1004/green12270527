@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #box_a {
+        height: 400px;
+        background: #aaa;
+      }
+      #box_a .list_man {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #box_a .list_man li {
+        width: 18%;
+        margin: 1%;
+        background: #fff;
+      }
+      @media screen and (max-width: 1024px) {
+        #box_a .list_man {
+          width: 95%;
+        }
+        #box_a .list_man li {
+          width: 23%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #box_a .list_man li {
+          width: 31.333%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        #box_a .list_man li {
+          width: 48%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box_a">
+      <ul class="list_man">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+        <li>f</li>
+        <li>g</li>
+        <li>h</li>
+        <li>i</li>
+        <li>j</li>
+      </ul>
+    </div>
+  </body>
+</html>
