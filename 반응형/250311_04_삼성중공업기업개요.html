@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #greeting {
+        width: 96%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      #greeting ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 35px 0;
+      }
+      #greeting ul li {
+        flex: 1 0 30%;
+      }
+      #greeting ul li > div {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 45px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      #greeting ul li:first-child > div,
+      #greeting ul li:nth-child(2) > div,
+      #greeting ul li:nth-child(3) > div {
+        border-bottom: 4px solid #111;
+      }
+      #greeting ul li > div p.title {
+        font-size: 22px;
+      }
+      #greeting ul li > div p.txt {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      @media screen and (max-width: 1280px) {
+        #greeting ul li > div {
+          width: 95%;
+        }
+      }
+      @media screen and (max-width: 840px) {
+        #greeting ul li > div p.title {
+          font-size: 16.7px;
+        }
+        #greeting ul li > div p.txt {
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #greeting ul li {
+          flex: 1 0 40%;
+        }
+        #greeting ul li > div {
+          border-bottom: 4px solid #111;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        #greeting ul li > div {
+          flex-direction: column;
+          text-align: center;
+          padding: 24px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="greeting">
+      <ul>
+        <li>
+          <div>
+            <p class="title">대표이사</p>
+            <p class="txt">최성안</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="title">창립일</p>
+            <p class="txt">1974년 8월 5일</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="title">종업원수</p>
+            <p class="txt">9,640명</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="title">자본금</p>
+            <p class="txt">8,801억원</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="title">매출액</p>
+            <p class="txt">79,072억원</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="title">총자산</p>
+            <p class="txt">158,920억원</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
