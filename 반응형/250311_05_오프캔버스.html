@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* body {
+        overflow: hidden;
+      } */
+      #wrap {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      #wrap #wrap_box {
+        display: flex;
+      }
+      #wrap #wrap_box > div {
+        flex: 1 0 30%;
+        height: 400px;
+      }
+      #wrap #wrap_box > div#box_a {
+        background: #aaa;
+      }
+      #wrap #wrap_box > div#box_b {
+        background: #bbb;
+      }
+      #wrap #wrap_box > div#box_c {
+        background: #ccc;
+      }
+      @media screen and (max-width: 768px) {
+        #wrap #wrap_box > div {
+          flex: 1 0 50%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        #wrap #wrap_box > div {
+          flex: 1 0 100%;
+        }
+        #wrap #wrap_box > div#box_a {
+          margin-left: -100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="wrap_box">
+        <div id="box_a">a</div>
+        <div id="box_b">b</div>
+        <div id="box_c">c</div>
+      </div>
+    </div>
+  </body>
+</html>
