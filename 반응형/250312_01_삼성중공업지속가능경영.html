@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* :root { */
+      html {
+        font-size: 10px;
+      }
+      @font-face {
+        font-family: Pretendard;
+        src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .promise {
+        width: 100%;
+        max-width: 1400px;
+        padding: 0 30px;
+        /* box-sizing: border-box; */
+        margin: 100px auto;
+        font-family: Pretendard, sans-serif;
+      }
+      .promise .headTitle {
+        width: 50%;
+      }
+      .promise .headTitle h1 {
+        font-size: 4.5rem; /*45px*/
+        line-height: 1.2;
+        color: #1e2123;
+      }
+      .promise .headTitle p {
+        font-size: 1.8rem; /*18px*/
+        line-height: 1.5;
+        color: #666;
+        margin-top: 1.5rem;
+      }
+      .promise ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10%;
+        margin-top: -12rem;
+      }
+      .promise ul li.left {
+        width: 45%;
+        max-width: 480px;
+      }
+      .promise ul li.right {
+        width: 45%;
+      }
+      .promise ul li .con {
+        width: 100%;
+      }
+      .promise ul li img {
+        width: 100%;
+      }
+      .promise ul li .txt h1 {
+        margin-top: 3rem;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #000;
+        line-height: 1.2;
+      }
+      .promise ul li .txt p {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        color: #666;
+      }
+      .promise ul li .txt a {
+        font-size: 1.5rem;
+        color: #000;
+        line-height: 2;
+        padding: 0 3px;
+        margin-top: 2.5rem;
+        display: inline-block;
+      }
+      .promise ul li.right .con:nth-child(2) {
+        margin-top: 10rem;
+      }
+      @media screen and (max-width: 1399px) {
+        .promise {
+          box-sizing: border-box;
+        }
+      }
+      @media screen and (max-width: 1280px) {
+        .promise .headTitle h1 {
+          font-size: 4.3rem;
+        }
+        .promise ul {
+          margin-top: -7.5rem;
+        }
+      }
+      @media screen and (max-width: 1080px) {
+        html {
+          font-size: 9px;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        .promise .headTitle {
+          width: 100%;
+        }
+        .promise ul {
+          margin-top: 30px;
+        }
+      }
+      @media screen and (max-width: 560px) {
+        .promise ul {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .promise ul li.left {
+          width: 100%;
+          max-width: 100%;
+        }
+        .promise ul li.right {
+          width: 100%;
+        }
+        .promise ul li.left .con > div:first-child {
+          padding-bottom: 65%;
+          height: 0;
+          overflow: hidden;
+          position: relative;
+        }
+        .promise ul li.left .con > div:first-child img {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="promise">
+      <div class="headTitle">
+        <h1>우리의 약속</h1>
+        <p>
+          급격한 대내외 변화에 대응하기 위해 비전과 목표, 체계 등을 수립하고,<br />지속적인
+          개선활동을 수행하여 ESG 경영 실천에 대한 의지를 표명하고자 합니다.
+        </p>
+      </div>
+      <ul>
+        <li class="left">
+          <div class="con">
+            <div>
+              <img
+                src="https://www.samsungshi.com/ESG/Kor/images/main/promise_e.jpg"
+                alt=""
+              />
+            </div>
+            <div class="txt">
+              <h1>환경</h1>
+              <p>
+                사업 전반에 있어서 환경을 먼저 생각하고, 기후변화 대응에
+                앞장서겠습니다.
+              </p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+        <li class="right">
+          <div class="con">
+            <div>
+              <img
+                src="https://www.samsungshi.com/ESG/Kor/images/main/promise_s.jpg"
+                alt=""
+              />
+            </div>
+            <div class="txt">
+              <h1>사회적 책임</h1>
+              <p>이해관계자의 가치를 존중하고, 사회적 책임을 다하겠습니다.</p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+          <div class="con">
+            <div>
+              <img
+                src="https://www.samsungshi.com/ESG/Kor/images/main/promise_g.jpg"
+                alt=""
+              />
+            </div>
+            <div class="txt">
+              <h1>거버넌스</h1>
+              <p>
+                투명하고 건전한 거버넌스를 확립하여 깨끗한 문화를
+                정착시키겠습니다.
+              </p>
+              <a href="#">자세히 보기</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
