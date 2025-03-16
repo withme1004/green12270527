@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .main {
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        padding: 0 24px;
+        box-sizing: border-box;
+      }
+      .main .title {
+        text-align: center;
+        margin-bottom: 56px;
+      }
+      .main .title h1 {
+        font-size: 36px;
+      }
+      .main ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+      .main ul li {
+        display: flex;
+        gap: 6.5rem;
+      }
+
+      .main ul li:nth-child(2n) {
+        flex-direction: row-reverse;
+      }
+      .main ul li:nth-child(2n) .txt {
+        text-align: right;
+      }
+      .main ul li > p {
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      .main ul li p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .main .txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 440px;
+        height: 440px;
+        word-break: keep-all;
+      }
+      .main .txt p:nth-child(1) {
+        font-size: 24px;
+        color: #777;
+        margin-bottom: 5px;
+        letter-spacing: -3px;
+      }
+      .main .txt p:nth-child(2) {
+        font-size: 48px;
+        letter-spacing: -3.5px;
+        color: #222;
+      }
+      .main .txt p:nth-child(3) {
+        font-size: 48px;
+        font-weight: 700;
+        color: #ffc72c;
+        line-height: 140%;
+      }
+      @media screen and (max-width: 1020px) {
+        .main .title h1 {
+          text-align: left;
+          font-size: 24px;
+          color: #222;
+        }
+        .main .txt p:nth-child(1) {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+        .main .txt p:nth-child(2) {
+          font-size: 22px;
+        }
+        .main .txt p:nth-child(3) {
+          font-size: 22px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        .main ul {
+          width: 100%;
+
+          flex-direction: column;
+        }
+        .main ul li {
+          flex-direction: column;
+          width: 100%;
+          display: flex;
+          gap: 12px;
+        }
+        .main ul li:nth-child(2n) {
+          flex-direction: column;
+        }
+        .main ul li:nth-child(2n) .txt {
+          text-align: left;
+        }
+        .main .txt {
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="title">
+        <h1>노랑풍선이 바라는 여행</h1>
+      </div>
+      <ul>
+        <li>
+          <p>
+            <img
+              src="https://company.ybtour.co.kr/images/bg/bg_story_1.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>여행의 새로운 가치를 알립니다</p>
+            <p>가치를 전달하는 여행</p>
+            <p>Value-Creating</p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://company.ybtour.co.kr/images/bg/bg_story_2.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>고객의, 고객에 의한, 고객을 위한</p>
+            <p>신뢰를 받는 여행</p>
+            <p>Trustworthy</p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://company.ybtour.co.kr/images/bg/bg_story_3.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>일상의 가장 반짝이는 순간을 만듭니다</p>
+            <p>즐거움을 선사하는 여행</p>
+            <p>Joyful</p>
+          </div>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://company.ybtour.co.kr/images/bg/bg_story_4.jpg"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <p>다양한 여행상품으로 여행 문화를 선도합니다</p>
+            <p>혁신적인 여행</p>
+            <p>Innovative</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
