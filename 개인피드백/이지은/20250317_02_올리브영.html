@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        .wrap{
+            width: 100%;
+            max-width: 1420px;
+            margin: 0 auto;
+            padding: 0 60px;
+            box-sizing: border-box;
+        }
+        .wrap ul{ 
+            width: 100%;
+            display: flex;
+            gap: 20px;
+        }
+        .wrap ul li:last-child{
+            width: 100%;
+            display: flex;
+        } .wrap ul li .con>div{
+            flex: 1;
+        }
+        
+        .wrap ul li:first-child{
+            width: 40%;
+        }
+        .wrap ul li:first-child .con1{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .wrap ul li:first-child .con1 p{
+            flex: 1;
+        }
+        
+        .wrap ul li:first-child .con1 .txt{
+            flex: 1;background: #ccc;
+    
+        }
+        .wrap ul li:last-child{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .wrap ul li:last-child .con2{
+            display: flex;
+            gap: 10px;
+        }
+        .wrap ul li:last-child .con2 >div p,
+        .wrap ul li:last-child .con2 >div .txt{
+            flex: 1;
+        }
+       /* .wrap ul li .con{
+            width: 100%;
+            display: flex;
+            position: relative;
+            gap: 20px;
+        }
+        .wrap ul li .con:nth-child(1){
+            width: 100%;
+        }
+        .wrap ul li .con:nth-child(2){
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .wrap ul li .con div p{
+            height: 100%;
+        }
+        .wrap ul li .con:nth-child(2):last-child{}
+        .wrap ul li .con div:last-child{
+            display: flex;
+            flex-direction: column;
+        }
+        .wrap ul li:nth-child(2) .con .txt{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 100%;
+        }
+        .wrap ul li .con p img{
+            width: 100%;
+            height: 100%;
+        }*/
+        .wrap ul img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li>
+                <div class="con1">
+                    <p><img src="https://d10yximrhdxai4.cloudfront.net/news/3dd65217bdf34f638a4f254a167f3b5f.jpg" alt=""></p>
+                    <div class="txt">
+                        <p>보도자료</p>
+                        <h3>CJ올리부영, 차병원과 '여성 건강 증진' 업무협약 체결</h3>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="con2">
+                    <div>
+                        <p><img src="https://d10yximrhdxai4.cloudfront.net/main/7b5dbf7a86404f02b8b6b89b2a240764.png" alt=""></p>
+                        <div class="txt">
+                            <p>보도자료</p>
+                            <h3>CJ올리부영, 차병원과 '여성 건강 증진' 업무협약 체결</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <p><img src="https://d10yximrhdxai4.cloudfront.net/news/626a0bc1a6994af99ceaec1ebc110184.jpg" alt=""></p>
+                        <div class="txt">
+                            <p>보도자료</p>
+                            <h3>CJ올리부영, 차병원과 '여성 건강 증진' 업무협약 체결</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="con3">
+                    <div>
+                        <p><img src="https://d10yximrhdxai4.cloudfront.net/main/cc48516239e44721a7581f99e233691b.jpg" alt=""></p>
+                        <div class="txt">
+                            <p>보도자료</p>
+                            <h3>CJ올리부영, 차병원과 '여성 건강 증진' 업무협약 체결</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p><img src="https://d10yximrhdxai4.cloudfront.net/main/47c4ba7410c54746a729b9e5fdaf4a8e.png" alt=""></p>
+                            <div class="txt">
+                                <p>보도자료</p>
+                                <h3>CJ올리부영, 차병원과 '여성 건강 증진' 업무협약 체결</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <p><img src="https://d10yximrhdxai4.cloudfront.net/main/0c6040745df847a4a40377f1dc573a19.png" alt=""></p>
+                            <div class="txt">
+                                <p>보도자료</p>
+                                <h3>CJ올리부영, 차병원과 '여성 건강 증진' 업무협약 체결</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
