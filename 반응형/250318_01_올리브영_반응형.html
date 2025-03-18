@@ -41,6 +41,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        vertical-align: top;
       }
       .cj > ul li.left {
         width: 40%;
@@ -57,6 +58,10 @@
       .cj > ul li.left a .txt {
         flex: 1;
         background: #21a100;
+      }
+      .cj > ul li.left a .txt div {
+        padding: 120px 30px 30px;
+        box-sizing: border-box;
       }
       .cj > ul li.right {
         width: 60%;
@@ -107,6 +112,40 @@
       .cj > ul li.right .txt h1 {
         font-size: 20px;
       }
+      @media screen and (max-width: 1439px) {
+        .cj > ul {
+          flex-direction: column;
+        }
+        .cj > ul li.left {
+          width: 100%;
+        }
+        .cj > ul li.left a {
+          flex-direction: row;
+        }
+        .cj > ul li.left a p {
+          flex: 1;
+        }
+        .cj > ul li.right {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        .cj {
+          padding: 0 30px;
+        }
+        .cj > ul li.left a {
+          flex-direction: column;
+        }
+        .cj > ul li.left a .txt div {
+          padding: 30px 30px 30px;
+        }
+        .cj > ul li.right ul:first-child {
+          flex-direction: column;
+        }
+        .cj > ul li.right ul:first-child li:nth-child(2) a p img {
+          content: url(https://d10yximrhdxai4.cloudfront.net/main/8218bf3265d84b5094cc55a69ec71001.png);
+        }
+      }
     </style>
   </head>
   <body>
@@ -122,8 +161,10 @@
             </p>
 
             <div class="txt">
-              <p>보도자료</p>
-              <h1>CJ올리브영, 2025 상반기 신입사원 채용</h1>
+              <div>
+                <p>보도자료</p>
+                <h1>CJ올리브영, 2025 상반기 신입사원 채용</h1>
+              </div>
             </div>
           </a>
         </li>
