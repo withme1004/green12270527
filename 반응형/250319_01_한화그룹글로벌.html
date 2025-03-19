@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .value {
+        background: #f6f0ec;
+        padding: 80px 0;
+      }
+      .value .inner {
+        padding: 0 80px;
+        box-sizing: border-box;
+      }
+      .value .inner ul {
+        display: flex;
+        gap: 10px;
+      }
+      .value .inner ul li {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background: #efe8e4;
+        padding: 50px 0;
+        flex: 1;
+        text-align: center;
+      }
+      .value .inner ul li > p {
+        height: 10vw;
+      }
+      .value .inner ul li img {
+        height: 100%;
+      }
+      .value .inner ul li .txt h2 {
+        font-size: 2vw;
+      }
+      @media screen and (max-width: 1024px) {
+        .value .inner {
+          padding: 0 20px;
+        }
+        .value .inner ul li:nth-child(3) .txt h2 br {
+          display: none;
+        }
+        .value .inner ul li .txt h2 {
+          font-size: 17px;
+        }
+        .value .inner ul li .txt p {
+          font-size: 13px;
+        }
+        .value .inner ul li .txt p br {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 760px) {
+        .value .inner ul {
+          flex-direction: column;
+        }
+        .value .inner ul li {
+          flex-direction: row;
+          text-align: left;
+          padding: 20px;
+          align-items: center;
+        }
+        .value .inner ul li > p {
+          width: 30%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="value">
+      <div class="inner">
+        <h1>Our Brand Values</h1>
+        <ul>
+          <li>
+            <p>
+              <img
+                src="https://www.hanwha.com/assets/img/main/sustainable-and-inclusive-growth.svg"
+                alt="01"
+              />
+            </p>
+            <div class="txt">
+              <h2>
+                Sustainable and<br />
+                Inclusive Growth
+              </h2>
+              <p>
+                We strive for social, economic, and<br />
+                environmental prosperity for all
+              </p>
+            </div>
+          </li>
+          <li>
+            <p>
+              <img
+                src="https://www.hanwha.com/assets/img/main/technology-and-solution-driven-innovation.svg"
+                alt="02"
+              />
+            </p>
+            <div class="txt">
+              <h2>
+                Technology and<br />
+                Solution-driven Innovation
+              </h2>
+              <p>
+                Through technological innovation,<br />
+                we provide solutions from people to planet
+              </p>
+            </div>
+          </li>
+          <li>
+            <p>
+              <img
+                src="https://www.hanwha.com/assets/img/main/hanwha-enhances-lives.svg"
+                alt="03"
+              />
+            </p>
+            <div class="txt">
+              <h2>
+                Enhancing<br />
+                Lives
+              </h2>
+              <p>
+                We lay the foundation for a fulfilling life through <br />
+                our technologies, products, and services
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
