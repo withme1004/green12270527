@@ -18,6 +18,9 @@
       div p.on {
         display: block;
       }
+      .active {
+        color: #f00;
+      }
     </style>
   </head>
   <body>
@@ -40,12 +43,18 @@
         document.querySelectorAll("p").forEach(function (v, k) {
           v.classList.remove("on");
         });
+        document.querySelectorAll("ul li").forEach(function (v, k) {
+          v.classList.remove("active");
+        });
       }
       document.getElementsByTagName("p")[0].classList.add("on");
+      document.querySelectorAll("ul li")[0].classList.add("active");
+
       document.querySelectorAll("ul li").forEach(function (value, key) {
         value.onclick = function () {
           my();
           document.querySelectorAll("p")[key].classList.add("on");
+          value.classList.add("active");
         };
       });
     </script>
