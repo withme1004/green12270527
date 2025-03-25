@@ -53,6 +53,21 @@
       .con li.on {
         opacity: 1;
       }
+      .con li div h2,
+      .con li div p {
+        position: relative;
+        top: 20px;
+        opacity: 0;
+        transition: 1s;
+      }
+      .con li div h2.on,
+      .con li div p.on {
+        top: 0;
+        opacity: 1;
+      }
+      .con li div p {
+        transition-delay: 0.5s;
+      }
     </style>
   </head>
   <body>
@@ -120,6 +135,14 @@
         .querySelector("a")
         .classList.add("on");
       document.querySelectorAll(".con li")[0].classList.add("on");
+      document
+        .querySelectorAll(".con li")[0]
+        .querySelector("h2")
+        .classList.add("on");
+      document
+        .querySelectorAll(".con li")[0]
+        .querySelector("p")
+        .classList.add("on");
       document.querySelectorAll(".con li").forEach(function (v, k) {
         v.style.background =
           "url(https://www.lotternd.com/assets/images/sub/research/research-ban" +
@@ -132,6 +155,8 @@
         });
         document.querySelectorAll(".con li").forEach(function (v, k) {
           v.classList.remove("on");
+          v.querySelector("div h2").classList.remove("on");
+          v.querySelector("div p").classList.remove("on");
         });
       }
       document.querySelectorAll(".menu li").forEach(function (v, k) {
@@ -140,6 +165,14 @@
           my();
           v.querySelector("a").classList.add("on");
           document.querySelectorAll(".con li")[k].classList.add("on");
+          document
+            .querySelectorAll(".con li")
+            [k].querySelector("div h2")
+            .classList.add("on");
+          document
+            .querySelectorAll(".con li")
+            [k].querySelector("div p")
+            .classList.add("on");
         };
       });
     </script>
