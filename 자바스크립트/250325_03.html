@@ -41,25 +41,11 @@
       <li><a href="#">메뉴1</a></li>
       <li><a href="#">메뉴2</a></li>
       <li><a href="#">메뉴3</a></li>
-      <li><a href="#">메뉴4</a></li>
+      <li style="display: none"><a href="#">메뉴4</a></li>
     </ul>
-    <p>메뉴<span></span>페이지입니다.</p>
     <script>
-      document.querySelectorAll(".menu li")[0].classList.add("on");
-      document.querySelector("p span").innerText = 1;
-      function my() {
-        document.querySelectorAll(".menu li").forEach(function (v, k) {
-          v.classList.remove("on");
-        });
-      }
-      document.querySelectorAll(".menu li").forEach(function (v, k) {
-        v.onclick = function (e) {
-          e.preventDefault();
-          my();
-          v.classList.add("on");
-          document.querySelector("p span").innerText = k + 1;
-        };
-      });
+      // console.log(document.querySelector("ul").innerText);
+      console.log(document.querySelector("ul").textContent);
     </script>
   </body>
 </html>
