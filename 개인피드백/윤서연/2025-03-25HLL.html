@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .main {
+      background: whitesmoke;
+      height: auto;
+      width: 100%;
+    }
+    .img {
+      position: relative;
+      padding: 30px;
+      background: thistle;
+      height: 960px;
+      width: 100%;
+    }
+    .img ul {
+      display: flex;
+      background: violet;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .img ul li.active {
+      display: block;
+    }
+    .img ul li {
+      display: none;
+      overflow: hidden;
+      position: relative;
+      background: yellow;
+      flex-direction: column;
+    }
+    h1 {
+      justify-content: center;
+      padding: 30px 0;
+      height: 20%;
+      display: flex;
+      background: yellowgreen;
+      margin: 0 auto;
+    }
+    img {
+      object-position: center;
+      object-fit: cover;
+    }
+    p {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      padding: 30px 0;
+      height: 80%;
+      background: yellowgreen;
+      margin: 0 auto;
+    }
+    .left ul {
+      justify-content: center;
+      background: wheat;
+      list-style: none;
+      gap: 20px;
+      display: flex;
+    }
+    .left ul li {
+      background: white;
+      padding: 20px;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="sub">
+        <div class="menu">
+          <div class="left">
+            <ul>
+              <li>ELLE</li>
+              <li>COMOPOLITAN</li>
+              <li>Harper's BAZAAR</li>
+              <li>ESQULRE</li>
+              <li>STUDIO DOT</li>
+              <li>YEET</li>
+            </ul>
+          </div>
+        </div>
+        <div class="img">
+          <ul>
+            <li>
+              <h1>
+                <img
+                  src="https://www.hll.kr/resources/images/main/logo-elle.svg"
+                  alt=""
+                />
+              </h1>
+              <p>
+                <img
+                  src="https://www.hll.kr/resources/images/img_visual_elle_pc.png"
+                  alt=""
+                />
+              </p>
+            </li>
+            <li>
+              <h1>
+                <img
+                  src="https://www.hll.kr/resources/images/main/logo-cosmopolitan.svg"
+                  alt=""
+                />
+              </h1>
+              <p>
+                <img
+                  src="https://www.hll.kr/resources/images/img_visual_cosmopolitan_pc.png"
+                  alt=""
+                />
+              </p>
+            </li>
+            <li>
+              <h1>
+                <img
+                  src="https://www.hll.kr/resources/images/main/logo-BAZAAR.svg"
+                  alt=""
+                />
+              </h1>
+              <p>
+                <img
+                  src="https://www.hll.kr/resources/images/img_visual_bazaar_pc.png"
+                  alt=""
+                />
+              </p>
+            </li>
+            <li>
+              <h1>
+                <img
+                  src="https://www.hll.kr/resources/images/main/logo-esquire.svg"
+                  alt=""
+                />
+              </h1>
+              <p>
+                <img
+                  src="https://www.hll.kr/resources/images/img_visual_esquire_pc.png"
+                  alt=""
+                />
+              </p>
+            </li>
+            <li>
+              <h1>
+                <img
+                  src="https://www.hll.kr/resources/images/main/logo-studio.svg"
+                  alt=""
+                />
+              </h1>
+              <p>
+                <img
+                  src="https://www.hll.kr/resources/images/img_visual_studio_pc.png"
+                  alt=""
+                />
+              </p>
+            </li>
+            <li>
+              <h1>
+                <img
+                  src="https://www.hll.kr/resources/images/main/logo-yeet.png"
+                  alt=""
+                />
+              </h1>
+              <p>
+                <img
+                  src="https://www.hll.kr/resources/images/img_visual_yeet_pc.png"
+                  alt=""
+                />
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".img ul li")[0].classList.add("active");
+
+      function myremove() {
+        document.querySelectorAll(".img ul li").forEach(function (v, k) {
+          v.classList.remove("active");
+        });
+      }
+
+      document.querySelectorAll(".left ul li").forEach(function (v, k) {
+        v.onclick = function () {
+          myremove();
+          document.querySelectorAll(".img ul li")[k].classList.add("active");
+        };
+      });
+    </script>
+  </body>
+</html>
