@@ -26,7 +26,7 @@
         margin: 0 auto;
         display: flex;
         gap: 20px;
-        background: #ccc;
+        /* background: #ccc; */
         height: 100%;
       }
       .new .left {
@@ -38,10 +38,14 @@
       .new .left ul li {
         height: 50px;
         font-size: 25px;
+        color: #ccc;
+      }
+      .new .left ul li.active {
+        color: #000;
       }
       .new .right {
         flex: 1;
-        background: #ddd;
+        /* background: #ddd; */
         position: relative;
       }
       .new .right a {
@@ -231,9 +235,13 @@
       </div>
     </div>
     <script>
+      document.querySelectorAll(".new .left ul li")[0].classList.add("active");
       document.querySelectorAll(".new .right a")[0].classList.add("active");
 
       function myremove() {
+        document.querySelectorAll(".left ul li").forEach(function (v, k) {
+          v.classList.remove("active");
+        });
         document.querySelectorAll(".new .right a").forEach(function (v, k) {
           v.classList.remove("active");
         });
@@ -243,6 +251,9 @@
         v.onclick = function () {
           myremove();
           document.querySelectorAll(".new .right a")[k].classList.add("active");
+          document
+            .querySelectorAll(".new .left ul li")
+            [k].classList.add("active");
         };
       });
     </script>
