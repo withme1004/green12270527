@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .container {
+        width: 100%;
+      }
+      .container .top {
+        width: 1280px;
+        padding: 60px 40px;
+        margin: 0 auto;
+      }
+      .container .top ul {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+      }
+      .container .top ul li {
+        display: flex;
+        align-items: center;
+        height: 44px;
+        padding: 0 16px;
+        background: #fff;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        font-weight: 400;
+        color: #111;
+      }
+      .container .top ul li.active {
+        color: #fff;
+        background: #211955;
+      }
+      .container .logo {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding: 130px 0 70px;
+      }
+      .container .logo p {
+        position: absolute;
+        height: 80px;
+        opacity: 0;
+      }
+
+      .container .logo p.active {
+        opacity: 1;
+      }
+      .container .logo p img {
+        position: relative;
+        height: 100%;
+      }
+      .container .bottom {
+        position: relative;
+        height: 624px;
+        object-fit: cover;
+      }
+      .container .bottom .con {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+      .container .bottom .con p {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .container .bottom .con.active {
+        opacity: 1;
+      }
+      .container .bottom .txt {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .container .bottom .txt h1 {
+        font-size: 36px;
+        text-align: center;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <ul>
+          <li>ELLE</li>
+          <li>COSMOPOLITAN</li>
+          <li>Harper’s BAZAAR</li>
+          <li>ESQUIRE</li>
+          <li>STUDIO DOT</li>
+          <li>YEET</li>
+        </ul>
+        <div class="logo">
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/main/logo-elle.svg"
+              alt=""
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/main/logo-cosmopolitan.svg"
+              alt=""
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/main/logo-BAZAAR.svg"
+              alt=""
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/main/logo-esquire.svg"
+              alt=""
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/main/logo-studio.svg"
+              alt=""
+            />
+          </p>
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/main/logo-yeet.png"
+              alt=""
+            />
+          </p>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="con">
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/img_visual_elle_pc.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <h1>NO.1 FASHION & LIFESTYLE MEDIA</h1>
+          </div>
+        </div>
+        <div class="con">
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/img_visual_cosmopolitan_pc.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <h1>Fun, Fearless, Female</h1>
+          </div>
+        </div>
+        <div class="con">
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/img_visual_bazaar_pc.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <h1>Realistic Inspiration from Artistic Creation</h1>
+          </div>
+        </div>
+        <div class="con">
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/img_visual_esquire_pc.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <h1>MAN AT HIS BEST</h1>
+          </div>
+        </div>
+        <div class="con">
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/img_visual_studio_pc.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <h1>
+              콘텐츠로 증명하는 '스튜디오닷' 브랜드와 고객의 니즈를 넘나드는 A
+              to Z 콘텐츠 솔루션 실행
+            </h1>
+          </div>
+        </div>
+        <div class="con">
+          <p>
+            <img
+              src="https://www.hll.kr/resources/images/img_visual_yeet_pc.png"
+              alt=""
+            />
+          </p>
+          <div class="txt">
+            <h1>Little Pleasures of Life</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .querySelectorAll(".container .top ul li")[0]
+        .classList.add("active");
+
+      document
+        .querySelectorAll(".container .logo p")[0]
+        .classList.add("active");
+
+      document
+        .querySelectorAll(".container .bottom .con")[0]
+        .classList.add("active");
+
+      function myremove() {
+        document.querySelectorAll(".top ul li").forEach(function (v, k) {
+          v.classList.remove("active");
+        });
+        document.querySelectorAll(".logo p").forEach(function (v, k) {
+          v.classList.remove("active");
+        });
+
+        document.querySelectorAll(".bottom .con").forEach(function (v, k) {
+          v.classList.remove("active");
+        });
+      }
+
+      document.querySelectorAll(".top ul li").forEach(function (v, k) {
+        v.onclick = function () {
+          myremove();
+
+          document
+            .querySelectorAll(".container .bottom .con")
+            [k].classList.add("active");
+          document;
+          document
+            .querySelectorAll(".container .logo p")
+            [k].classList.add("active");
+          document
+
+            .querySelectorAll(".container .top ul li")
+            [k].classList.add("active");
+        };
+      });
+    </script>
+  </body>
+</html>
