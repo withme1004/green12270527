@@ -26,7 +26,12 @@
       .wrap > ul > li {
         margin: 10px;
         padding: 10px;
-        border: 1px solid;
+        border: 1px solid rgb(204, 204, 204);
+        cursor: pointer;
+      }
+      .wrap > ul > li:hover {
+        background-color: rgb(33, 25, 85);
+        color: #fff;
       }
       .wrap .con ul {
         position: relative;
@@ -36,13 +41,21 @@
         width: 100%;
         opacity: 0;
       }
+
       .wrap .con ul li.up {
         opacity: 1;
       }
       .wrap .con ul li p.logo {
         width: 1200px;
+        height: 80px;
         text-align: center;
-        margin: 10% auto;
+        margin: 7% auto;
+      }
+      .wrap .con ul li p.logo img {
+        height: 100%;
+      }
+      .wrap .con ul li p:nth-child(2) img {
+        width: 100%;
       }
     </style>
   </head>
