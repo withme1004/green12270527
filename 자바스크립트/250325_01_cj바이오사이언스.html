@@ -11,6 +11,93 @@
       text-overflow: ellipsis;
       -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;*/
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .new {
+        width: 1500px;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+        background: #ccc;
+        height: 100%;
+      }
+      .new .left {
+        margin-bottom: 100px;
+      }
+      .new .left h1 {
+        margin-bottom: 50px;
+      }
+      .new .left ul li {
+        height: 50px;
+        font-size: 25px;
+      }
+      .new .right {
+        flex: 1;
+        background: #ddd;
+        position: relative;
+      }
+      .new .right a {
+        display: flex;
+        color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+      }
+      .new .right a.active {
+        opacity: 1;
+      }
+      .new .right a > p {
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .new .right a > p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+      }
+      .new .right a:first-child > p img,
+      .new .right a:nth-child(3) > p img {
+        width: 30%;
+        height: 30%;
+        object-fit: contain;
+      }
+      .new .right .txt {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        box-sizing: border-box;
+        gap: 20px;
+        justify-content: center;
+        background: #000;
+      }
+      .new .right .txt h1 {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      .new .right .txt p {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
     </style>
   </head>
   <body>
@@ -143,6 +230,21 @@
         </a>
       </div>
     </div>
-    <script></script>
+    <script>
+      document.querySelectorAll(".new .right a")[0].classList.add("active");
+
+      function myremove() {
+        document.querySelectorAll(".new .right a").forEach(function (v, k) {
+          v.classList.remove("active");
+        });
+      }
+
+      document.querySelectorAll(".left ul li").forEach(function (v, k) {
+        v.onclick = function () {
+          myremove();
+          document.querySelectorAll(".new .right a")[k].classList.add("active");
+        };
+      });
+    </script>
   </body>
 </html>
