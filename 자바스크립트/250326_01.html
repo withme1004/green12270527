@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body.on {
+        background: rgba(0, 0, 0, 0.8);
+      }
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      p a {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        text-decoration: none;
+        padding: 20px;
+      }
+      p a.on {
+        background: #fff;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="#">클릭</a></p>
+    <script>
+      /*document.querySelector("p a").onclick = function (e) {
+        e.preventDefault();
+        document.querySelector("body").classList.toggle("on");
+        this.classList.toggle("on");
+      };*/
+      document.querySelector("p a").addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector("body").classList.toggle("on");
+        this.classList.toggle("on");
+      });
+    </script>
+  </body>
+</html>
