@@ -14,12 +14,15 @@
         let hour = x.getHours();
         let minute = x.getMinutes();
         let second = x.getSeconds();
+        let milisecond = x.getMilliseconds();
         let time =
           hour.toString().padStart(2, "0") +
           " : " +
           minute.toString().padStart(2, "0") +
           " : " +
-          second.toString().padStart(2, "0");
+          second.toString().padStart(2, "0") +
+          " : " +
+          milisecond;
         document.getElementById("time").innerText = time;
       }
 
