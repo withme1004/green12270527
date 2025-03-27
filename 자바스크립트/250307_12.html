@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>red</p>
+    <p>green</p>
+    <p>blue</p>
+    <p>gray</p>
+    <div>빨간색</div>
+    <div>그린색</div>
+    <div>파란색</div>
+    <div>회색</div>
+    <section>photo1</section>
+    <section>photo2</section>
+    <section>photo3</section>
+    <section>photo4</section>
+    <section>photo5</section>
+    <section>photo6</section>
+
+    <script>
+      const color = ["red", "green", "blue", "gray"];
+      document.querySelectorAll("p").forEach(function (v, k) {
+        v.style.backgroundColor = v.innerText;
+      });
+      document.querySelectorAll("div").forEach(function (v, k) {
+        v.style.backgroundColor = color[k];
+      });
+      /*document.querySelectorAll("section").forEach(function (v, k) {
+        v.style.backgroundImage = `url(../Html5&CSS/images/photo${k + 1}.jpg)`;
+      });*/
+      let bg = "url(../Html5&CSS/images/photo1.jpg)";
+      document.querySelectorAll("section").forEach(function (v, k) {
+        v.style.backgroundImage = bg.replace(bg.slice(-6, -5), k + 1);
+      });
+    </script>
+  </body>
+</html>
