@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #con {
+        width: 630px;
+        height: 630px;
+        margin: 50px auto;
+      }
+      #clock {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      #clock > div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #clock > div#base {
+        background: url(./images/clock_bg.png);
+      }
+      #clock > div#hour {
+        background: url(./images/hour.png);
+        /* transform: rotate(30deg); */
+      }
+      #clock > div#minute {
+        background: url(./images/minute.png);
+      }
+      #clock > div#second {
+        background: url(./images/second.png) center/630px 630px;
+      }
+      #clock > div#center {
+        background: url(./images/center_bg.png);
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let str1 = "nice to meetm you";
+      let str2 = new String("nice to meet you");
+      document.write(str1.search("m") + "<br>");
+      document.write(str1.search("M") + "<br>");
+      document.write(str1.search(/M/i) + "<br>");
+      document.write(str1.replace("m", "n") + "<br>");
+      document.write(str1 + "<br>");
+      document.write(str1.replace(/M/i, "n") + "<br>");
+      document.write(str1.replace(/m/g, "n") + "<br>");
+      document.write(str1.replace(/M/gi, "n") + "<br>");
+      document.write(str1.replaceAll("m", "n") + "<br>");
+      document.write(str1.indexOf("m") + "<br>");
+      document.write(str1.indexOf("x") + "<br>");
+      document.write(str1.lastIndexOf("m") + "<br>");
+      document.write(str1.match("me") + "<br>");
+      document.write(str1.match("x") + "<br>");
+      document.write(str1.charAt(8) + "<br>");
+      document.write(str1.slice(0, 3) + "<br>");
+      document.write(str1.slice(-3, -1) + "<br>");
+      document.write(str1.slice(1) + "<br>");
+      document.write(str1.slice(-3) + "<br>");
+      let str3 = "123456-7890123";
+      document.write(str3.replace(str3.slice(8), "******") + "<br>");
+      document.write(str3.replace(str3.slice(8), "*".repeat(6)) + "<br>");
+      document.write(str3.substring(0, 8) + "<br>");
+      document.write(str3.substring(7) + "<br>");
+      document.write(str3.substring(-3) + "<br>");
+      //substring메소드는 인수값에 음의값이 입력되면 0으로 처리
+      document.write(str3.substr(0, 5) + "<br>");
+      document.write(str3.substr(0) + "<br>");
+      document.write(str3.substr(-6, 2) + "<br>");
+      document.write(str3.length + "<br>");
+      let str4 = "a b c d f";
+      document.write(str4.split(" ", 1) + "<br>");
+      document.write(str4.split(" ").length + "<br>");
+      document.write(str4.split(" ")[4] + "<br>");
+    </script>
+  </body>
+</html>

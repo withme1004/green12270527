@@ -58,7 +58,7 @@
     <script>
       function clock() {
         let x = new Date();
-        let hour = (360 / 12) * x.getHours() * 0.5;
+        let hour = (360 / 12) * x.getHours() + x.getMinutes() * 0.5;
         let minute = (360 / 60) * x.getMinutes();
         let second = (360 / 60) * x.getSeconds();
 
