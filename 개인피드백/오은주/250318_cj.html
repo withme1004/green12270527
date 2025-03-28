@@ -16,9 +16,6 @@
         margin: 0;
         padding: 0;
       }
-      html {
-        scroll-behavior: smooth;
-      }
       body {
         font-family: "Pretendard-Regular";
       }
@@ -43,7 +40,7 @@
       .cj > ul.main {
         display: flex;
         gap: 20px;
-        margin-bottom: 140px;
+        padding-bottom: 140px;
       }
       .cj > ul img {
         width: 100%;
@@ -158,7 +155,8 @@
       }
       .cj section .plat-con {
         flex: 2;
-        margin-top: 140px;
+        position: relative;
+        top: 140px;
       }
       .cj section .plat-con > div {
         display: flex;
@@ -404,9 +402,9 @@
             Platforms
           </h1>
           <ul class="plat-menu">
-            <li><a href="#link1">올리브영 매장</a></li>
-            <li><a href="#link2">올리브영 Online (국내)</a></li>
-            <li><a href="#link3">올리브영 글로벌</a></li>
+            <li><a href="#">올리브영 매장</a></li>
+            <li><a href="#">올리브영 Online (국내)</a></li>
+            <li><a href="#">올리브영 글로벌</a></li>
           </ul>
         </div>
 
@@ -501,7 +499,7 @@
       </section>
     </div>
     <script>
-      let ht = document.querySelectorAll("main").clientHeight;
+      let ht = document.querySelector(".main").clientHeight;
 
       document.querySelectorAll(".plat-menu li a")[0].classList.add("on");
 
@@ -511,15 +509,16 @@
         });
       }
 
-      document.querySelectorAll(".plat-menu li a").forEach(function (v, k) {
-        v.onclick = function () {
+      document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.preventDefault();
           down();
           this.classList.add("on");
+          window.scrollTo({
+            top: document.querySelector(`#link${k + 1}`).offsetTop + ht,
+            behavior: "smooth",
+          });
         };
-        window.scrollTo({
-          top: document.querySelector(`#link${k + 1}`).offsetTop + ht,
-          behavior: "smooth",
-        });
       });
     </script>
   </body>
