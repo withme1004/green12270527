@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .con {
+        width: 1440px;
+        margin: 50px auto;
+        display: flex;
+      }
+      .con .left p.on {
+        opacity: 1;
+        height: auto;
+      }
+      .con .left p {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+      }
+      .con .right {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        justify-content: center;
+        flex: 1;
+        padding-left: 80px;
+      }
+      .con .right ul {
+        display: flex;
+      }
+      .con .right ul li {
+        text-transform: uppercase;
+        padding: 0 30px;
+        font-size: 20px;
+        position: relative;
+      }
+      .con .right ul li span.on {
+        color: #fff;
+      }
+      .con .right ul li span.on::after {
+        content: "";
+        width: 55px;
+        height: 55px;
+        background: #0e2072;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        z-index: -1;
+      }
+      .con .right .txt {
+        position: relative;
+      }
+      .con .right .txt .txt_box {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .con .right .txt .txt_box.on {
+        opacity: 1;
+        top: 0;
+        transition: 0.5s;
+      }
+      .con .right .txt .txt_box {
+        opacity: 0;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <div class="left">
+        <p class="on">
+          <img
+            src="https://www.unitechcorp.com/wp-content/themes/unitech/assets/images/business_slide_img.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="https://www.unitechcorp.com/wp-content/themes/unitech/assets/images/business_slide_img2.jpg"
+            alt=""
+          />
+        </p>
+        <p>
+          <img
+            src="https://www.unitechcorp.com/wp-content/themes/unitech/assets/images/business_slide_img3.jpg"
+            alt=""
+          />
+        </p>
+      </div>
+      <div class="right">
+        <ul class="menu">
+          <li><span>mo</span>bility</li>
+          <li><span>en</span>ergy</li>
+          <li><span>in</span>novation</li>
+        </ul>
+        <div class="txt">
+          <div class="txt_box">
+            <span>첨단 모빌리티 소재의 중심</span>
+            <h3>Mobility</h3>
+            <p>
+              보다 안전하고, 보다 가벼워질 수 있는 <br class="pc" />모빌리티
+              소재를 제공합니다.
+            </p>
+            <p><a href="#">Automotive</a></p>
+          </div>
+          <div class="txt_box">
+            <span>지속가능한 에너지 솔루션</span>
+            <h3>ENERGY</h3>
+            <p>
+              독창적인 기술력과 우수한 품질로 <br class="pc" />지속가능한 에너지
+              솔루션을 제안합니다.
+            </p>
+
+            <p>
+              <a href="#">LNG CARRIER</a>
+              <a href="#">BATTERY</a>
+            </p>
+          </div>
+          <div class="txt_box">
+            <span>미래 혁신 소재 구현</span>
+            <h3>INNOVATION</h3>
+            <p>
+              극한의 환경에도 적용할 수 있는 <br class="pc" />첨단 접착 소재를
+              구현합니다.
+            </p>
+            <p>
+              <a href="#">ELECTRONICS</a>
+              <a href="#">AEROSPACE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>
