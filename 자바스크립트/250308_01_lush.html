@@ -53,8 +53,37 @@
       </ul>
     </div>
     <script>
-      // url(https://weare.lush.co.kr/images/ico_main_value02.svg)
+      // url(https://weare.lush.co.kr/images/ico_main_value01.svg)
       // url(https://weare.lush.co.kr/images/main_value01.jpg)
+      function lush() {
+        document.querySelectorAll(".lush ul li").forEach(function (v, k) {
+          v.querySelector("a").style.backgroundColor = "transparent";
+        });
+      }
+      document.querySelectorAll(".lush ul li").forEach(function (v, k) {
+        v.querySelector(
+          "a"
+        ).style.backgroundImage = `url(https://weare.lush.co.kr/images/ico_main_value0${
+          k + 1
+        }.svg)`;
+        v.onmouseenter = function () {
+          console.log(v);
+          lush();
+          document
+            .querySelectorAll(".lush ul li")
+            [k].querySelector("a").style.backgroundColor = "#222";
+          document.querySelector(
+            ".lush"
+          ).style.backgroundImage = `url(https://weare.lush.co.kr/images/main_value0${
+            k + 1
+          }.jpg)`;
+        };
+        v.onmouseleave = function () {
+          document.querySelectorAll(".lush ul li").forEach(function (v, k) {
+            v.querySelector("a").style.backgroundColor = "#222";
+          });
+        };
+      });
     </script>
   </body>
 </html>
