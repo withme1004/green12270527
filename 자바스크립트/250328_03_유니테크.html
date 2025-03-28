@@ -144,6 +144,38 @@
         </div>
       </div>
     </div>
-    <script></script>
+    <script>
+      document
+        .querySelectorAll(".con .right ul li")[0]
+        .querySelector("span")
+        .classList.add("on");
+      document
+        .querySelectorAll(".con .right .txt .txt_box")[0]
+        .classList.add("on");
+
+      function my() {
+        document.querySelectorAll(".con .right ul li").forEach(function (v, k) {
+          v.querySelector("span").classList.remove("on");
+        });
+        document
+          .querySelectorAll(".con .right .txt .txt_box")
+          .forEach(function (v, k) {
+            v.classList.remove("on");
+          });
+        document.querySelectorAll(".con .left p").forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+      document.querySelectorAll(".con .right ul li").forEach(function (v, k) {
+        v.onmouseenter = function () {
+          my();
+          v.querySelector("span").classList.add("on");
+          document.querySelectorAll(".con .left p")[k].classList.add("on");
+          document
+            .querySelectorAll(".con .right .txt .txt_box")
+            [k].classList.add("on");
+        };
+      });
+    </script>
   </body>
 </html>
