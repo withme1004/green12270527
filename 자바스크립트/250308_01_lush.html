@@ -69,9 +69,7 @@
         v.onmouseenter = function () {
           console.log(v);
           lush();
-          document
-            .querySelectorAll(".lush ul li")
-            [k].querySelector("a").style.backgroundColor = "#222";
+          this.querySelector("a").style.backgroundColor = "#222";
           document.querySelector(
             ".lush"
           ).style.backgroundImage = `url(https://weare.lush.co.kr/images/main_value0${
