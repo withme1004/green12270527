@@ -111,14 +111,20 @@
     <script>
       document.querySelectorAll(".con ul li").forEach(function (v, k) {
         v.onmouseenter = function () {
-          v.querySelector("a").classList.add("on");
-          v.querySelector("p").classList.add("on");
-          v.querySelector("span").classList.add("on");
+          if (k === 0) {
+            return;
+          } else {
+            v.querySelector("a").classList.add("on");
+            v.querySelector("p").classList.add("on");
+            v.querySelector("span").classList.add("on");
+          }
         };
         v.onmouseleave = function () {
-          v.querySelector("a").classList.remove("on");
-          v.querySelector("p").classList.remove("on");
-          v.querySelector("span").classList.remove("on");
+          if (k !== 0) {
+            v.querySelector("a").classList.remove("on");
+            v.querySelector("p").classList.remove("on");
+            v.querySelector("span").classList.remove("on");
+          }
         };
       });
     </script>
