@@ -225,6 +225,24 @@
         </li>
       </ul>
     </div>
-    <script></script>
+    <script>
+      document.querySelectorAll(".contents").forEach(function (v, k) {
+        v.querySelector(".detail").style.display = "none";
+      });
+      document.querySelectorAll(".list li").forEach(function (v, k) {
+        v.onclick = function () {
+          let bool = this.querySelector(".detail").style.display;
+          if (bool == "none") {
+            this.querySelector("p").classList.add("on");
+            this.querySelector(".arrow").classList.add("on");
+            this.querySelector(".detail").style.display = "block";
+          } else {
+            this.querySelector("p").classList.remove("on");
+            this.querySelector(".arrow").classList.remove("on");
+            this.querySelector(".detail").style.display = "none";
+          }
+        };
+      });
+    </script>
   </body>
 </html>
