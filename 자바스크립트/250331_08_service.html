@@ -55,13 +55,13 @@
       }
       .con ul li a span {
         opacity: 0;
+        position: absolute;
+        right: 0;
         transform: rotate(0deg);
         transition: 0.5s;
       }
       .con ul li a span.on {
         opacity: 1;
-        position: absolute;
-        right: 0;
         transform: rotate(180deg);
       }
     </style>
@@ -111,7 +111,7 @@
     <script>
       document.querySelectorAll(".con ul li").forEach(function (v, k) {
         v.onmouseenter = function () {
-          if (k === 0) {
+          if (k == 0) {
             return;
           } else {
             v.querySelector("a").classList.add("on");
@@ -120,7 +120,7 @@
           }
         };
         v.onmouseleave = function () {
-          if (k !== 0) {
+          if (k != 0) {
             v.querySelector("a").classList.remove("on");
             v.querySelector("p").classList.remove("on");
             v.querySelector("span").classList.remove("on");
