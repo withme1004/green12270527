@@ -54,6 +54,23 @@
         transform: rotate(90deg);
         opacity: 0;
       }
+      ul.list .contents p {
+        height: 0;
+        overflow: hidden;
+        transform: translateY(-20px);
+        opacity: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      ul.list .contents p.on {
+        /* height: auto; */
+        opacity: 1;
+        transform: translateY(10px);
+      }
+      ul.list .contents p img {
+        width: 100%;
+        object-fit: cover;
+      }
     </style>
   </head>
   <body>
@@ -87,6 +104,27 @@
         </div>
       </li>
     </ul>
-    <script></script>
+    <script>
+      let item = document.querySelectorAll(".list li");
+      function myfnc() {
+        let bool = this.querySelector("span").classList.contains("on");
+        item.forEach(function (v, k) {
+          v.querySelector("span").classList.remove("on");
+          v.querySelector(".contents p").classList.remove("on");
+          v.querySelector(".contents p").style.height = 0;
+        });
+        if (!bool) {
+          this.querySelector("span").classList.add("on");
+          this.querySelector(".contents p").classList.add("on");
+          let ht = this.querySelector(".contents p img").clientHeight;
+          console.log(ht);
+          this.querySelector(".contents p").style.height = ht + "px";
+        }
+      }
+
+      item.forEach(function (v, k) {
+        v.onclick = myfnc;
+      });
+    </script>
   </body>
 </html>
