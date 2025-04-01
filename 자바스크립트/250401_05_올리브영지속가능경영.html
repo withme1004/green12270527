@@ -96,6 +96,22 @@
         });
       }
       myfnc1();
+      btn.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          myover(k);
+        };
+        v.onmouseleave = function () {
+          myfnc1();
+        };
+      });
+      function myover(i) {
+        btn.forEach(function (v, k) {
+          let imgs = v.querySelectorAll("img");
+          imgs.forEach(function (item, index) {
+            imgs[i + 1].classList.add("default");
+          });
+        });
+      }
     </script>
   </body>
 </html>
