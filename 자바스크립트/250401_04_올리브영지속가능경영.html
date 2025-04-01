@@ -53,14 +53,27 @@
       let btn = document.querySelectorAll(".list li");
       btn.forEach(function (v, k) {
         v.onmouseenter = function () {
-          btn.forEach(function (item, index) {
-            item.querySelector("img").src = `./images/img_sustain_pc_hover_${
-              k + 1
-            }_${index + 1}.jpg`;
-          });
+          console.log(k);
+          myover(k); //myover(0)myover(1)myover(2)myover(3)myover(4)
         };
-        v.onmouseleave = function () {};
+        v.onmouseleave = function () {
+          myleave();
+        };
       });
+      function myleave() {
+        btn.forEach(function (item, index) {
+          item.querySelector("img").src = `./images/img_sustain_pc_${
+            index + 1
+          }.jpg`;
+        });
+      }
+      function myover(i) {
+        btn.forEach(function (item, index) {
+          item.querySelector("img").src = `./images/img_sustain_pc_hover_${
+            i + 1
+          }_${index + 1}.jpg`;
+        });
+      }
     </script>
   </body>
 </html>
