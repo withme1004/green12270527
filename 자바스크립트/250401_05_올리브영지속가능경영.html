@@ -83,6 +83,19 @@
         <img src="images/img_sustain_pc_hover_5_5.jpg" alt="hover" />
       </li>
     </ul>
-    <script></script>
+    <script>
+      let btn = document.querySelectorAll(".list li");
+      function myfnc1() {
+        btn.forEach(function (item, index) {
+          let imgs = item.querySelectorAll("img");
+          imgs.forEach(function (value) {
+            imgs[0].classList.add("default");
+            value.classList.remove("hidden");
+            value.classList.remove("default");
+          });
+        });
+      }
+      myfnc1();
+    </script>
   </body>
 </html>
