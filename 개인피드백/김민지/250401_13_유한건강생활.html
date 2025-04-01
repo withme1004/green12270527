@@ -80,35 +80,21 @@
       }
       .btn {
         display: flex;
+        gap: 40px;
         justify-content: center;
-        gap: 30px;
       }
       .btn li {
-        font-size: 24px;
-        font-weight: bold;
-        border: 1px solid;
-        padding: 10px 50px;
+        border: 1px solid #000;
+        padding: 10px 40px;
         border-radius: 30px;
-        cursor: pointer;
+        box-sizing: border-box;
+        font-size: 24px;
       }
       .btn li.on {
-        color: #fff;
         background: #000;
-      }
-      .txt {
-        text-align: center;
-        position: relative;
-        margin-top: 40px;
-      }
-      .txt li {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0;
-      }
-      .txt li.on {
-        opacity: 1;
-      }
+        color: #fff;
+        font-weight: bold;
+      } /* 이게 버튼 바꾸는 거 위치 이름 잘 기억 */
     </style>
   </head>
   <body>
@@ -130,51 +116,30 @@
         <li>사업소개</li>
         <li>기업문화</li>
       </ul>
-      <ul class="txt">
-        <li>
-          천연물의 과학적 연구를 토대로 고객의 삶에 새로운 의식과 <br />
-          가치 있는 경험을 전하는 유한건강생활을 소개합니다.
-        </li>
-        <li>
-          먹고 입고 바르는 라이프스타일의 모든 부분에서 <br />
-          진정성 있는 가치와 본질에 집중하여 연구 활동을 이어 갑니다. 바로가기
-        </li>
-        <li>
-          우리는 브랜드 원칙에 공감하며 행동으로 실천합니다. <br />
-          유한건강생활의 문화와 사고의 공간을 소개합니다.
-        </li>
-      </ul>
     </div>
     <script>
-      let item = document.querySelectorAll(".item li");
-      let zoom = document.querySelectorAll(".mask .zoom_circle");
-      let bool = document.querySelectorAll(".btn li");
-      let text = document.querySelectorAll(".txt li");
-      item[0].classList.add("on");
-      bool[0].classList.add("on");
-      text[0].classList.add("on");
-      function remove() {
-        zoom.forEach(function (v, k) {
+      document.querySelectorAll(".item li")[0].classList.add("on");
+      document.querySelectorAll(".zoom_circle")[0].classList.add("on");
+
+      function myremove() {
+        document.querySelectorAll(".item li").forEach(function (v) {
           v.classList.remove("on");
-          item.forEach(function (v, k) {
-            v.classList.remove("on");
-            bool.forEach(function (v, k) {
-              v.classList.remove("on");
-              text.forEach(function (v, k) {
-                v.classList.remove("on");
-              });
-            });
-          });
+        });
+        document.querySelectorAll(".btn li").forEach(function (v) {
+          v.classList.remove("on");
+        });
+        document.querySelectorAll(".zoom_circle").forEach(function (v) {
+          v.classList.remove("on");
         });
       }
 
       document.querySelectorAll(".btn li").forEach(function (v, k) {
         v.onclick = function () {
-          remove();
-          zoom[k].classList.add("on");
-          item[k].classList.add("on");
-          bool[k].classList.add("on");
-          text[k].classList.add("on");
+          myremove();
+
+          v.classList.add("on");
+          document.querySelectorAll(".item li")[k].classList.add("on"); // 이미지 변경1
+          document.querySelectorAll(".zoom_circle")[k].classList.add("on"); // 이미지 변경2
         };
       });
     </script>
