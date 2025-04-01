@@ -32,40 +32,35 @@
     </style>
   </head>
   <body>
-    <!-- https://corp.oliveyoung.com/img/sustain/img_sustai…pc_hover_1_1-d1e0957f2b025f580daa5afbb38f3e8b.jpg -->
-    https://corp.oliveyoung.com/img/sustain/img_sustai…pc_hover_2_1-7e5e363ddc9ecea169406dd7a00c9ef1.jpg
     <ul class="list">
       <li>
-        <img
-          src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_1-3c110ddb443747ebad1204fe066448ec.jpg"
-          alt=""
-        />
+        <img src="./images/img_sustain_pc_1.jpg" alt="" />
       </li>
       <li>
-        <img
-          src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_2-2c3dcee55945fd08ee8fddd162fd0e91.jpg"
-          alt=""
-        />
+        <img src="./images/img_sustain_pc_2.jpg" alt="" />
       </li>
       <li>
-        <img
-          src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_3-96e4e9cd2233b95e0560eb2148167f00.jpg"
-          alt=""
-        />
+        <img src="./images/img_sustain_pc_3.jpg" alt="" />
       </li>
       <li>
-        <img
-          src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_4-b9a3022852ec7bd6b2f6888ab71bc15f.jpg"
-          alt=""
-        />
+        <img src="./images/img_sustain_pc_4.jpg" alt="" />
       </li>
       <li>
-        <img
-          src="https://corp.oliveyoung.com/img/sustain/img_sustain_pc_5-c58cdd9b912b7f273e164f0915300b46.jpg"
-          alt=""
-        />
+        <img src="./images/img_sustain_pc_5.jpg" alt="" />
       </li>
     </ul>
-    <script></script>
+    <script>
+      let btn = document.querySelectorAll(".list li");
+      btn.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          btn.forEach(function (item, index) {
+            item.querySelector("img").src = `./images/img_sustain_pc_hover_${
+              k + 1
+            }_${index + 1}.jpg`;
+          });
+        };
+        v.onmouseleave = function () {};
+      });
+    </script>
   </body>
 </html>
