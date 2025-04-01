@@ -100,6 +100,26 @@
         <li>기업문화</li>
       </ul>
     </div>
-    <script></script>
+    <script>
+      let item = document.querySelectorAll(".con .topImage .item li");
+      let mask = document.querySelectorAll(".con .topImage .mask .zoom_circle");
+      let btn = document.querySelectorAll(".con .btn li");
+      item[0].classList.add("on");
+      function my() {
+        item.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        mask.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+      btn.forEach(function (v, k) {
+        v.onclick = function () {
+          my();
+          item[k].classList.add("on");
+          mask[k].classList.add("on");
+        };
+      });
+    </script>
   </body>
 </html>
