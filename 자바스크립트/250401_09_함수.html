@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>함수호출</p>
+    <script>
+      function myWrite() {
+        document.write("자바스트립트");
+      }
+      document.querySelector("p").onclick = function () {
+        myWrite();
+      };
+      // myWrite();
+      (function () {
+        document.write("자바스트립트");
+      })();
+    </script>
+  </body>
+</html>
