@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let color = [
+        "#f00",
+        "#0f0",
+        "#00f",
+        "#ff0",
+        "#f0f",
+        "#0ff",
+        "#ccc",
+        "#ddd",
+      ];
+      //0,1,2,3,4,5
+      //let i = Math.floor(Math.random() * 6);
+      let i = Math.floor(Math.random() * color.length);
+      document.querySelector("body").style.backgroundColor = color[i];
+    </script>
+  </body>
+</html>
