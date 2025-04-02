@@ -169,6 +169,29 @@
         </li>
       </ul>
     </div>
-    <script></script>
+    <script>
+      function myfnc() {
+        document.querySelectorAll(".tower ul li").forEach(function (v, k) {
+          v.classList.remove("on", "active");
+        });
+      }
+      tower(0);
+      function tower(i) {
+        document.querySelectorAll(".tower ul li").forEach(function (v, k) {
+          if (k == i) {
+            v.classList.add("on");
+          } else {
+            v.classList.add("active");
+          }
+        });
+      }
+
+      document.querySelectorAll(".tower ul li").forEach(function (v, k) {
+        v.onclick = function () {
+          myfnc();
+          tower(k);
+        };
+      });
+    </script>
   </body>
 </html>
