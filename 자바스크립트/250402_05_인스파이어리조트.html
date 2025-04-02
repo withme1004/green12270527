@@ -170,7 +170,7 @@
       </ul>
     </div>
     <script>
-      function myfnc() {
+      /* function myfnc() {
         document.querySelectorAll(".tower ul li").forEach(function (v, k) {
           v.classList.remove("on", "active");
         });
@@ -191,7 +191,25 @@
           myfnc();
           tower(k);
         };
-      });
+      });*/
+      document
+        .querySelectorAll(".tower ul li")
+        .forEach(function (v, k, allitem) {
+          if (k == 0) {
+            v.classList.add("on");
+          } else {
+            v.classList.add("active");
+          }
+          v.onclick = function () {
+            allitem.forEach(function (item, index) {
+              item.classList.remove("on", "active");
+              if (item != v) {
+                item.classList.add("active");
+              }
+            });
+            v.classList.add("on");
+          };
+        });
     </script>
   </body>
 </html>
