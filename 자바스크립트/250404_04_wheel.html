@@ -34,6 +34,16 @@
   <body>
     <div id="navbar"></div>
     <div class="contents"></div>
-    <script></script>
+    <script>
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        console.log(ht);
+        if (ht > 20) {
+          document.getElementById("navbar").classList.add("on");
+        } else {
+          document.getElementById("navbar").classList.remove("on");
+        }
+      };
+    </script>
   </body>
 </html>
