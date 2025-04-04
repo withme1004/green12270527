@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin-top: 1000px;
+        margin-bottom: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>clientX : <input type="text" name="clientX" id="clientX" /></p>
+    <p>clientY : <input type="text" name="clientY" id="clientY" /></p>
+    <p>pageX : <input type="text" name="pageX" id="pageX" /></p>
+    <p>pageY : <input type="text" name="pageY" id="pageY" /></p>
+    <p>screenX : <input type="text" name="screenX" id="screenX" /></p>
+    <p>screenY : <input type="text" name="screenY" id="screenY" /></p>
+    <script>
+      document.onmousemove = function (event) {
+        document.querySelector("#clientX").value = event.clientX;
+        document.querySelector("#clientY").value = event.clientY;
+        document.querySelector("#pageX").value = event.pageX;
+        document.querySelector("#pageY").value = event.pageY;
+        document.querySelector("#screenX").value = event.screenX;
+        document.querySelector("#screenY").value = event.screenY;
+      };
+    </script>
+  </body>
+</html>

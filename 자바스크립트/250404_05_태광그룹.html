@@ -40,7 +40,7 @@
         align-items: center;
       }
 
-      header .inner img:first-child {
+      header .inner img.on {
         display: none;
       }
       header nav ul {
@@ -153,6 +153,8 @@
     </section>
     <script>
       let sec = document.querySelectorAll("section");
+      let logo = document.querySelector(".logo").querySelectorAll("img");
+      logo[0].classList.add("on");
       let sec1top = sec[0].offsetTop;
       let sec2top = sec[1].offsetTop;
       let sec3top = sec[2].offsetTop;
@@ -169,14 +171,19 @@
         let delta = event.deltaY;
         console.log("delta" + delta);
         if (delta > 0) {
+          //마우스휠을 아래로
           document.querySelector("header").classList.add("on");
           document.querySelector("header").classList.remove("bg");
         } else if (delta < 0 && ht < sec5top) {
           document.querySelector("header").classList.remove("on");
           document.querySelector("header").classList.remove("bg");
+          logo[0].classList.add("on");
+          logo[1].classList.remove("on");
         } else if (delta < 0 && ht > sec5top) {
           document.querySelector("header").classList.remove("on");
           document.querySelector("header").classList.add("bg");
+          logo[0].classList.remove("on");
+          logo[1].classList.add("on");
         }
         if (ht < sec2top) {
           myremove();
