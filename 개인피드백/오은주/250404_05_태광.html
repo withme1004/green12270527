@@ -162,7 +162,12 @@
       console.log(sec2top);
       window.addEventListener("wheel", function (event) {
         let ht = document.documentElement.scrollTop;
-        console.log;
+        let delta = event.deltaY;
+        console.log("delta" + delta);
+        if (delta > 0) {
+          document.querySelector("header").classList.add("on");
+        } else {
+        }
         if (ht < sec2top) {
           myremove();
           sec[0].classList.add("on");

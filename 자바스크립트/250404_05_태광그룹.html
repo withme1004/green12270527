@@ -46,6 +46,9 @@
       header nav ul {
         display: flex;
       }
+      header.bg nav ul li a {
+        color: #000;
+      }
       header nav ul li a {
         color: #fff;
         font-size: 20px;
@@ -60,7 +63,10 @@
       section {
         height: 100vh;
       }
-
+      section:nth-of-type(2) {
+        position: relative;
+        top: 800px;
+      }
       section video {
         width: 100%;
         height: 100%;
@@ -147,29 +153,40 @@
     </section>
     <script>
       let sec = document.querySelectorAll("section");
-
-      let sec1Top = sec[0].offsetTop;
-      let sec2Top = sec[1].offsetTop;
-      let sec3Top = sec[2].offsetTop;
-      let sec4Top = sec[3].offsetTop;
+      let sec1top = sec[0].offsetTop;
+      let sec2top = sec[1].offsetTop;
+      let sec3top = sec[2].offsetTop;
+      let sec4top = sec[3].offsetTop;
+      let sec5top = sec[4].offsetTop;
       function myremove() {
         sec.forEach(function (v, k) {
           v.classList.remove("on", "active");
         });
       }
-      console.log(sec2Top);
+      console.log(sec2top);
       window.addEventListener("wheel", function (event) {
         let ht = document.documentElement.scrollTop;
-        console.log(ht);
-        if (ht < sec2Top) {
+        let delta = event.deltaY;
+        console.log("delta" + delta);
+        if (delta > 0) {
+          document.querySelector("header").classList.add("on");
+          document.querySelector("header").classList.remove("bg");
+        } else if (delta < 0 && ht < sec5top) {
+          document.querySelector("header").classList.remove("on");
+          document.querySelector("header").classList.remove("bg");
+        } else if (delta < 0 && ht > sec5top) {
+          document.querySelector("header").classList.remove("on");
+          document.querySelector("header").classList.add("bg");
+        }
+        if (ht < sec2top) {
           myremove();
           sec[0].classList.add("on");
           sec[1].classList.add("active");
-        } else if (ht < sec3Top) {
+        } else if (ht < sec3top) {
           myremove();
           sec[1].classList.add("on");
           sec[2].classList.add("active");
-        } else if (ht < sec4Top) {
+        } else if (ht < sec4top) {
           myremove();
           sec[2].classList.add("on");
           sec[3].classList.add("active");
