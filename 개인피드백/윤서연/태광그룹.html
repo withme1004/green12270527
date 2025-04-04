@@ -162,12 +162,15 @@
         let ht = document.documentElement.scrollTop;
         console.log(ht);
         if (ht <= sec2Top) {
+          myremove();
           sec[0].classList.add("on");
           sec[1].classList.add("active");
         } else if (ht < sec3Top) {
+          myremove();
           sec[1].classList.add("on");
           sec[2].classList.add("active");
         } else if (ht < sec4Top) {
+          myremove();
           sec[2].classList.add("on");
           sec[3].classList.add("active");
         } else {
