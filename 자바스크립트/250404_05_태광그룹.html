@@ -60,6 +60,7 @@
       section {
         height: 100vh;
       }
+
       section video {
         width: 100%;
         height: 100%;
@@ -144,6 +145,25 @@
         alt=""
       />
     </section>
-    <script></script>
+    <script>
+      let sec = document.querySelectorAll("section");
+
+      let sec1Top = sec[0].offsetTop;
+      let sec2Top = sec[1].offsetTop;
+      let sec3Top = sec[2].offsetTop;
+      let sec4Top = sec[3].offsetTop;
+      console.log(sec2Top);
+      window.addEventListener("wheel", function (event) {
+        let ht = document.documentElement.scrollTop;
+        console.log(ht);
+        if (ht <= sec2Top) {
+          sec[0].classList.add("on");
+          sec[1].classList.add("active");
+        } else {
+          sec[0].classList.remove("on");
+          sec[1].classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>
