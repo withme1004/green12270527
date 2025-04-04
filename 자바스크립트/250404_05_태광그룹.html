@@ -152,16 +152,29 @@
       let sec2Top = sec[1].offsetTop;
       let sec3Top = sec[2].offsetTop;
       let sec4Top = sec[3].offsetTop;
+      function myremove() {
+        sec.forEach(function (v, k) {
+          v.classList.remove("on", "active");
+        });
+      }
       console.log(sec2Top);
       window.addEventListener("wheel", function (event) {
         let ht = document.documentElement.scrollTop;
         console.log(ht);
-        if (ht <= sec2Top) {
+        if (ht < sec2Top) {
+          myremove();
           sec[0].classList.add("on");
           sec[1].classList.add("active");
+        } else if (ht < sec3Top) {
+          myremove();
+          sec[1].classList.add("on");
+          sec[2].classList.add("active");
+        } else if (ht < sec4Top) {
+          myremove();
+          sec[2].classList.add("on");
+          sec[3].classList.add("active");
         } else {
-          sec[0].classList.remove("on");
-          sec[1].classList.remove("active");
+          myremove();
         }
       });
     </script>
