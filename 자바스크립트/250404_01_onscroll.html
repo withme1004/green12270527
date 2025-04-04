@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #demo {
+        width: 500px;
+        height: 500px;
+        border: 1px solid #ccc;
+        overflow: auto;
+      }
+      #con {
+        width: 2000px;
+        height: 2000px;
+        background: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo">
+      <div id="con">scroll me</div>
+    </div>
+    <div id="page"></div>
+    <script>
+      document.querySelector("#demo").onscroll = function () {
+        let scr_left = this.scrollLeft;
+        let scr_top = this.scrollTop;
+        console.log(scr_top);
+        document.querySelector(
+          "#page"
+        ).innerHTML = `가로${scr_left}세로${scr_top}`;
+      };
+    </script>
+  </body>
+</html>
