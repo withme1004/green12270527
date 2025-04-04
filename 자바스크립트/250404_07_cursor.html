@@ -100,6 +100,19 @@
         </p>
       </li>
     </ul>
-    <script></script>
+    <script>
+      document.onmousemove = function (e) {
+        document.querySelector(".cursor").style.left = e.clientX + "px";
+        document.querySelector(".cursor").style.top = e.clientY + "px";
+      };
+      document.querySelectorAll("#info li").forEach(function (v, k) {
+        v.onmouseenter = function () {
+          document.querySelector(".cursor").classList.add("on");
+        };
+        v.onmouseleave = function () {
+          document.querySelector(".cursor").classList.remove("on");
+        };
+      });
+    </script>
   </body>
 </html>
