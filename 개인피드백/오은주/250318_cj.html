@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>왜안될까</title>
     <style>
       @font-face {
         font-family: "Pretendard-Regular";
@@ -134,7 +134,6 @@
       }
       .cj section .Plat-txt {
         top: 140px;
-
         height: 50%;
         position: sticky;
         flex: 1;
@@ -394,7 +393,7 @@
           </ul>
         </li>
       </ul>
-      <div class="con"></div>
+      <!-- <div class="con"></div> -->
       <section>
         <div class="Plat-txt">
           <h1>
@@ -500,12 +499,15 @@
     </div>
     <script>
       let ht = document.querySelector(".main").clientHeight;
-
-      document.querySelectorAll(".plat-menu li a")[0].classList.add("on");
+      console.log(ht);
+      document
+        .querySelectorAll(".plat-menu li")[0]
+        .querySelector("a")
+        .classList.add("on");
 
       function down() {
-        document.querySelectorAll(".plat-menu li a").forEach(function (v, k) {
-          v.classList.remove("on");
+        document.querySelectorAll(".plat-menu li").forEach(function (v, k) {
+          v.querySelector("a").classList.remove("on");
         });
       }
 
@@ -513,7 +515,7 @@
         v.onclick = function (e) {
           e.preventDefault();
           down();
-          this.classList.add("on");
+          this.querySelector("a").classList.add("on");
           window.scrollTo({
             top: document.querySelector(`#link${k + 1}`).offsetTop + ht,
             behavior: "smooth",
