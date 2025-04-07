@@ -120,6 +120,8 @@
             page[0].onclick = function () {
               slides.style.left = "-8400px";
               slides.style.transition = "0.5s";
+              page[5].classList.remove("on");
+              page[0].classList.add("on");
               setTimeout(function () {
                 slides.style.left = "-1200px";
                 slides.style.transition = "0s";
