@@ -78,6 +78,7 @@
       header .head .top ul.menu > li .sub.on {
         opacity: 1;
         transition: 0.3s;
+        background: #ccc;
       }
       header .head .top ul.menu > li:first-child .sub > ul {
         display: flex;
@@ -226,11 +227,11 @@
       gnb.forEach(function (v, k, allitem) {
         v.onmouseenter = function () {
           try {
-            let ht = sub[k].querySelector("ul").offsetHeight + 80;
+            let ht = sub[k].querySelector("ul").offsetHeight;
             gnb[k].querySelector(".sub").style.height = ht + "px";
             gnb[k].querySelector(".sub").classList.add("on");
             document.querySelector(".head").style.backgroundColor = "#fff";
-            document.querySelector(".head").style.height = ht + "px";
+            document.querySelector(".head").style.height = ht + 80 + "px";
           } catch (error) {
             document.querySelector(".head").style.height = 80 + "px";
           }

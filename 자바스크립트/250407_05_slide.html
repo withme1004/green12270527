@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #slide {
+        position: relative;
+        width: 1200px;
+        height: 300px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      #slide .slides {
+        position: absolute;
+        left: 0;
+        display: flex;
+      }
+      #slide .slides img {
+        width: 1200px;
+        height: 300px;
+        object-fit: cover;
+      }
+      .btn li {
+        cursor: pointer;
+      }
+      .page li.on {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slide">
+      <ul class="slides">
+        <li><img src="images/photo1.jpg" alt="photo1" /></li>
+        <li><img src="images/photo2.jpg" alt="photo2" /></li>
+        <li><img src="images/photo3.jpg" alt="photo3" /></li>
+        <li><img src="images/photo4.jpg" alt="photo3" /></li>
+        <li><img src="images/photo5.jpg" alt="photo3" /></li>
+        <li><img src="images/photo6.jpg" alt="photo3" /></li>
+      </ul>
+    </div>
+    <div class="controller">
+      <ul class="btn">
+        <li id="prev">이전으로</li>
+        <li id="next">다음으로</li>
+      </ul>
+      <ul class="page">
+        <li>photo1</li>
+        <li>photo2</li>
+        <li>photo3</li>
+        <li>photo4</li>
+        <li>photo5</li>
+        <li>photo6</li>
+      </ul>
+    </div>
+    <script>
+      let slide = document.querySelector("#slide");
+      let slides = document.querySelector(".slides");
+      let slideLi = document.querySelectorAll(".slides li");
+      let page = document.querySelectorAll(".page li");
+      let current = 0;
+      let slidewidth = slide.offsetWidth;
+      page[0].classList.add("on");
+      let len = slideLi.length;
+      console.log(slidewidth);
+      function makeClone() {
+        let clone_first = slideLi[0].cloneNode(true);
+        slides.append(clone_first);
+        let clone_last = slideLi[len - 1].cloneNode(true);
+        slides.prepend(clone_last);
+      }
+      makeClone();
+      function initfnc() {
+        slides.style.width = slidewidth * (len + 2) + "px";
+        slides.style.left = -slidewidth + "px";
+      }
+      initfnc();
+      document.querySelector("#next").onclick = function () {
+        if (current <= len - 1) {
+          slides.style.left = -(current + 2) * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (current == len - 1) {
+          setTimeout(function () {
+            slides.style.left = -slidewidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          current = -1;
+        }
+        current++;
+        //console.log(current);
+        for (let i = 0; i < len; i++) {
+          page[i].classList.remove("on");
+        }
+        page[current].classList.add("on");
+      };
+      document.querySelector("#prev").onclick = function () {
+        if (current >= 0) {
+          slides.style.left = -current * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (current === 0) {
+          setTimeout(function () {
+            slides.style.left = -len * slidewidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          current = len;
+        }
+        current--;
+      };
+      let interval = setInterval(function () {
+        document.querySelector("#next").onclick();
+      }, 1000);
+      page.forEach(function (v, k) {
+        //console.log(k);
+        v.onclick = function () {
+          console.log(k);
+          slides.style.left = -k * slidewidth + "px";
+          for (let i = 0; i < len; i++) {
+            page[i].classList.remove("on");
+          }
+          page[k].classList.add("on");
+        };
+      });
+      document.querySelector(".controller").onmouseenter = function () {
+        clearInterval(interval);
+      };
+      document.querySelector(".controller").onmouseleave = function () {
+        interval = setInterval(function () {
+          document.querySelector("#next").onclick();
+        }, 1000);
+      };
+    </script>
+  </body>
+</html>
