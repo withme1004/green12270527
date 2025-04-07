@@ -80,15 +80,16 @@
         slides.prepend(clone_last);
       }
       makeClone();
-      slides.style.left = "-1200px";
+      //slides.style.left = "-1200px";
+      slides.style.left = -slidewidth + "px";
       document.querySelector("#next").onclick = function () {
         if (current <= 5) {
-          slides.style.left = -(current + 2) * 1200 + "px";
+          slides.style.left = -(current + 2) * slidewidth + "px";
           slides.style.transition = "0.5s";
         }
         if (current == 5) {
           setTimeout(function () {
-            slides.style.left = "-1200px";
+            slides.style.left = -slidewidth + "px";
             slides.style.transition = "0s";
           }, 500);
           current = -1;
@@ -99,12 +100,13 @@
       document.querySelector("#prev").onclick = function () {
         //console.log(current);
         if (current >= 0) {
-          slides.style.left = -current * 1200 + "px";
+          slides.style.left = -current * slidewidth + "px";
           slides.style.transition = "0.5s";
         }
         if (current == 0) {
           setTimeout(function () {
-            slides.style.left = "-7200px";
+            //slides.style.left = "-7200px";
+            slides.style.left = -slidewidth * len + "px";
             slides.style.transition = "0s";
           }, 500);
           current = 6;
@@ -115,20 +117,21 @@
         v.onclick = function () {
           console.log(k);
           if (k == 5) {
-            slides.style.left = -(k + 1) * 1200 + "px";
+            slides.style.left = -(k + 1) * slidewidth + "px";
             slides.style.transition = "0.5s";
             page[0].onclick = function () {
-              slides.style.left = "-8400px";
+              //slides.style.left = "-8400px";
+              slides.style.left = -(len + 1) * slidewidth + "px";
               slides.style.transition = "0.5s";
               page[5].classList.remove("on");
               page[0].classList.add("on");
               setTimeout(function () {
-                slides.style.left = "-1200px";
+                slides.style.left = -slidewidth + "px";
                 slides.style.transition = "0s";
               }, 500);
             };
           } else {
-            slides.style.left = -(k + 1) * 1200 + "px";
+            slides.style.left = -(k + 1) * slidewidth + "px";
             slides.style.transition = "0.5s";
           }
           for (let i = 0; i < 6; i++) {
