@@ -210,6 +210,29 @@
         />
       </video>
     </section>
-    <script></script>
+    <script>
+      let sub = document.querySelectorAll(".sub");
+      let subUL = document.querySelectorAll(".sub>ul");
+      let gnb = document.querySelectorAll(".menu>li");
+      console.log(subUL[0].offsetHeight);
+      function myfnc() {
+        sub.forEach(function (v, k) {
+          v.style.height = 0 + "px";
+          v.classList.remove("on");
+        });
+      }
+      gnb.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          let ht = sub[k].querySelector("ul").offsetHeight + 80;
+          gnb[k].querySelector(".sub").style.height = ht + "px";
+          gnb[k].querySelector(".sub").classList.add("on");
+          document.querySelector(".head").style.backgroundColor = "#fff";
+          document.querySelector(".head").style.height = ht + "px";
+        };
+        v.onmouseleave = function () {
+          myfnc();
+        };
+      });
+    </script>
   </body>
 </html>
