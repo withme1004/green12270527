@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쿠첸 브랜드 사이트</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.cuchen.com/img/favicon_1661825555.png"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+      }
+      header .head {
+        transition: 0.3s;
+      }
+      header .head .top {
+        width: 1500px;
+        height: 80px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header .head .top ul.menu {
+        display: flex;
+        width: 680px;
+        /* justify-content: space-between; */
+      }
+      header .head .top ul.menu > li {
+        position: relative;
+        /* width: calc(100% / 6); */
+        height: 100%;
+        line-height: 80px;
+        /* text-align: center; */
+        /* background: #ccc; */
+        padding-right: 40px;
+        box-sizing: border-box;
+      }
+      header .head .top ul.menu > li > a {
+        color: #fff;
+      }
+      header .head .top ul.menu > li > a.on {
+        color: #333;
+      }
+      header .head .top ul.menu > li:hover > a {
+        color: #e85400;
+      }
+      header .head .top ul.menu > li .sub {
+        position: absolute;
+        width: 680px;
+        left: 0;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        z-index: 2;
+        transform: 0s;
+      }
+      header .head .top ul.menu > li .sub.on {
+        opacity: 1;
+        transition: 0.3s;
+      }
+      header .head .top ul.menu > li:first-child .sub > ul {
+        display: flex;
+      }
+      header .head .top ul.menu > li .sub > ul li {
+        flex: 1;
+        line-height: 40px;
+      }
+      header .head .top ul.menu > li .sub > ul li a:hover {
+        color: #e85400;
+      }
+      section {
+        height: 100vh;
+      }
+      section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <div class="top">
+          <div class="logo">
+            <img
+              src="https://www.cuchen.com/img/logo.svg
+            "
+              alt="logo"
+            />
+          </div>
+          <ul class="menu">
+            <li>
+              <a href="#">쿠첸 이야기</a>
+              <div class="sub">
+                <ul>
+                  <li>
+                    <h4>브랜드 소개</h4>
+                    <ul>
+                      <li><a href="#">CEO 인사말</a></li>
+                      <li><a href="#">About 쿠첸</a></li>
+                      <li><a href="#">경영이념 및 미션</a></li>
+                      <li><a href="#">소비자 중심 경영(CCM)</a></li>
+                      <li><a href="#">회사 연혁</a></li>
+                      <li><a href="#">쿠첸 수상 내역</a></li>
+                      <li><a href="#">CSR 활동</a></li>
+                      <li><a href="#">인재채용</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>쿠첸기술력</h4>
+                    <ul>
+                      <li>
+                        <a href="#">쿠첸 핵심 제품</a>
+                      </li>
+                      <li>
+                        <a href="#">쿠첸 밥맛 연구소</a>
+                      </li>
+                      <li>
+                        <a href="#">지적재산권 현황</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>쿠첸소식</h4>
+                    <ul>
+                      <li>
+                        <a href="#">쿠첸기사</a>
+                      </li>
+                      <li>
+                        <a href="#">쿠첸 광고</a>
+                      </li>
+                      <li>
+                        <a href="#">후원, 협찬</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">비즈니스</a>
+              <div class="sub">
+                <ul>
+                  <li><a href="#">국내 영업</a></li>
+                  <li><a href="#">해외 영업</a></li>
+                  <li><a href="#">북미 판매 법인</a></li>
+                  <li><a href="#">중국 판매 법인</a></li>
+                  <li><a href="#">중국 생산 법인</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">B2B 특판</a>
+              <div class="sub">
+                <ul>
+                  <li><h4>B2B 비즈니스</h4></li>
+                  <li><a href="#">B2B 소개</a></li>
+                  <li><a href="#">B2B 빌트인 가전</a></li>
+                  <li><a href="#">납품 실적 및 적용 사례</a></li>
+                  <li>
+                    <a href="#"><strong>B2B 제품 안내</strong></a>
+                  </li>
+                  <li>
+                    <a href="#"><strong>B2B 상담 신청</strong></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">쿠첸몰</a></li>
+            <li><a href="#">플렉스쿡</a></li>
+          </ul>
+          <div class="lang">KOR</div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <video
+        autoplay
+        muted
+        loop
+        poster="https://www.cuchen.com/img/mov_bg.jpg"
+        class="bgvid"
+      >
+        <source
+          src="https://www.cuchen.com/upload/video/20240826_0004.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </section>
+    <script></script>
+  </body>
+</html>
