@@ -160,7 +160,7 @@
     <script>
       let subMenu = document.querySelector(".submenu");
       let sub = document.querySelectorAll(".lnb>ul>li");
-      let gnb = document.querySelectorAll(".menu ul li a");
+      let gnb = document.querySelectorAll(".menu ul li");
       let ht = document.querySelector(".lnb").offsetHeight;
       console.log("ht : " + ht);
       gnb.forEach(function (item, keys) {
@@ -174,11 +174,11 @@
       sub.forEach(function (item, keys) {
         item.addEventListener("mouseenter", function () {
           subMenu.style.height = ht + "px";
-          gnb[keys].classList.add("on", "active");
+          gnb[keys].querySelector("a").classList.add("on", "active");
         });
         item.addEventListener("mouseleave", function () {
           subMenu.style.height = 0 + "px";
-          gnb[keys].classList.remove("on", "active");
+          gnb[keys].querySelector("a").classList.remove("on", "active");
         });
       });
     </script>
