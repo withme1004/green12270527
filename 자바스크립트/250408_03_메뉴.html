@@ -298,7 +298,7 @@
           <ul>
             <li>
               <ul>
-                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴5</a></li>
                 <li><a href="#">서브메뉴1</a></li>
                 <li><a href="#">서브메뉴1</a></li>
                 <li><a href="#">서브메뉴1</a></li>
@@ -349,6 +349,38 @@
         </div>
       </div>
     </header>
-    <script></script>
+    <script>
+      let subMenu = document.querySelectorAll(".submenu");
+      let lnb = document.querySelectorAll(".lnb");
+      let gnb = document.querySelectorAll(".menu ul li");
+      function myfnc() {
+        subMenu.forEach(function (v, k) {
+          v.style.height = "0px";
+          gnb[k].querySelector("a").classList.remove("on");
+        });
+      }
+      myfnc();
+      gnb.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          myfnc();
+          let ht = lnb[k].offsetHeight;
+          subMenu[k].style.height = ht + "px";
+        };
+        v.onmouseleave = function () {
+          myfnc();
+        };
+      });
+      subMenu.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          myfnc();
+          let ht = lnb[k].offsetHeight;
+          subMenu[k].style.height = ht + "px";
+          gnb[k].querySelector("a").classList.add("on");
+        };
+        v.onmouseleave = function () {
+          myfnc();
+        };
+      });
+    </script>
   </body>
 </html>
