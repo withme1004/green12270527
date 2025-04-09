@@ -29,7 +29,9 @@
         margin: 0;
         padding: 0;
       }
-
+      .visual {
+        position: relative;
+      }
       .swiper {
         width: 100%;
         height: 100%;
@@ -79,24 +81,58 @@
         stroke-dashoffset: calc(200px * (1 - var(--progress)));
         stroke-dasharray: 200;
       }
+      #controls {
+        position: absolute;
+        left: 100px;
+        top: 80%;
+        width: 200px;
+        height: 50px;
+        z-index: 20;
+      }
+      #controls svg {
+        stroke-width: 10px;
+        stroke: #fff;
+        fill: none;
+        stroke-dashoffset: calc(200px * (1 - var(--progress)));
+        stroke-dasharray: 200;
+        animation: bar 10s infinite linear;
+        /*animation-play-state: paused;
+        animation-play-state: running;*/
+      }
+      @keyframes bar {
+        0% {
+          stroke-dashoffset: 200;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <video id="video" muted autoplay loop>
-            <source src="https://www.jbfg.com/assets/img/main/kv.mp4" />
-          </video>
+    <div class="visual">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <video id="video" muted autoplay loop>
+              <source src="https://www.jbfg.com/assets/img/main/kv.mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 200 48">
+            <line x1="0" y1="0" x2="200" y2="0"></line>
+          </svg>
+          <span></span>
         </div>
       </div>
-      <div class="autoplay-progress">
+      <div id="controls">
         <svg viewBox="0 0 200 48">
           <line x1="0" y1="0" x2="200" y2="0"></line>
         </svg>
-        <span></span>
+        <span id="stop">정지</span>
       </div>
     </div>
 
@@ -108,7 +144,8 @@
       const progressCircle = document.querySelector(".autoplay-progress svg");
       const progressContent = document.querySelector(".autoplay-progress span");
       const video = document.getElementById("video");
-
+      const stop = document.getElementById("stop");
+      const bar = document.querySelector("#controls svg");
       // Swiper 초기화
       var swiper = new Swiper(".mySwiper", {
         autoplay: {
@@ -130,6 +167,19 @@
           },
         },
       });
+      let videoPlay = true;
+      stop.onclick = function () {
+        if (videoPlay) {
+          video.pause();
+          this.innerHTML = "재생";
+          bar.style.animationPlayState = "paused";
+        } else {
+          video.play();
+          this.innerHTML = "정지";
+          bar.style.animationPlayState = "running";
+        }
+        videoPlay = !videoPlay;
+      };
     </script>
   </body>
 </html>
