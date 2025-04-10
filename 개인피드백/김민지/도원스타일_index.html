@@ -20,7 +20,7 @@
       }
       .wrap {
         width: 100%;
-        margin: 0 auto;
+        /* margin: 0 auto; */
       }
       /* 헤더메뉴 */
       header {
@@ -29,6 +29,9 @@
       header .menu {
         display: flex;
         gap: 40px;
+      }
+      section {
+        height: 100vh;
       }
       /*두번째 스크롤페이지 */
       .con2 {
@@ -103,7 +106,7 @@
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 521px;
+        /* height: 521px; */
       }
 
       .con5 .right {
@@ -113,21 +116,18 @@
 
       .con5 .right .storeimg {
         position: relative;
-        height: 100%;
+        height: auto;
       }
 
       .con5 .right .storeimg li {
-        object-fit: cover;
         position: absolute;
         top: 0;
         right: 0;
       }
       .con5 .right .storeimg {
-        height: auto;
       }
       .con5 .right .storeimg img {
         width: 100%;
-        height: auto;
         object-fit: cover;
       }
 
@@ -237,7 +237,8 @@
         background: #ccc;
       }
       footer .footerlogo ul {
-        width: 1600px;
+        /* width: 1600px; */
+        width: 100%;
         margin: 0 auto;
         padding: 40px;
         box-sizing: border-box;
@@ -516,11 +517,9 @@
       </footer>
     </div>
     <script>
-      // let ht = document.querySelector(
-      //   ".con5 .right .storeimg img"
-      // ).offsetHeight;
-      // console.log(ht);
-      // document.querySelector(".con5 .right .storeimg").style.height = ht + "px";
+      let ht = document.querySelector(".con5 .right .storeimg li").offsetHeight;
+      console.log(ht);
+      document.querySelector(".con5 .right .storeimg").style.height = ht + "px";
     </script>
   </body>
 </html>
