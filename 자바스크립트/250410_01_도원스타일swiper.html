@@ -58,9 +58,36 @@
       .swiper-slide img.on {
         transform: scale(1);
       }
+      .txt {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        width: 100%;
+
+        color: #fff;
+      }
+      .txt > div {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+      }
+      .txt > div h1 {
+        font-size: 60px;
+        transform: scale(1.2);
+        opacity: 0;
+        line-height: 1.2;
+      }
+      .txt > div h1.on {
+        opacity: 1;
+        transform: scale(1);
+        transition: 1s;
+        transition-delay: 1s;
+      }
       #controls {
         position: absolute;
-        top: 60%;
+        top: 70%;
         left: 50%;
         transform: translateX(-50%);
         width: 500px;
@@ -69,6 +96,7 @@
         align-items: center;
         color: #fff;
         z-index: 20;
+        justify-content: space-between;
       }
       #controls #arrow {
         width: 20%;
@@ -106,7 +134,26 @@
             />
           </div>
         </div>
-
+        <div class="txt">
+          <div>
+            <h1>
+              전통이 살아있는 맛 <br />
+              <strong>중식의 낙원, 도원스타일</strong>
+            </h1>
+          </div>
+          <div>
+            <h1>
+              호텔 중식의 재구성 <br />
+              <strong>프리미엄 다이닝</strong>
+            </h1>
+          </div>
+          <div>
+            <h1>
+              약식동원의 음식 철학 <br />
+              <strong>건강한 광둥식</strong>
+            </h1>
+          </div>
+        </div>
         <div id="controls">
           <div id="arrow">
             <div class="swiper-button-next"></div>
@@ -130,12 +177,25 @@
 
     <!-- Initialize Swiper -->
     <script>
+      let slide = document.querySelectorAll(".swiper-slide");
+      let txt = document.querySelectorAll(".txt>div");
+      document.querySelector(".start").innerHTML = "1";
+      document.querySelector(".end").innerHTML = slide.length;
+      function myfnc() {
+        slide.forEach(function (v, k) {
+          v.querySelector("img").classList.remove("on");
+        });
+        txt.forEach(function (v, k) {
+          v.querySelector("h1").classList.remove("on");
+        });
+      }
+
       var swiper = new Swiper(".mySwiper", {
         effect: "fade",
         speed: 1000,
         loop: true,
         autoplay: {
-          delay: 2500,
+          delay: 9000,
           disableOnInteraction: false,
         },
         pagination: {
@@ -146,7 +206,29 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        on: {
+          slideChange: function () {
+            myfnc();
+            slide[this.realIndex].querySelector("img").classList.add("on");
+            txt[this.realIndex].querySelector("h1").classList.add("on");
+            document.querySelector(".start").innerHTML = this.realIndex + 1;
+          },
+        },
       });
+
+      let autoplaying = true;
+      document.querySelector(".stop").onclick = function () {
+        if (autoplaying) {
+          swiper.autoplay.stop();
+        }
+        autoplaying = false;
+      };
+      document.querySelector(".play").onclick = function () {
+        if (!autoplaying) {
+          swiper.autoplay.start();
+        }
+        autoplaying = true;
+      };
     </script>
   </body>
 </html>
