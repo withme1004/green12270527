@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+      .visual {
+        position: relative;
+        height: 100vh;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.5);
+        transition: 8s ease-in-out;
+      }
+      .swiper-slide img.on {
+        transform: scale(1);
+      }
+      #controls {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 500px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        z-index: 20;
+      }
+      #controls #arrow {
+        width: 20%;
+        position: relative;
+      }
+      #controls #arrow .swiper-button-next:after,
+      #controls #arrow .swiper-button-prev:after {
+        font-size: 16px;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="visual">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://www.t-won.com/data/banner/61c84320e0877.jpg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.t-won.com/data/banner/61c8439fe973b.jpg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.t-won.com/data/banner/61c843b3246c5.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div id="controls">
+          <div id="arrow">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div id="page">
+            <span class="start"></span>
+            <span> / </span>
+            <span class="end"></span>
+          </div>
+          <div id="playStop">
+            <span class="stop">정지</span>
+            <span class="play">시작</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "fade",
+        speed: 1000,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
