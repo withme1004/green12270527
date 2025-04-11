@@ -52,7 +52,7 @@
         color: #fff;
       }
       .swiper-slide img {
-        width: 1042px;
+        width: 100%;
         object-fit: cover;
       }
     </style>
@@ -95,17 +95,17 @@
     <script>
       var swiper4 = new Swiper(".mySwiper4", {
         grabCursor: true,
+        speed: 800,
         effect: "creative",
+        mousewheel: true,
         creativeEffect: {
           prev: {
-            shadow: true,
-            translate: [0, 0, -800],
-            rotate: [180, 0, 0],
+            opacity: 0,
+            rotate: [0, 0, -45],
           },
           next: {
-            shadow: true,
-            translate: [0, 0, -800],
-            rotate: [-180, 0, 0],
+            opacity: 0,
+            rotate: [0, 0, 45],
           },
         },
       });

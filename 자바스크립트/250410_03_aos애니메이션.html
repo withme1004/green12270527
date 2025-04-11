@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>aos</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section:nth-child(1) {
+        background: #aaa;
+      }
+      section:nth-child(2) {
+        background: #bbb;
+      }
+      section:nth-child(3) {
+        background: #ddd;
+      }
+      section:nth-child(4) {
+        background: #eee;
+      }
+      section > div {
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section></section>
+    <section>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+        fade-up
+      </div>
+    </section>
+    <section>
+      <div data-aos="fade-down">fade-down</div>
+    </section>
+    <section>
+      <div data-aos="fade-left">fade-left</div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        delay: 500,
+      });
+    </script>
+  </body>
+</html>

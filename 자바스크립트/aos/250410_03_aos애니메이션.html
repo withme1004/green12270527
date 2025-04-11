@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>aos</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        /* gap: 50px; */
+      }
+      section:nth-child(1) {
+        background: #aaa;
+      }
+      section:nth-child(2) {
+        background: #bbb;
+      }
+      section:nth-child(3) {
+        background: #ddd;
+      }
+      section:nth-child(4) {
+        background: #eee;
+      }
+      section > div {
+        width: 200px;
+        height: 200px;
+        background: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div data-aos="fade-right">fade-right</div>
+    </section>
+    <section>
+      <div data-aos="fade-up" data-aos-duration="3000">fade-up</div>
+      <div data-aos="fade-down" data-aos-duration="3000" data-aos-offset="800">
+        fade-down
+      </div>
+    </section>
+    <section>
+      <div data-aos="fade-down">fade-down</div>
+    </section>
+    <section>
+      <div data-aos="fade-left">fade-left</div>
+    </section>
+    <script src="./js/aos.js"></script>
+    <script>
+      window.onscroll = function () {
+        let scrtop = document.documentElement.scrollTop;
+        console.log(scrtop);
+      };
+      AOS.init({
+        duration: 1000,
+        //delay: 500,
+        easing: "ease-in-out-cubic",
+        offset: 120,
+      });
+    </script>
+  </body>
+</html>
