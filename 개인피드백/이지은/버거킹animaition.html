@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 406px;
+        height: 377px;
+        background: url(https://www.burgerking.co.kr/img/bg_appdown_phone.png);
+        /* overflow: hidden; */
+        position: relative;
+      }
+      .wrap .inner {
+        position: absolute;
+        left: 130px;
+        top: 45px;
+        /* top: -130px; */
+        background: #f00;
+        width: 232px;
+        height: 330px;
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;
+        transition: 1s;
+      }
+      .wrap .inner ul {
+        display: flex;
+        transition: 0.5s;
+      }
+      .wrap ul li {
+        position: relative;
+        top: 0;
+        flex: 1 0 232px;
+      }
+      .wrap ul li.on {
+        top: -190px;
+        transition: 0.5s;
+        transition-delay: 1s;
+      }
+      .wrap ul li img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="inner">
+        <ul class="image_list">
+          <li>
+            <img
+              src="https://www.burgerking.co.kr//img/img_home_phone_cont01.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://www.burgerking.co.kr//img/img_home_phone_cont02.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://www.burgerking.co.kr//img/img_home_phone_cont03.png"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      let innerUl = document.querySelector(".inner ul");
+      let innerUli = document.querySelectorAll(".inner ul li");
+
+      let i = 0;
+
+      function resetLiClass() {
+        innerUli.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+
+      function next() {
+        setTimeout(function () {
+          resetLiClass();
+          innerUli[i].classList.add("on");
+          innerUl.style.marginLeft = `-${i * 100}%`;
+
+          i++;
+          if (i >= innerUli.length) {
+            i = 0;
+          }
+          inner.classList.remove("on");
+        }, 1000);
+      }
+
+      setInterval(next, 3000);
+    </script>
+  </body>
+</html>
