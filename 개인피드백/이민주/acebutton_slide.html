@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Line to Arc on Mouse Hover</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .visual {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        border: 1px solid;
+      }
+      .visual .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .visual .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .visual .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .visual .swiper-btn {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 20;
+      }
+
+      .visual .swiper-btn a {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 150px;
+      }
+
+      svg {
+        width: 50px;
+        height: 150px;
+        fill: none;
+        stroke: #000;
+        stroke-width: 4px;
+        border: 1px solid;
+      }
+
+      svg path {
+        transition: d 1s ease;
+      }
+
+      #next p,
+      #prev p {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        font-size: 15px;
+        color: #333;
+        letter-spacing: 1px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      #next p {
+        left: -10px;
+      }
+      #prev p {
+        left: 10px;
+      }
+      #next:hover p,
+      #prev:hover p {
+        opacity: 1;
+      }
+      .visual .swiper-btn a.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="visual">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+      </div>
+      <div class="swiper-btn">
+        <a href="#" id="prev">
+          <svg>
+            <path class="btn_prev" d="M 30 10 Q 30 65 30 140"></path>
+          </svg>
+          <p><span>PREV</span></p>
+        </a>
+        <a href="#" id="next">
+          <svg>
+            <path class="btn_next" d="M 20 10 Q 20 65 20 140"></path>
+          </svg>
+          <p><span>NEXT</span></p>
+        </a>
+      </div>
+    </div>
+    <div class="btn">
+      <div>slide1</div>
+      <div>slide2</div>
+      <div>slide3</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      function updateBtn(swiperI) {
+        const prevBtn = document.querySelector("#prev");
+        const nextBtn = document.querySelector("#next");
+
+        prevBtn.classList.toggle("disabled", swiperI.isBeginning);
+        nextBtn.classList.toggle("disabled", swiperI.isEnd);
+      }
+
+      const swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: "#next",
+          prevEl: "#prev",
+        },
+        on: {
+          init(swiper) {
+            updateBtn(swiper);
+          },
+          slideChange(swiper) {
+            updateBtn(swiper);
+          },
+        },
+      });
+      const btnPrev = document.querySelector("#prev");
+      const pathPrev = btnPrev.querySelector(".btn_prev");
+      const btnNext = document.querySelector("#next");
+      const pathnext = btnNext.querySelector(".btn_next");
+
+      btnPrev.addEventListener("mouseenter", () => {
+        pathPrev.setAttribute("d", "M 30 10 Q -10 65 30 140");
+      });
+
+      btnPrev.addEventListener("mouseleave", () => {
+        pathPrev.setAttribute("d", "M 30 10 Q 30 65 30 140");
+      });
+      btnNext.addEventListener("mouseenter", () => {
+        pathnext.setAttribute("d", "M 20 10 Q 60 65 20 140");
+      });
+
+      btnNext.addEventListener("mouseleave", () => {
+        pathnext.setAttribute("d", "M 20 10 Q 20 65 20 140");
+      });
+      const btns = document.querySelectorAll(".btn div");
+      btns.forEach((v, k) => {
+        v.addEventListener("click", () => {
+          swiper.slideTo(k); // 0부터 시작하는 인덱스
+        });
+      });
+    </script>
+  </body>
+</html>
