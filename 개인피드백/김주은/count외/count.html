@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 2rem;
+      }
+
+      .counter-container {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+      }
+
+      .counter {
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="counter-container">
+      <li class="counter-item">
+        <strong class="counter" data-target="12000"></strong>
+      </li>
+      <li class="counter-item">
+        <strong class="counter" data-target="100"></strong>하어ㅣ허니
+      </li>
+      <li class="counter-item">
+        <strong class="counter" data-target="5000"></strong>
+      </li>
+    </ul>
+
+    <script>
+      const counters = document.querySelectorAll(".counter");
+
+      counters.forEach(function (counter) {
+        counter.textContent = "0";
+
+        const targetNum = +counter.getAttribute("data-target");
+
+        const updateCounter = () => {
+          const count = +counter.textContent;
+
+          const increment = targetNum / 100;
+          const nextCount = Math.ceil(count + increment);
+
+          counter.textContent = nextCount > targetNum ? targetNum : nextCount;
+
+          if (count < targetNum) {
+            requestAnimationFrame(updateCounter);
+          }
+        };
+
+        updateCounter();
+      });
+    </script>
+  </body>
+</html>
