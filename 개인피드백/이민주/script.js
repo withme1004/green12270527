@@ -16,10 +16,9 @@ gnbL.forEach(function (v, k) {
     // span[1].style.display = "block";
     gnbL.forEach(function (item) {
       let spans = item.querySelectorAll("div > a > span");
-      if (spans.length > 1) {
-        spans[0].style.display = "none"; // 첫 번째 span 숨기고
-        spans[1].style.display = "block"; // 두 번째 span 보이기
-      }
+
+      spans[0].style.display = "none"; // 첫 번째 span 숨기고
+      spans[1].style.display = "block"; // 두 번째 span 보이기
     });
     document.querySelector(".nav").style.height = "180px";
     sub.forEach(function (v, k) {
