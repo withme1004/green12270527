@@ -1,0 +1,284 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Pretendard-B";
+  src: url(../webfonts/Pretendard-Bold.c8dc160f.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Pretendard-S";
+  src: url(../webfonts/Pretendard-SemiBold.0b651bef.woff2) format("woff2");
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.wrap {
+  height: 100vh;
+}
+.main {
+  position: relative;
+}
+.main .bg {
+  width: 100%;
+  height: 100%;
+}
+.main .bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main .bg h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Pretendard-B", "sans-serif";
+  font-size: 72px;
+  color: #fff;
+}
+.main ul.bg-menu {
+  position: fixed;
+  width: 100%;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main ul.bg-menu > li {
+  line-height: 30px;
+  width: 150px;
+}
+.main ul.bg-menu > li > a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: "Pretendard-B", "sans-serif";
+  font-size: 15px;
+}
+.main ul.bg-menu > li:not(:first-child) > a span {
+  opacity: 0;
+  transition: 1s;
+}
+.main ul.bg-menu > li:not(:first-child):hover > a span {
+  opacity: 1;
+}
+.main ul.bg-menu > li > a > p {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 3px;
+  left: 0;
+  top: 0;
+  margin-right: 15px;
+}
+
+.main div.nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  align-items: center;
+  padding: 0 0 0 45px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.main div.nav > a p {
+  width: 113px;
+  height: 25px;
+  padding-right: 146px;
+}
+.main div.nav > a p img {
+  width: 100%;
+  height: 100%;
+}
+
+.main .nav ul.menu {
+  height: 100%;
+  display: flex;
+  font-family: "Pretendard-B", "sans-serif";
+  margin: 0 auto;
+  align-items: center;
+  z-index: 99;
+}
+.main .nav ul.menu > li {
+  position: relative;
+}
+.main .nav ul.menu > li > a {
+  display: block;
+  position: relative;
+  height: 100%;
+  line-height: 100px;
+  color: #fff;
+  text-align: center;
+  padding: 0 24px;
+  transition: 0.5s;
+}
+.main .nav ul.menu:hover > li > a {
+  padding: 0 60px;
+  color: #000;
+}
+.main .nav ul.menu li ul.sub-menu {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 100px;
+  padding-top: 35px;
+  overflow: hidden;
+  text-align: center;
+}
+.main .nav ul.menu:hover li ul.sub-menu {
+  height: 200px;
+}
+.main .nav ul.menu li ul.sub-menu li a {
+  width: 100%;
+  color: #000;
+}
+
+.main .nav ul.service {
+  display: flex;
+  font-family: "Pretendard-S", "sans-serif";
+  position: relative;
+  z-index: 99;
+}
+.main .nav ul.service li {
+  padding-right: 35px;
+  align-self: center;
+  position: relative;
+}
+.main .nav ul.menu:hover ~ .service li {
+  color: #000;
+}
+.main .nav ul.service li::after {
+  content: url(../imges/arrow1.svg);
+  position: absolute;
+  width: 8px;
+  top: -2px;
+  right: 20px;
+}
+
+.main div.nav .service p {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.main div.nav .service p span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(250, 0, 45);
+  left: 0;
+  top: 0;
+}
+.main div.nav .service p span img {
+  width: 26px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.business {
+  width: 100%;
+  text-align: center;
+}
+
+.title-txt {
+  padding: 150px 0;
+}
+
+.title-txt h2 {
+  font-size: 84px;
+}
+.title-txt p {
+  font-size: 24px;
+}
+.business ul {
+  width: 100%;
+  display: flex;
+}
+
+.business ul li {
+  width: 100%;
+}
+.recruit {
+  width: 100%;
+  text-align: center;
+}
+.recruit > ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  height: 100%;
+  background: url(../imges/recruit/bg_recruit.06af1aea.png) center/cover;
+}
+.recruit > ul > li {
+  /* flex: 0 0 25%; */
+  width: 400px;
+  border-radius: 5%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.recruit > ul > li a {
+  height: 100%;
+  padding: 20px;
+  display: block;
+  color: #fff;
+  position: relative;
+}
+.recruit > ul > li a p:nth-child(2) {
+  padding: 25px 0;
+  font-size: 28px;
+  font-family: "Pretendard-B", "sans-serif";
+}
+.recruit > ul > li a p:nth-child(3) {
+  font-size: 18px;
+}
+.recruit > ul > li > a > span {
+  display: inline-block;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  left: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 1599px) {
+  .nav ul.menu > li {
+    transition: none;
+  }
+  .nav ul.menu:hover > li {
+    padding: 40px 27px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .main div.nav {
+    height: 60px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main .bg-menu,
+  .main .nav ul.menu,
+  .nav .service li {
+    display: none;
+  }
+  .main div.nav .service p {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+  }
+}
