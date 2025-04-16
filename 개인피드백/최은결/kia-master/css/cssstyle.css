@@ -1,0 +1,229 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  /* width: 100vw; */
+  height: 100vh;
+}
+.head {
+  width: 100%;
+  /* max-width: 100%; */
+  height: 60px;
+  /* margin: 0 auto; */
+  padding: 0 25px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head .logo {
+  width: 102px;
+  height: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.head .logo a {
+  background: url(https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/logo_w.svg)
+    center/cover no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.head .left ul {
+  display: flex;
+  gap: 48px;
+  padding-left: 24px;
+  /* width: calc(100% - 261px); */
+}
+.head .left ul li a {
+  font-size: 18px;
+  color: #fff;
+}
+.head .left ul li:not(:nth-child(7)) {
+  /* padding: 0 24px; */
+}
+/* .head .left ul li:nth-child(7) {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+} */
+.right {
+  /* display: flex;
+  align-items: center; */
+}
+.right > ul {
+  position: relative;
+  display: flex;
+  /* position: absolute;
+  right: 5%;
+  top: 22px; */
+  gap: 48px;
+}
+.right > ul > li > a {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.43;
+}
+.right > ul:first-child.on {
+  display: block;
+}
+
+/* .right ul li button {
+  margin-left: 32px;
+  background: none;
+  border: none;
+} */
+/* .right div {
+  position: absolute;
+  left: 5%;
+  top: 100%;
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 10px;
+  display: none;
+} */
+
+/* .right div li {
+  padding: 19px 24px;
+  overflow: hidden;
+} */
+/* .right div li a {
+  font-size: 18px;
+  color: #697278;
+  line-height: 1.43;
+}
+.right div li:hover {
+  background: #000;
+  box-sizing: border-box;
+  color: #fff;
+} */
+.right > ul > li > a {
+  display: flex;
+}
+.right > ul > li div {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: block;
+  background: #fff;
+  border-radius: 10px;
+  display: none;
+}
+.right > ul > li div ul li {
+  padding: 20px 30px;
+  margin: 2px;
+}
+.right > ul > li div ul li:hover {
+  background: #000;
+}
+.right > ul > li div ul li:hover a {
+  color: #fff;
+}
+.right > ul > li.lanBtn .lanimg img {
+  transition: 0.5s;
+}
+.right > ul > li.lanBtn .lanimg img.on {
+  transform: rotate(180deg);
+}
+#main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main .swiper-pagination-bullet-active {
+  background: rgba(255, 255, 255, 1) !important;
+}
+#main .swiper-pagination-bullet {
+  background: transparent;
+  border: 1px solid #fff;
+  opacity: 1;
+}
+#main .txt > div {
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+  z-index: 100;
+}
+#main .txt > div.on {
+  /* opacity: 1; */
+}
+#main .txt > div h5,
+#main .txt > div h1 {
+  opacity: 0;
+  transform: translateX(100%);
+}
+#main .txt > div h5.on {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
+}
+#main .txt > div h1.on {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+#main .txt .con {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  opacity: 0;
+  gap: 20px;
+  /* position: absolute;
+  left: 0;
+  top: 90%; */
+  transform: translateX(20px);
+  transition: transform 0.5s;
+}
+#main .txt .con p {
+  padding: 10px 20px;
+}
+#main .txt .con p:first-child {
+  background: #fff;
+}
+#main .txt .con p:nth-child(2) {
+  background: #000;
+}
+#main .txt .con p:nth-child(2) a {
+  color: #fff;
+}
+#main .txt .con.on {
+  opacity: 1;
+  transform: translateX(0);
+}
