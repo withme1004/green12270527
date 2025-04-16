@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script></script>
+  </head>
+  <body>
+    <p id="p1">문단태그1</p>
+    <p>문단태그2</p>
+    <p>문단태그3</p>
+    <p>문단태그4</p>
+    <p>문단태그5</p>
+    <script>
+      /*let p = document.querySelectorAll("p");
+      p.forEach(function (v, k, allitem) {
+        v.onclick = function () {
+          allitem.forEach(function (item) {
+            item.style.color = "#000";
+          });
+          this.style.color = "#f00";
+        };
+      });*/
+      /* let p = document.querySelectorAll("p");
+      p.forEach((v, k, allitem) => {
+        v.onclick = () => {
+          allitem.forEach((item) => {
+            item.style.color = "#000";
+          });
+          v.style.color = "#f00";
+        };
+      });*/
+      /*$("p").click(function () {
+        $("p").css("color", "#000");
+        $(this).css("color", "#f00");
+      });*/
+      $("p").mouseenter(() => {
+        $("p").css("color", "#000");
+        $(event.currentTarget).css("color", "#f00");
+      });
+      $("p").dblclick(function () {
+        $(this).hide();
+      });
+      $("#p1").mouseup(function () {
+        alert("Mouse down over p1!");
+      });
+    </script>
+  </body>
+</html>

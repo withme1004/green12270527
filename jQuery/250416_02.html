@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      // $(document).ready(function () {
+      //
+      // });
+      $(function () {
+        //$("p").css("color", "#f00").css().css();
+        $("p:first").css({ color: "#f00" });
+        $("p:last").css({ color: "#f00" });
+        $("p").eq(2).css({ color: "#f00" });
+        $("h1").text("hello<br>");
+        $("h1").html("hello<br>");
+        let sec = $(".visual").parent().prop("nodeName");
+        console.log(sec);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>jQuery</h1>
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+    <p>다섯</p>
+    <section>
+      <div class="visual"></div>
+    </section>
+    <script>
+      // document.querySelector("p").style.color = "#f00";
+      //document.getElementsByTagName("p")[0].style.color = "#f00";
+      // document.querySelectorAll("p").forEach(function (v, k) {
+      //   v.style.color = "#f00";
+      // });
+      // document.querySelector("h1").textContent = "hello";
+      document.querySelector("h1").remove();
+      // let sec = document.querySelector(".visual").parentNode.nodeName;
+      // console.log(sec);
+    </script>
+  </body>
+</html>
