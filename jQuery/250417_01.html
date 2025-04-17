@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+    <style>
+      .parent1,
+      .parent2,
+      .parent3 {
+        border: 1px solid;
+        padding: 50px;
+        margin: 20px;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".parent1")
+          .focus(function () {
+            $(this).css("backgroundColor", "#ccc");
+          })
+          .blur(function () {
+            $(this).css("backgroundColor", "#fff");
+          });
+        $(".parent2 input")
+          .focusin(function () {
+            $(this).css("backgroundColor", "#ccc");
+            $(this).parent().css("backgroundColor", "#ccc");
+          })
+          .focusout(function () {
+            $(this).css("backgroundColor", "#fff");
+          });
+
+        $(".parent1 input").focus(function () {
+          $(this).css("backgroundColor", "#ccc");
+        });
+        $(".parent1 input").blur(function () {
+          $(this).css("backgroundColor", "#fff");
+        });
+
+        /*$(".parent3").focusin(function () {
+          $(this).css("backgroundColor", "#ccc");
+          $(this).children().css("backgroundColor", "#ccc");
+        });*/
+        $(".parent3 input").focus(function () {
+          $(this).css("backgroundColor", "#ccc");
+          $(this).parent().css("backgroundColor", "#ccc");
+        });
+        $(".parent3").focusout(function () {
+          $(this).css("backgroundColor", "#fff");
+          $(this).children().css("backgroundColor", "#fff");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="parent1"><input type="text" /><br /><input type="text" /></div>
+    <div class="parent2"><input type="text" /><br /><input type="text" /></div>
+    <div class="parent3"><input type="text" /><br /><input type="text" /></div>
+
+    <script></script>
+  </body>
+</html>

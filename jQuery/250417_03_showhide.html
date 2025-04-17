@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("a").click(function (e) {
+          //e.preventDefault();//a태그의 기본동작을 막아줌 구문의 가장위에
+          $("p").toggle(1000, "linear"); //swing,또는 linear
+          let txt = $(this).text();
+          console.log(txt);
+          $(this).text("show");
+          if (txt == "hide") {
+            $(this).text("show");
+          } else {
+            $(this).text("hide");
+          }
+          return false; //a태그의 기본동작을 막아줌 구문의 가장끝
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>show()hide()</p>
+    <a href="#">hide</a>
+  </body>
+</html>
