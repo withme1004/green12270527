@@ -10,9 +10,24 @@ a {
   text-decoration: none;
   color: #fff;
 }
-section {
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.boxwrap {
+  display: flex;
+  width: 300vw;
   height: 100vh;
 }
+section.box {
+  width: 100vw;
+  flex-shrink: 0;
+}
+section.box1 {
+  height: 100vh;
+}
+
 .first {
   width: 100%;
   height: 100%;
@@ -31,12 +46,21 @@ section {
   z-index: 20;
   width: 100%;
   height: 130px;
+  color: #fff;
+}
+#menu.on {
+  color: #000;
+  background: #fff;
+  box-shadow: 0 0 10px #ddd;
+}
+#menu .title svg .cls-1.on {
+  fill: #00527c;
 }
 nav.liv {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   padding: 0 20px;
   max-width: 1288px;
@@ -62,7 +86,7 @@ nav.liv ul li {
   /* padding: 20px; */
   padding: 0 20px;
   font-weight: 600;
-  color: #fff;
+  /* color: #fff; */
   cursor: pointer;
 }
 nav.liv ul li:hover {
@@ -80,8 +104,13 @@ nav.liv a:last-child {
   box-sizing: border-box;
   text-align: center;
 }
-nav.liv a:last-child:hover {
+nav.liv a.contact:hover,
+nav.liv a.contact.on {
   background: #015578;
+  color: #fff;
+}
+nav.liv a:last-child.on:hover {
+  background: #ccc;
   color: #fff;
 }
 .main {
@@ -185,4 +214,12 @@ nav.liv a:last-child:hover {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+#secLast {
+  color: black;
+  overflow-y: scroll;
+}
+#secLast .inner {
+  width: 100%;
+  height: 3000px;
 }
