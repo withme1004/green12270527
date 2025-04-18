@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    .section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+  <body>
+    <div class="section">Section 1</div>
+    <div class="section">Section 2</div>
+    <div class="section">Section 3</div>
+  </body>
+  <script>
+    let currentSection = 0;
+    const sections = document.querySelectorAll(".section");
+    let isScrolling = false;
+
+    window.addEventListener("wheel", (e) => {
+      if (isScrolling) return;
+
+      if (e.deltaY > 0 && currentSection < sections.length - 1) {
+        currentSection++;
+      } else if (e.deltaY < 0 && currentSection > 0) {
+        currentSection--;
+      } else {
+        return;
+      }
+
+      isScrolling = true;
+      sections[currentSection].scrollIntoView({ behavior: "smooth" });
+
+      setTimeout(() => {
+        isScrolling = false;
+      }, 0); // 딜레이로 중복 스크롤 방지
+    });
+  </script>
+</html>
