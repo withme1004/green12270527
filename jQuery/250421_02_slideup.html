@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+      }
+      p {
+        width: 100%;
+        height: 100%;
+        background: #ccc;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("a:first-of-type").mouseenter(function (e) {
+          e.preventDefault();
+          $("p").slideUp(1000, "linear");
+        });
+        $("a:nth-of-type(2)").click(function (e) {
+          e.preventDefault();
+          $("p").slideDown(1000, "linear");
+        });
+        $("a:nth-of-type(3)").click(function (e) {
+          e.preventDefault();
+          $("p").slideToggle(1000, "linear");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <p></p>
+    </div>
+    <a href="#">slideup</a>
+    <a href="#">slidedown</a>
+    <a href="#">slidetoggle</a>
+  </body>
+</html>
