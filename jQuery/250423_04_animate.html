@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p#move {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #ccc;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("a#a01").click(function (e) {
+          e.preventDefault(); //실행구문의 가장 처음에 위치 기본동작을 막는역할
+          $("p#move").animate({ left: "+=50px" }, 1000, "linear");
+        });
+        $("a#a02").click(function () {
+          $("p#demo").animate({ height: "toggle" }, 1000);
+          return false; //실행구문의 가장 끝에위치 기본동작을 막는역할
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="move"></p>
+    <a href="#" id="a01">클릭</a>
+    <p id="demo">보이기/숨기기</p>
+    <a href="#" id="a02">toggle</a>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p#move {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #ccc;
+      }
+      #draggable {
+        width: 150px;
+        height: 150px;
+        padding: 0.5em;
+        border: 1px solid;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("a").click(function (e) {
+          e.preventDefault();
+          $("p#move")
+            .animate({ left: "500px" }, 1000, "linear")
+            .animate({ top: "500px", backgroundColor: "#f00" }, 1000, "swing")
+            .animate({ left: "0px" }, 1000, "easeInOutBounce")
+            .animate({ top: "0px" }, 1000, "easeInOutElastic");
+        });
+        $("a").trigger("click");
+        setInterval(function () {
+          $("a").click();
+        }, 4000);
+
+        $("#draggable").draggable();
+      });
+    </script>
+  </head>
+  <body>
+    <p id="move"></p>
+    <a href="#">클릭</a>
+    <div id="draggable" class="ui-widget-content">
+      <p>Drag me around</p>
+    </div>
+  </body>
+</html>

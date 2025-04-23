@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("ul li").each(function (i, e) {
+          let txt = $(this).data("bg");
+          console.log(txt);
+          $(this)
+            .css("background-color", `#${txt}`)
+            .text(i + 1);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li data-bg="aaa"></li>
+      <li data-bg="bbb"></li>
+      <li data-bg="ccc"></li>
+      <li data-bg="ddd"></li>
+      <li data-bg="eee"></li>
+    </ul>
+  </body>
+</html>
