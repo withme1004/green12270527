@@ -38,7 +38,7 @@
         width: 100%;
         object-fit: cover;
       }
-      #section3 .con {
+      #section4 .con {
         height: 300px;
         background: #000;
       }
@@ -72,8 +72,33 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
-      <div class="section" id="section2"></div>
-      <div class="section fp-auto-height" id="section3">
+      <div class="section" id="section2">
+        <div class="swiper mySwiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://cdn.pixabay.com/photo/2020/11/24/04/01/pond-5771499_1280.jpg"
+                alt="cubic"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://cdn.pixabay.com/photo/2025/03/19/13/20/trees-9480700_1280.jpg"
+                alt="cubic"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://cdn.pixabay.com/photo/2022/03/31/11/30/rapeseed-7102819_1280.jpg"
+                alt="cubic"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="section" id="section3"></div>
+      <div class="section fp-auto-height" id="section4">
         <div class="con"></div>
       </div>
     </div>
@@ -92,6 +117,7 @@
             return false;
           });
           swiper.mousewheel.disable();
+          swiper1.mousewheel.disable();
         },
         afterLoad: function (anchorLink, index) {
           // 전환이 끝난후 이벤트풀기
@@ -99,6 +125,7 @@
           if (!$(".fp-completely .swiper-wrapper").length > 0)
             $("#fullpage").off("touchmove");
           if (swiper) swiper.mousewheel.enable();
+          if (swiper1) swiper1.mousewheel.enable();
           if (!$("#section1").hasClass("active"))
             $.fn.fullpage.setAllowScrolling(true);
           // 슬라이드 섹션을 벗어나면 휠풀어주기
@@ -129,6 +156,42 @@
             var i = this.activeIndex;
             // 처음과 마지막 슬라이드일 경우 fullpage전환 풀기
             if (i == 0 || i >= length - 1)
+              $.fn.fullpage.setAllowScrolling(true);
+          },
+          touchMove: function (e) {
+            var startY = e.touches.startY;
+            setTimeout(function () {
+              if (startY > e.touches.currentY) swiper.slideNext();
+              else swiper.slidePrev();
+            }, 100);
+          },
+        },
+      });
+      var length1 = $("#section2 .swiper-slide").length;
+      var swiper1 = new Swiper(".mySwiper1", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        freeMode: false,
+        speed: 1000,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        mousewheel: true,
+        on: {
+          slideChange: function () {
+            var i = this.activeIndex;
+            // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
+            if (this.activeIndex != 0 && i != length1)
+              $.fn.fullpage.setAllowScrolling(false);
+            if (length1 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
+            //슬라이드가 2개밖에 없을때
+            // console.log('즉시 : ' + i);
+          },
+          slideChangeTransitionEnd: function () {
+            var i = this.activeIndex;
+            // 처음과 마지막 슬라이드일 경우 fullpage전환 풀기
+            if (i == 0 || i >= length1 - 1)
               $.fn.fullpage.setAllowScrolling(true);
           },
           touchMove: function (e) {
