@@ -133,6 +133,12 @@
             `rotateY(${index * degPerItem}deg) translateZ(320px)`
           );
         });
+        $(".left ul li").click(function (e) {
+          e.preventDefault();
+          let i = $(this).index();
+          let y = -i * degPerItem;
+          $(".inner").css("transform", `rotateY(${y}deg)`);
+        });
       });
     </script>
   </head>
