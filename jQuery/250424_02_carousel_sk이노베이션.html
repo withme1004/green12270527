@@ -123,6 +123,18 @@
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let totalItem = $(".inner .item").length;
+        let degPerItem = 360 / totalItem;
+        $(".item").each(function (index, element) {
+          $(element).css(
+            "transform",
+            `rotateY(${index * degPerItem}deg) translateZ(320px)`
+          );
+        });
+      });
+    </script>
   </head>
   <body>
     <section>
