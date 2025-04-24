@@ -10,7 +10,7 @@
         width: 200px;
         height: 200px;
         margin: 100px auto;
-        perspective: 800px;
+        perspective: 300px;
       }
       div#box {
         width: 200px;
@@ -43,16 +43,24 @@
       div#box img:last-child {
         transform: translateZ(200px);
       }
+      #btn {
+        position: relative;
+        top: 200px;
+      }
     </style>
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script>
       $(function () {
+        let x = 0;
         let y = 0;
         $("#left").click(function () {
           $("#box").css("transform", `rotateY(${(y -= 60)}deg)`);
         });
         $("#right").click(function () {
           $("#box").css("transform", `rotateY(${(y += 60)}deg)`);
+        });
+        $("#top").click(function () {
+          $("#box").css("transform", `rotateX(${(x += 90)}deg)`);
         });
       });
     </script>
@@ -89,6 +97,7 @@
     <div id="btn">
       <button id="left">left</button>
       <button id="right">right</button>
+      <button id="top">top</button>
     </div>
   </body>
 </html>
