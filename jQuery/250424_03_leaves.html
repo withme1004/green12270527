@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SK 3D Carousel</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="leafCanvas"></canvas>
+    <script>
+      const canvas = document.getElementById("leafCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const leafImage = new Image();
+      leafImage.src = "./leaves.png"; // 나뭇잎 이미지 URL로 교체
+
+      const leaves = [];
+
+      function createLeaf() {
+        return {
+          x: canvas.width + Math.random() * 200,
+          y: Math.random() * canvas.height,
+          speed: 1 + Math.random() * 2,
+          size: 30 + Math.random() * 30,
+          angle: Math.random() * 2 * Math.PI,
+          rotationSpeed: 0.01 + Math.random() * 0.02,
+        };
+      }
+
+      // 초기 나뭇잎 생성
+      for (let i = 0; i < 20; i += 5) {
+        leaves.push(createLeaf());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        leaves.forEach((leaf, index) => {
+          leaf.x -= leaf.speed;
+          leaf.angle += leaf.rotationSpeed;
+
+          // 나뭇잎이 화면 왼쪽을 벗어나면 다시 오른쪽에서 등장
+          if (leaf.x < -leaf.size) {
+            leaves[index] = createLeaf();
+          }
+
+          ctx.save();
+          ctx.translate(leaf.x, leaf.y);
+          ctx.rotate(leaf.angle);
+          ctx.drawImage(
+            leafImage,
+            -leaf.size / 2,
+            -leaf.size / 2,
+            leaf.size,
+            leaf.size
+          );
+          ctx.restore();
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      leafImage.onload = animate;
+
+      window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    </script>
+  </body>
+</html>

@@ -18,6 +18,16 @@
       a {
         text-decoration: none;
       }
+      #sec03 {
+        height: 100vh;
+      }
+      #leafCanvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+      }
       section {
         width: 1438px;
         height: 860px;
@@ -30,7 +40,9 @@
         font-family: "SUIT", sans-serif;
       }
       .left {
+        position: relative;
         width: 40%;
+        z-index: 1;
       }
       .right {
         width: 60%;
@@ -143,176 +155,243 @@
     </script>
   </head>
   <body>
-    <section>
-      <div class="left">
-        <ul>
-          <li><a href="#">SK에너지</a></li>
-          <li><a href="#">SK지오센트릭</a></li>
-          <li><a href="#">SK온</a></li>
-          <li><a href="#">SK엔무브</a></li>
-          <li><a href="#">SK인천석유화학</a></li>
-          <li><a href="#">SK아이이테크놀로지</a></li>
-          <li><a href="#">SK어스온</a></li>
-        </ul>
-      </div>
-      <div class="right">
-        <div class="sk">
-          <p class="earthImg">
-            <img
-              src="https://www.skinnovation.com/resources/images/main/s4-earth.png"
-              alt="지구"
-            />
-          </p>
-          <div class="inner">
-            <div class="item">
-              <a href="">
-                <h1>SK에너지</h1>
-                <span class="desc"
-                  >에너지를 통해 고객과 <br />사회의 행복에<br />기여하는 미래형
-                  에너지 기업<br />
-                </span>
-                <div class="icon-box">
-                  <span class="link"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
-                      alt=""
+    <div class="sec03">
+      <canvas id="leafCanvas"></canvas>
+      <section>
+        <div class="left">
+          <ul>
+            <li><a href="#">SK에너지</a></li>
+            <li><a href="#">SK지오센트릭</a></li>
+            <li><a href="#">SK온</a></li>
+            <li><a href="#">SK엔무브</a></li>
+            <li><a href="#">SK인천석유화학</a></li>
+            <li><a href="#">SK아이이테크놀로지</a></li>
+            <li><a href="#">SK어스온</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="sk">
+            <p class="earthImg">
+              <img
+                src="https://www.skinnovation.com/resources/images/main/s4-earth.png"
+                alt="지구"
+              />
+            </p>
+            <div class="inner">
+              <div class="item">
+                <a href="">
+                  <h1>SK에너지</h1>
+                  <span class="desc"
+                    >에너지를 통해 고객과 <br />사회의 행복에<br />기여하는
+                    미래형 에너지 기업<br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-1.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK지오센트릭</h1>
+                  <span class="desc"
+                    >고부가 화학소재, 차세대 재활용 <br />기술 기반으로 세상에
+                    <br />필요한 솔루션을 제공하는 기업<br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="	https://www.skinnovation.com/resources/images/main/s4-icon-2.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK온</h1>
+                  <span class="desc"
+                    >배터리 기술 혁신으로 더 나은 <br />미래를 열어 나가는
+                    기업<br /><br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-3.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK엔무브</h1>
+                  <span class="desc"
+                    >제품 기술 경쟁력과 액침냉각,<br />
+                    배터리 열관리 등 신규 사업으로 <br />연료/전력 효율성을
+                    높이는 Energy<br />Saving Company
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-4.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK인천석유화학</h1>
+                  <span class="desc"
+                    >보다 안전하고 <br />깨끗한 에너지로 <br />지역사회와
+                    상생하는 기업<br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-5.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK아이이테크놀로지</h1>
+                  <span class="desc"
+                    >글로벌 탑티어 <br />소재 솔루션 기업 <br /><br /><br
                   /></span>
-                  <span class="icon"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-icon-1.png"
-                      alt=""
-                  /></span>
-                </div>
-              </a>
-            </div>
-            <div class="item">
-              <a href="">
-                <h1>SK지오센트릭</h1>
-                <span class="desc"
-                  >고부가 화학소재, 차세대 재활용 <br />기술 기반으로 세상에
-                  <br />필요한 솔루션을 제공하는 기업<br />
-                </span>
-                <div class="icon-box">
-                  <span class="link"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
-                      alt=""
-                  /></span>
-                  <span class="icon"
-                    ><img
-                      src="	https://www.skinnovation.com/resources/images/main/s4-icon-2.png"
-                      alt=""
-                  /></span>
-                </div>
-              </a>
-            </div>
-            <div class="item">
-              <a href="">
-                <h1>SK온</h1>
-                <span class="desc"
-                  >배터리 기술 혁신으로 더 나은 <br />미래를 열어 나가는 기업<br /><br />
-                </span>
-                <div class="icon-box">
-                  <span class="link"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
-                      alt=""
-                  /></span>
-                  <span class="icon"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-icon-3.png"
-                      alt=""
-                  /></span>
-                </div>
-              </a>
-            </div>
-            <div class="item">
-              <a href="">
-                <h1>SK엔무브</h1>
-                <span class="desc"
-                  >제품 기술 경쟁력과 액침냉각,<br />
-                  배터리 열관리 등 신규 사업으로 <br />연료/전력 효율성을 높이는
-                  Energy<br />Saving Company
-                </span>
-                <div class="icon-box">
-                  <span class="link"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
-                      alt=""
-                  /></span>
-                  <span class="icon"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-icon-4.png"
-                      alt=""
-                  /></span>
-                </div>
-              </a>
-            </div>
-            <div class="item">
-              <a href="">
-                <h1>SK인천석유화학</h1>
-                <span class="desc"
-                  >보다 안전하고 <br />깨끗한 에너지로 <br />지역사회와 상생하는
-                  기업<br />
-                </span>
-                <div class="icon-box">
-                  <span class="link"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
-                      alt=""
-                  /></span>
-                  <span class="icon"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-icon-5.png"
-                      alt=""
-                  /></span>
-                </div>
-              </a>
-            </div>
-            <div class="item">
-              <a href="">
-                <h1>SK아이이테크놀로지</h1>
-                <span class="desc"
-                  >글로벌 탑티어 <br />소재 솔루션 기업 <br /><br /><br
-                /></span>
-                <div class="icon-box">
-                  <span class="link"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
-                      alt=""
-                  /></span>
-                  <span class="icon"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-icon-6.png"
-                      alt=""
-                  /></span>
-                </div>
-              </a>
-            </div>
-            <div class="item">
-              <a href="">
-                <h1>SK어스온</h1>
-                <span class="desc"
-                  >자원의 선순환까지 생각하는<br />
-                  Carbon Neutral Company<br /><br />
-                </span>
-                <div class="icon-box">
-                  <span class="link"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
-                      alt=""
-                  /></span>
-                  <span class="icon"
-                    ><img
-                      src="https://www.skinnovation.com/resources/images/main/s4-icon-7.png"
-                      alt=""
-                  /></span>
-                </div>
-              </a>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-6.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK어스온</h1>
+                  <span class="desc"
+                    >자원의 선순환까지 생각하는<br />
+                    Carbon Neutral Company<br /><br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-7.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+    <script>
+      const canvas = document.getElementById("leafCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const leafImage = new Image();
+      leafImage.src = "./leaves.png"; // 나뭇잎 이미지 URL로 교체
+
+      const leaves = [];
+
+      function createLeaf() {
+        return {
+          x: canvas.width + Math.random() * 200,
+          y: Math.random() * canvas.height,
+          speed: 1 + Math.random() * 2,
+          size: 30 + Math.random() * 30,
+          angle: Math.random() * 2 * Math.PI,
+          rotationSpeed: 0.01 + Math.random() * 0.02,
+        };
+      }
+
+      // 초기 나뭇잎 생성
+      for (let i = 0; i < 20; i += 5) {
+        leaves.push(createLeaf());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        leaves.forEach((leaf, index) => {
+          leaf.x -= leaf.speed;
+          leaf.angle += leaf.rotationSpeed;
+
+          // 나뭇잎이 화면 왼쪽을 벗어나면 다시 오른쪽에서 등장
+          if (leaf.x < -leaf.size) {
+            leaves[index] = createLeaf();
+          }
+
+          ctx.save();
+          ctx.translate(leaf.x, leaf.y);
+          ctx.rotate(leaf.angle);
+          ctx.drawImage(
+            leafImage,
+            -leaf.size / 2,
+            -leaf.size / 2,
+            leaf.size,
+            leaf.size
+          );
+          ctx.restore();
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      leafImage.onload = animate;
+
+      window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    </script>
   </body>
 </html>
