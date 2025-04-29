@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+      .green {
+        background: green;
+      }
+      .red {
+        background: red;
+      }
+      .blue {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green"></div>
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    <script>
+      gsap.from(".green", {
+        x: 500,
+        duration: 5,
+        rotation: 360,
+        //repeat: -1,
+        //yoyo: true,
+        ease: "bounce.out",
+      });
+      gsap.to(".red", { x: 500, duration: 5, rotation: 360, delay: 5 });
+      gsap.fromTo(
+        ".blue",
+        { x: 500, y: -300 },
+        { y: 500, duration: 5, delay: 10 }
+      );
+    </script>
+  </body>
+</html>
