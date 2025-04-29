@@ -1,0 +1,635 @@
+@charset "utf-8";
+
+/* @font-face {
+    font-family: 'BKBulMatPro';
+    src: url('../font/BKBulMatPro-Bold.woff') format('woff');
+    font-weight:normal;
+}
+@font-face {
+    font-family: 'SDGothicgBd';
+    src: url('../font/SDGothicNeoRound-gBd.otf') format('otf');
+}
+@font-face {
+    font-family: 'SDGothichEb';
+    src: url('../font/SDGothicNeoRound-hEb.otf') format('otf');
+} */
+@font-face {
+  font-family: "SDGothicgBd";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../font/SDGothicNeoRound-gBd.otf") format("otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 42px;
+  font-family: SDGothicgBd, sans-serif;
+}
+a,
+h1,
+h2,
+p {
+  font-family: SDGothicgBd, sans-serif;
+  color: #502314;
+}
+
+.bk {
+  background: #f5ebdc;
+}
+header {
+  position: relative;
+  /* width: 1620px; */
+  padding: 20px 60px;
+  box-sizing: border-box;
+  background: #f5ebdc;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bk header .logo {
+  min-width: 200px;
+  height: 25px;
+  background: url(../images/bg_logo.svg) no-repeat;
+  text-align: left;
+}
+header .nav {
+  width: 100%;
+}
+.menu {
+  max-width: 1620px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin: 0 auto;
+  font-size: 24px;
+  background: #f5ebdc;
+}
+.menu ul {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+.menu ul li {
+  flex: 1 1 10%;
+  text-align: center;
+  line-height: 50px;
+}
+.menu ul li a:hover,
+.menu ul li a.on {
+  color: #d62300;
+}
+.menu ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.submenu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 90px;
+  background: #502314;
+  border-radius: 0 0 15px 15px;
+}
+.submenu .lnb {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.submenu .lnb > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.submenu .lnb > ul > li {
+  flex: 1 1 20%;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+.submenu .lnb > ul > li a {
+  color: #70554c;
+}
+.submenu .lnb > ul > li a:hover {
+  color: #fffcf8;
+}
+.bk header .franchise {
+  min-width: 200px;
+  text-align: right;
+}
+.bk header > .franchise a {
+  height: 40px;
+  padding: 5px 20px 5px 35px;
+  font-size: 13px;
+  white-space: nowrap;
+  border-radius: 30px;
+  line-height: 30px;
+  background-color: rgba(80, 35, 20, 0.05);
+  background-size: 14px;
+  background-image: url(../images/ico_tit_store.svg);
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+section {
+  width: 100%;
+  max-width: 1620px;
+  margin: 0px auto;
+  padding: 40px 60px 0;
+  box-sizing: border-box;
+}
+
+/* 배너 */
+section .home_banner {
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+section .home_banner .header_slide {
+  width: 1160px;
+  margin: 0 auto;
+}
+section .home_banner .header_slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home_banner .swiper {
+  /*  width: 100%;*/
+  height: 675px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 50px;
+}
+.home_banner .swiper-slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home_banner .swiper-slide > p {
+  width: 100%;
+  height: 100%;
+}
+.home_banner .swiper-slide > p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section .home_banner .header_con {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 675px;
+  max-width: 500px;
+  gap: 10px;
+  /* margin: 0 0 0 auto; */
+}
+section .home_banner .header_con_01,
+section .home_banner .header_con_02 {
+  width: 382px;
+  padding: 30px;
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 15px;
+  background-color: #fffcf8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section .home_banner .header_con_01 {
+  background-image: url(../images/header_con_01/bg_home_appdown.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 80%;
+  line-height: 28px;
+}
+section .home_banner .header_con_01 .my_app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+section .home_banner .header_con_01 .my_app > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section .home_banner .header_con_01 .my_app > div p {
+  background: #e4d7c8;
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+section .home_banner .header_con_02 {
+  background: #502314;
+  /* background-image: url(../images/header_con_02/bg_home_search.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 90%; */
+}
+section .home_banner .header_con_02 p {
+  color: #fffcf8;
+  display: flex;
+  flex-direction: column;
+}
+section .home_banner .header_con_02 p:last-child img {
+  /* display: inline;
+    width: 110%;
+    text-align: center; */
+}
+
+/* 광고영상 */
+section .home_ad {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 50px 0;
+}
+section .home_ad .bk_title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+section .home_ad h1 {
+  flex: 1 1 0%;
+  /* margin-top: 20px; */
+}
+section .home_ad p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  word-break: keep-all;
+}
+section .home_ad .ad_con > div {
+  width: 100%;
+  display: flex;
+  gap: 2%;
+}
+section .home_ad .ad_con_01,
+section .home_ad .ad_con_02,
+section .home_ad .ad_con_03 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  flex: 1 1 30%;
+  text-align: center;
+}
+section .home_ad .ad_con_01::after,
+section .home_ad .ad_con_02::after,
+section .home_ad .ad_con_03::after {
+  content: url(../images/video_thumbnail/btn_play.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section .home_ad .ad_con p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 매장소개 */
+section .home_my {
+  width: 100%;
+  height: 100%;
+  margin: 50px 0;
+}
+section .home_my_con {
+  max-width: 1620px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 2%;
+}
+
+section .home_my_con .my_con_txt {
+  width: 100%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0 0;
+}
+section .home_my_con .my_con_txt p {
+  width: 15%;
+  padding: 10px 0;
+  font-size: 13px;
+  line-height: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  background: #faf4ed;
+}
+
+.home_my_con .home_my_con_01,
+.home_my_con .home_my_con_02 {
+  width: 487px;
+  height: 467px;
+  flex: 1 1 30%;
+}
+section .home_my_con p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 15px 15px;
+}
+section .home_my_con .my_con_txt > h2 {
+  padding-bottom: 20px;
+  font-size: 23px;
+}
+section .home_my_con .my_con_txt > div {
+  display: flex;
+  justify-content: flex-end;
+}
+section .home_my_con .my_con_txt > div > a {
+  padding-right: 30px;
+  background: url(../images/ico_move.svg) no-repeat right;
+  font-weight: bold;
+  font-size: 16px;
+}
+.home_my_con_03 {
+  width: 465px;
+  height: 465px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: #fffcf8;
+  border-radius: 15px;
+}
+
+.swiper-slide {
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.home_my_con_03 .my_con_txt h2 {
+  text-align: center;
+  margin-bottom: 7px;
+  text-align: center;
+}
+.swiper-slide .my_con_txt h2 {
+  line-height: 30.5px;
+}
+.home_my_con_03 .swiper-slide p img {
+  width: 100%;
+  height: 278px;
+  object-fit: cover;
+}
+/* 집에서 만나는 버거킹 */
+
+section .home_delivery {
+  margin: 50px 0;
+  max-width: 1620px;
+  width: 100%;
+  height: 160px;
+  padding: 25px 30px;
+  background: #502314;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+section .home_delivery .del_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.del_banner_txt h2,
+.del_banner_txt strong {
+  color: #fffcf8;
+}
+.del_banner_txt h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.del_banner_txt span {
+  font-weight: normal;
+}
+.del_banner_txt_tel {
+  display: flex;
+  align-items: center;
+}
+.del_banner_txt_tel h2 {
+  font-size: 54px;
+  color: #fa0;
+}
+/*고객과 함께 성장하는 버거킹*/
+section .home_customer {
+  width: 100%;
+  margin: 50px 0;
+}
+section .home_customer .home_custrmer_txt {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+section .home_custrmer_txt .customer_01,
+section .home_custrmer_txt .customer_02,
+section .home_custrmer_txt .customer_03 {
+  width: 100%;
+  flex: 1 1 30%;
+}
+section .home_custrmer_txt .customer_01 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home_custrmer_txt .customer_01 .cu_brand,
+.home_custrmer_txt .customer_01 .cu_esg {
+  background: #fffcf8;
+  height: 50%;
+  border-radius: 15px;
+}
+.home_custrmer_txt img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+section .customer_02,
+section .customer_03 {
+  width: 100%;
+}
+section .my_con_txt {
+  width: 100%;
+  background: #fffcf8;
+  border-radius: 15px 15px 0 0;
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+section .home_custrmer_txt .my_con_txt p:first-child {
+  width: 20%;
+  padding: 10px 0;
+  font-size: 13px;
+  line-height: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  background: #faf4ed;
+}
+
+section .customer_02 .my_con_txt > h2,
+section .customer_03 .my_con_txt > h2 {
+  padding-bottom: 20px;
+  font-size: 22px;
+}
+
+section .my_con_txt p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*앱 홍보 배너*/
+section .home_app_banner {
+  margin: 50px 0;
+  max-width: 1620px;
+  width: 100%;
+  height: 370px;
+  padding: 25px 30px;
+  background: #e4d7c8;
+  box-sizing: border-box;
+  border-radius: 15px;
+  position: relative;
+}
+.home_app_main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.home_app {
+  width: 406px;
+  height: 377px;
+  background: url(https://www.burgerking.co.kr/img/bg_appdown_phone.png);
+  overflow: hidden;
+  position: relative;
+  top: -33px;
+  left: 130px;
+}
+.home_app .inner {
+  position: absolute;
+  left: 130px;
+  top: 44px;
+  /* top: -130px; */
+  width: 232px;
+  height: 335px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  transition: 1s;
+}
+.home_app .inner ul {
+  display: flex;
+  transition: 0.5s;
+}
+.home_app ul li {
+  position: relative;
+  top: 0;
+  flex: 1 0 232px;
+}
+.home_app ul li.on {
+  top: -190px;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+.home_app ul li img {
+  width: 100%;
+}
+.app_txt {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.app_txt_title {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+.app_txt_title span {
+  color: #d62300;
+}
+.app_list ul {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+.app_list ul li {
+  font-size: 19px;
+  color: #fffcf8;
+  background: #502314;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.app_download {
+  display: flex;
+  gap: 20px;
+}
+.btn_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.btn_area p {
+  cursor: pointer;
+}
+
+#popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(119, 92, 84, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+}
+#popup .pop {
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+  background: #ccc;
+}
