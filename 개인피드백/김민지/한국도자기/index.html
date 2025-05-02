@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -92,69 +98,79 @@
       </div>
     </header>
     <section class="con1">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <h2>
-                  일상의 행복을 위한 <br /><strong>한국도자기 공식몰</strong>
-                </h2>
-                <p class="text">
-                  일상에서 편하고 아름답게 사용할 수 있는<br />테이블웨어를
-                  제안합니다
+      <div class="visual">
+        <div class="left">
+          <ul>
+            <li>
+              <div class="text-box">
+                <div class="txt">
+                  <h1>일상의 행복을 위한</h1>
+                </div>
+                <div class="txt">
+                  <h1>한국도자기 공식몰<br /></h1>
+                </div>
+                <p>
+                  일상에서 편하고 아름답게 사용할 수 있는 <br />테이블웨어를
+                  제안합니다.
                 </p>
-                <p><a href="#">공식몰 바로가기</a></p>
+                <a href="#"
+                  >공식몰 바로가기<i class="fa-solid fa-arrow-right"></i
+                ></a>
               </div>
-              <div class="slide-right">
+            </li>
+            <li>
+              <div class="text-box">
+                <div class="txt"><h1>연(姸) 컬렉션</h1></div>
+                <p>
+                  전통 옷감인 모시를 모티브로 한<br />연 컬렉션을 만나보세요.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="text-box">
+                <div class="txt">
+                  <h1>티보에렘</h1>
+                </div>
+                <div class="txt">
+                  <h1>오브제 컬렉션</h1>
+                </div>
+                <p>
+                  프랑스 일러스트레이터 티보에렘이 그려낸<br />환상적인 오브제를
+                  선보입니다.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
                 <img
                   src="https://group.hankook.com/default/img/onepixel/images/main/main-slide1.jpg"
-                  alt="슬라이드 이미지"
+                  alt=""
                 />
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <h2><strong>연(姸) 컬렉션</strong></h2>
-                <p class="text">
-                  전통 옷감인 모시를 모티브로 한<br />
-                  연 컬렉션을 만나보세요.
-                </p>
-              </div>
-              <div class="slide-right">
+              <div class="swiper-slide">
                 <img
                   src="https://group.hankook.com/default/img/onepixel/images/main/main-slide2.jpg"
-                  alt="슬라이드 이미지"
+                  alt=""
                 />
               </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <h2>티보에렘<br /><strong>오브제 컬렉션</strong></h2>
-                <p class="text">
-                  프랑스 일러스트레이터 티보에렘이 그려낸<br />
-                  환상적인 오브제를 선보입니다.
-                </p>
-              </div>
-              <div class="slide-right">
+              <div class="swiper-slide">
                 <img
-                  src="https://group.hankook.com/default/img/onepixel/images/main/main-slide1.jpg"
-                  alt="슬라이드 이미지"
+                  src="https://group.hankook.com/default/img/onepixel/images/main/main-slide3.jpg"
+                  alt=""
                 />
               </div>
             </div>
           </div>
-        </div>
-        <div class="custom-pagination">
-          <span class="current">01</span> <span class="none">/</span>
-          <span class="total">03</span>
-          <div class="button_group">
-            <div class="swiper-button-next">〉</div>
-            <div class="swiper-button-prev">〈</div>
+          <div id="btn">
+            <div class="swiper-button-next"></div>
+            <div class="page">
+              <span class="start"></span> / <span class="end"></span>
+            </div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </div>
@@ -176,8 +192,8 @@
                 <h3>Ceramic</h3>
                 <p>
                   테이블웨어 중 가장 고급 재질인 본차이나를 생산합니다. 국내
-                  청주 공장에서 연간 240만 피스의<br />
-                  도자기를 생산하며, 그 가치를 인정받고 있습니다.
+                  청주 공장에서 연간 240만 피스의 도자기를 생산하며, 그 가치를
+                  인정받고 있습니다.
                 </p>
               </div>
             </a>
@@ -194,9 +210,8 @@
                 <h3>Decal</h3>
                 <p>
                   1980년부터 병행한 전사지 인쇄 사업. 세계에서 가장 큰 인쇄
-                  공장을 보유하며,<br />
-                  전사지를 원색에 가깝게 표현하며 엠보와 광택 등의 기술을 가지고
-                  있습니다.
+                  공장을 보유하며, 전사지를 원색에 가깝게 표현하며 엠보와 광택
+                  등의 기술을 가지고 있습니다.
                 </p>
               </div>
             </a>
@@ -213,7 +228,7 @@
                 <h3>해외브랜드 수입/유통</h3>
                 <p>
                   한국도자기는 브랜드 본사로부터 직접 수입하여 믿을 수 있는 해외
-                  브랜드<br />들을 소개합니다.
+                  브랜드들을소개합니다.
                 </p>
               </div>
             </a>
@@ -240,9 +255,8 @@
           </a>
           <h4>판촉물</h4>
           <p>
-            대학교, 기업, 재외공관 등 많은 고객들이 한국도자기를 선택합니다<br />
-            확실한 품질과 디자인으로 소중한 뜻을 더욱 소중하게<br />전할 수
-            있습니다.
+            대학교, 기업, 재외공관 등 많은 고객들이 한국도자기를 선택합니다
+            확실한 품질과 디자인으로 소중한 뜻을 더욱 소중하게 전할 수 있습니다.
           </p>
         </div>
         <div class="right_box">
@@ -251,9 +265,8 @@
           </a>
           <h4>제품 OEM</h4>
           <p>
-            대학교, 기업, 재외공관 등 많은 고객들이 한국도자기를 선택합니다<br />
-            확실한 품질과 디자인으로 소중한 뜻을 더욱 소중하게<br />전할 수
-            있습니다.
+            대학교, 기업, 재외공관 등 많은 고객들이 한국도자기를 선택합니다
+            확실한 품질과 디자인으로 소중한 뜻을 더욱 소중하게 전할 수 있습니다.
           </p>
         </div>
       </div>
@@ -346,6 +359,267 @@
         </div>
       </div>
     </section>
+    <section class="con5">
+      <div class="brand-container">
+        <div class="brand-left">
+          <h2>BRAND</h2>
+          <p>한국도자기의 브랜드를 소개합니다.</p>
+          <div class="brand-thumbs">
+            <div class="swiper mySwiper6">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.hankook.com/default/img/onepixel/images/main/section-brand1.jpg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.hankook.com/default/img/onepixel/images/main/section-brand2.jpg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.hankook.com/default/img/onepixel/images/main/section-brand3.jpg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.hankook.com/default/img/onepixel/images/main/section-brand4.jpg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.hankook.com/default/img/onepixel/images/main/section-brand5.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="brand-thumbs">
+            <img
+              src="https://www.hankook.com/default/img/onepixel/images/main/section-brand1.jpg"
+              data-index="0"
+              class="active"
+            />
+            <img
+              src="https://www.hankook.com/default/img/onepixel/images/main/section-brand2.jpg"
+              data-index="1"
+            />
+            <img
+              src="https://www.hankook.com/default/img/onepixel/images/main/section-brand3.jpg"
+              data-index="2"
+            />
+            <img
+              src="https://www.hankook.com/default/img/onepixel/images/main/section-brand4.jpg"
+              data-index="3"
+            />
+            <img
+              src="https://www.hankook.com/default/img/onepixel/images/main/section-brand5.jpg"
+              data-index="4"
+            />
+          </div> -->
+
+          <div class="brand-scroll-buttons">
+            <button id="brand-prev">←</button>
+            <button id="brand-next">→</button>
+          </div>
+        </div>
+
+        <div class="swiper mySwiper5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://www.hankook.com/default/img/onepixel/images/main/section-brand1.jpg"
+              />
+              <div class="brand-caption">
+                <h3>한국도자기</h3>
+                <p>80년 전통 도자기 브랜드</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.hankook.com/default/img/onepixel/images/main/section-brand2.jpg"
+              />
+              <div class="brand-caption">
+                <h3>프라우나</h3>
+                <p>
+                  국내 최초 본차이나 기술력의 정수를 담은 하이엔드 테이블웨어
+                  브랜드
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.hankook.com/default/img/onepixel/images/main/section-brand3.jpg"
+              />
+              <div class="brand-caption">
+                <h3>화리트블룸</h3>
+                <p>맑은 흰 빛으로 피어난 컨템포러리 본차이나</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.hankook.com/default/img/onepixel/images/main/section-brand4.jpg"
+              />
+              <div class="brand-caption">
+                <h3>리한</h3>
+                <p>삶에 영감을 주는 프리미엄 라이프스타일 브랜드</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.hankook.com/default/img/onepixel/images/main/section-brand5.jpg"
+              />
+              <div class="brand-caption">
+                <h3>해외브랜드</h3>
+                <p>
+                  한국도자기가 브랜드 본사로부터 직접 수입하여 믿을 수 있는 해외
+                  브랜드
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="con6">
+      <div class="inner">
+        <div class="left">
+          <h1>CONTACT</h1>
+          <div class="list">
+            <div class="list1">
+              <p>대표</p>
+              <p>마케팅/제휴</p>
+              <p>B2B/주문제작(서울/수도권)</p>
+              <p>B2B/주문제작(지방)</p>
+              <p>수출/무역</p>
+              <p>리빙한국/리한</p>
+            </div>
+            <div class="list2" l>
+              <p>online@hankook.com</p>
+              <p>brand@hankook.com</p>
+              <p>sales@hankook.com, 02-2250-3440</p>
+              <p>kdsonem@hankook.com, 043-279-9535</p>
+              <p>bslee@hankook.com</p>
+              <p>sales2@hankook.com, 02-2250-3480</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <ul class="sns_icon">
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-youtube"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li>
+              <img
+                src="https://www.hankook.com/default/img/onepixel/images/common/kakao-talk.png"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="inner">
+        <div class="left">
+          <h1 class="footerlogo">
+            <img
+              src="https://www.hankook.com/default/img/onepixel/images/common/logo-default.png"
+              alt=""
+            />
+          </h1>
+          <ul>
+            <li>
+              COMPANY : 한국도자기(주), OWNER : 김영신, TEL : 043) 262-5251, FAX
+              : 043) 262-5215
+            </li>
+            <li>ADDRESS : 청주시 흥덕구 월명로 55번길 100</li>
+            <li>개인정보관리책임자 : 김영신, E-MAIL : webmaster@hankook.com</li>
+            <li>
+              BUSINESS LICENSE : 315-81-00274, A MAIL-ORDER BUSINESS REPORT : 제
+              2016-충북청주-0053호
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="right_menu">
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">브랜드철학</a></li>
+              <li><a href="#">인재상</a></li>
+              <li><a href="#">회사연혁</a></li>
+              <li><a href="#">계열사</a></li>
+            </ul>
+          </div>
+          <div class="right_menu">
+            <ul>
+              <li><a href="#">Brand</a></li>
+              <li><a href="#">한국도자기</a></li>
+              <li><a href="#">프라우나</a></li>
+              <li><a href="#">화이트블룸</a></li>
+              <li><a href="#">리한</a></li>
+              <li><a href="#">해외브랜드</a></li>
+            </ul>
+          </div>
+          <div class="right_menu">
+            <ul>
+              <li><a href="#">Collection</a></li>
+              <li><a href="#">한국도자기</a></li>
+              <li><a href="#">프라우나</a></li>
+              <li><a href="#">화이트블룸</a></li>
+              <li><a href="#">해외브랜드</a></li>
+            </ul>
+          </div>
+          <div class="right_menu">
+            <ul>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Ceramic</a></li>
+              <li><a href="#">Decal</a></li>
+              <li>
+                <a href="#">해외브랜드<br />수입/유통</a>
+              </li>
+            </ul>
+          </div>
+          <div class="right_menu">
+            <ul>
+              <li><a href="#">News</a></li>
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">press</a></li>
+            </ul>
+          </div>
+          <div class="right_menu">
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">오시는 길</a></li>
+              <li><a href="#">매장 안내</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer2">
+      <div class="left">
+        <ul>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이메일무단수집거부</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <p>Copyright © 2025 한국도자기 All rights reserved.</p>
+      </div>
+    </div>
+    <!-- 맨 위에 떠있는거 -->
+    <div class="floating-buttons">
+      <a href="#" class="talk-button">
+        <img src="./img/kakao.png" alt="Kakao" />
+      </a>
+      <button class="top-button">↑</button>
+    </div>
     <!-- 
     <script src="./js/jquery-3.7.1.min.js"></script> -->
     <script src="./js/main.js"></script>
