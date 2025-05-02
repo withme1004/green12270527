@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>타이핑 효과</title>
+    <style>
+      .typing {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 24px;
+        white-space: pre;
+        border-right: 2px solid black;
+        animation: blink 0.7s infinite;
+      }
+
+      @keyframes blink {
+        0% {
+          border-color: black;
+        }
+        50% {
+          border-color: transparent;
+        }
+        100% {
+          border-color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="typing" id="typingText"></div>
+
+    <script>
+      const text = "안녕하세요! 타이핑 효과입니다.";
+      const typingTarget = document.getElementById("typingText");
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          typingTarget.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, 100); // 속도 조절 (100ms마다 한 글자)
+        }
+      }
+
+      window.onload = type;
+    </script>
+  </body>
+</html>
