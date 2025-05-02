@@ -109,14 +109,79 @@
 
     <!-- Initialize Swiper -->
     <script>
-      window.onload = function () {
+      let swiper; // 전역에 선언
+
+      function startTyping() {
         const text0 = document.getElementById("textType");
         const text1 = document.getElementById("textType2");
         const overlay = document.getElementById("textOverlay");
         const grove = document.getElementById("groveLogo");
         const mainSection = document.getElementById("main");
 
-        const swiper = new Swiper(".mySwiper", {
+        // 초기화
+        text0.textContent = "";
+        text1.textContent = "";
+        overlay.style.opacity = 0;
+        grove.style.opacity = 0;
+        text0.style.opacity = 1;
+        text1.style.opacity = 1;
+        mainSection.style.backgroundImage = "none";
+
+        const typewriter0 = new Typewriter(text0, {
+          loop: false,
+        });
+
+        typewriter0
+          .typeString("불가능")
+          .pauseFor(1000)
+          .deleteAll()
+          .callFunction(() => {
+            const typewriter1 = new Typewriter(text0, {
+              loop: false,
+              cursor: "",
+            });
+            typewriter1
+              .typeString("경계를 넘어,")
+              .pauseFor(300)
+              .callFunction(() => {
+                const typewriter2 = new Typewriter(text1, {
+                  loop: false,
+                  cursor: "",
+                });
+                typewriter2
+                  .typeString("새로운 가능성을 열다")
+                  .callFunction(() => {
+                    setTimeout(() => {
+                      mainSection.style.backgroundImage =
+                        "url('https://www.grovesoft.net/wp-content/uploads/2024/12/forest_img.png')";
+                      mainSection.style.backgroundSize = "cover";
+                      mainSection.style.backgroundPosition = "center";
+
+                      text0.style.opacity = 0;
+                      text1.style.opacity = 0;
+
+                      setTimeout(() => {
+                        overlay.style.opacity = 1;
+                      }, 500);
+
+                      setTimeout(() => {
+                        overlay.style.opacity = 0;
+                      }, 2000);
+
+                      setTimeout(() => {
+                        grove.style.opacity = 1;
+                      }, 3500);
+                    }, 1500);
+                  })
+                  .start();
+              })
+              .start();
+          })
+          .start();
+      }
+
+      window.onload = function () {
+        swiper = new Swiper(".mySwiper", {
           effect: "fade",
           speed: 1000,
           autoplay: {
@@ -131,81 +196,20 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
+          on: {
+            slideChange: function () {
+              if (swiper.realIndex === 0) {
+                startTyping();
+              }
+            },
+          },
         });
 
-        function startTyping() {
-          // 초기화
-          text0.textContent = "";
-          text1.textContent = "";
-          overlay.style.opacity = 0;
-          grove.style.opacity = 0;
-          text0.style.opacity = 1;
-          text1.style.opacity = 1;
-          mainSection.style.backgroundImage = "none";
-
-          const typewriter0 = new Typewriter(text0, {
-            loop: false,
-          });
-
-          typewriter0
-            .typeString("불가능")
-            .pauseFor(1000)
-            .deleteAll()
-            .callFunction(() => {
-              const typewriter1 = new Typewriter(text0, {
-                loop: false,
-                cursor: "",
-              });
-              typewriter1
-                .typeString("경계를 넘어,")
-                .pauseFor(300)
-                .callFunction(() => {
-                  const typewriter2 = new Typewriter(text1, {
-                    loop: false,
-                    cursor: "",
-                  });
-                  typewriter2
-                    .typeString("새로운 가능성을 열다")
-                    .callFunction(() => {
-                      setTimeout(() => {
-                        mainSection.style.backgroundImage =
-                          "url('https://www.grovesoft.net/wp-content/uploads/2024/12/forest_img.png')";
-                        mainSection.style.backgroundSize = "cover";
-                        mainSection.style.backgroundPosition = "center";
-
-                        text0.style.opacity = 0;
-                        text1.style.opacity = 0;
-
-                        setTimeout(() => {
-                          overlay.style.opacity = 1;
-                        }, 500);
-
-                        setTimeout(() => {
-                          overlay.style.opacity = 0;
-                        }, 2000);
-
-                        setTimeout(() => {
-                          grove.style.opacity = 1;
-                        }, 3500);
-                      }, 1500);
-                    })
-                    .start();
-                })
-                .start();
-            })
-            .start();
-        }
-
-        // 첫 진입 시 실행
-        startTyping();
-      };
-      // 슬라이드 변경 감지
-      swiper.on("slideChange", function () {
+        // 초기 진입 시 타이핑 실행
         if (swiper.realIndex === 0) {
-          // 0번 슬라이드일 때만 타이핑 애니메이션 실행
           startTyping();
         }
-      });
+      };
     </script>
   </body>
 </html>
