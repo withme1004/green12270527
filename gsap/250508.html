@@ -139,6 +139,146 @@
         <div class="item_img i1"></div>
       </section>
     </main>
-    <script></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script>
+      const ani1 = gsap.timeline();
+      ani1
+        .to("#section1 .item_img", {
+          rotation: 720,
+          scale: 0,
+          borderRadius: 200,
+        })
+        .to("#section1 .item_img", { rotation: 0, scale: 1, borderRadius: 20 });
+      ScrollTrigger.create({
+        animation: ani1,
+        trigger: "#section1",
+        //markers: true,
+        start: "20% 10%",
+        // end: "80% 70%",
+        end: "2000 top",
+        pin: true,
+        scrub: true,
+      });
+      const ani2 = gsap.timeline({
+        defaults: { autoAlpha: 0, borderRadius: 200 },
+      });
+      ani2
+        .from("#section2 .i1", { y: -100 })
+        .from("#section2 .i2", { y: 100 })
+        .from("#section2 .i3", { y: -100 });
+      ScrollTrigger.create({
+        animation: ani2,
+        trigger: "#section2",
+        // markers: true,
+        start: "20% 10%",
+        // end: "80% 70%",
+        end: "2000 top",
+        pin: true,
+        scrub: true,
+      });
+      const ani3 = gsap.timeline();
+      ani3.from("#section3 .item_img", {
+        y: -100,
+        opacity: 0,
+        stagger: {
+          amount: 3,
+          //each: 0.1,
+          // from: "edges",
+          from: "random",
+        },
+      });
+      ScrollTrigger.create({
+        animation: ani3,
+        trigger: "#section3",
+        markers: true,
+        start: "20% 10%",
+        // end: "80% 70%",
+        end: "2000 top",
+        pin: true,
+        scrub: true,
+        id: "box3",
+      });
+      const ani4 = gsap.timeline();
+      ani4.from("#section4 .item_img", {
+        opacity: 0,
+        scale: 5,
+        rotation: 720,
+        width: "100vh",
+        height: "100vh",
+        borderRadius: 10000,
+      });
+      ScrollTrigger.create({
+        animation: ani4,
+        trigger: "#section4",
+        markers: true,
+        start: "25% 15%",
+        // end: "80% 70%",
+        end: "2000 top",
+        pin: true,
+        scrub: true,
+        id: "box4",
+      });
+      const ani5 = gsap.timeline();
+      ani5
+        .to(
+          "#section5 .t1",
+          {
+            xPercent: 300,
+          },
+          "txt"
+        )
+        .to(
+          "#section5 .t2",
+          {
+            xPercent: -300,
+          },
+          "txt"
+        )
+        .to(
+          "#section5 .t3",
+          {
+            xPercent: 300,
+          },
+          "txt"
+        )
+        .to(
+          "#section5 .t4",
+          {
+            xPercent: -300,
+          },
+          "txt"
+        );
+      ScrollTrigger.create({
+        animation: ani5,
+        trigger: "#section5",
+        markers: true,
+        start: "25% 15%",
+        // end: "80% 70%",
+        end: "2000 top",
+        pin: true,
+        scrub: true,
+        id: "box4",
+      });
+      const ani6 = gsap.timeline();
+      ani6
+        .to("#section6 .item_text", {
+          scale: 60,
+        })
+        .to("#section6 .item_text", {
+          opacity: 0,
+        });
+      ScrollTrigger.create({
+        animation: ani6,
+        trigger: "#section6",
+        //markers: true,
+        start: "25% 15%",
+        // end: "80% 70%",
+        end: "2000 top",
+        pin: true,
+        scrub: true,
+      });
+    </script>
   </body>
 </html>
