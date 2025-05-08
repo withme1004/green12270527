@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #fff;
+        background: #111;
+      }
+      #parallax {
+        overflow: hidden;
+      }
+      .item {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section:nth-child(2n) {
+        background: #222;
+      }
+      .num {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-size: 5vw;
+      }
+      .item_img {
+        width: 10vw;
+        height: 10vw;
+        background-size: cover;
+        background-position: center;
+        margin: 1vw;
+      }
+      #section1 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);
+      }
+      #section2 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);
+      }
+      #section3 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+      }
+      #section4 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/03/21/14/36/forest-8647829_1280.jpg);
+      }
+      #section8 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg);
+      }
+      #section9 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990_1280.jpg);
+        border-radius: 50%;
+      }
+      .item_text {
+        font-size: 5vw;
+      }
+      #section7 .item_text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #111;
+        padding: 30px;
+        text-align: center;
+        width: 100%;
+        opacity: 0;
+      }
+      #section5,
+      #section8 {
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="parallax">
+      <section id="section1" class="item">
+        <div class="num">01</div>
+        <div class="item_img"></div>
+      </section>
+      <section id="section2" class="item">
+        <div class="num">02</div>
+        <div class="item_img i1"></div>
+        <div class="item_img i2"></div>
+        <div class="item_img i3"></div>
+      </section>
+      <section id="section3" class="item">
+        <div class="num">03</div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+      </section>
+      <section id="section4" class="item">
+        <div class="num">04</div>
+        <div class="item_img"></div>
+      </section>
+      <section id="section5" class="item">
+        <div class="num">05</div>
+        <div class="item_text t1">section5</div>
+        <div class="item_text t2">section5</div>
+        <div class="item_text t3">section5</div>
+        <div class="item_text t4">section5</div>
+      </section>
+      <section id="section6" class="item">
+        <div class="num">06</div>
+        <div class="item_text">section6</div>
+      </section>
+      <section id="section7" class="item">
+        <div class="num">07</div>
+        <div class="item_text t1">코딩이란</div>
+        <div class="item_text t2">프로그래밍 코드를</div>
+        <div class="item_text t3">어딘가에</div>
+        <div class="item_text t4">적는것을 말한다</div>
+        <div class="item_text t5">코딩은</div>
+        <div class="item_text t6">누구라</div>
+        <div class="item_text t7">할 수 있다</div>
+      </section>
+      <section id="section8" class="item">
+        <div class="num">08</div>
+        <div class="item_text t1">section8 title1</div>
+        <div class="item_text t2">section8 title2</div>
+        <div class="item_text t3">section8 title3</div>
+        <div class="item_img i1"></div>
+      </section>
+      <section id="section9" class="item">
+        <div class="num">09</div>
+        <div class="item_img i1"></div>
+      </section>
+    </main>
+    <script></script>
+  </body>
+</html>
