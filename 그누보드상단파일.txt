@@ -7,4 +7,4 @@ include_once(G5_LIB_PATH.'/outlogin.lib.php');
 
 
 페이지이동경로
-echo "<script>top.location.href = '/green/login_ok.php';</script>"
+echo "<script>top.location.href = '/login_ok.php';</script>"
