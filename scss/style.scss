@@ -1,0 +1,41 @@
+$main: #f00;
+$sub: #0f0;
+@mixin txt {
+  background-color: #000;
+  border: 1px solid;
+  padding: 20px;
+}
+@mixin text-style($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+ul {
+  @include txt;
+  @include text-style(30px, 1.5, #333);
+  list-style: none;
+  li {
+    color: $main;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+div {
+  @include txt;
+  @include text-style(24px, 1, #ff0);
+}
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  border-radius: 10px;
+}
+.slide {
+  @extend .inner;
+  background-color: #ccc;
+}
