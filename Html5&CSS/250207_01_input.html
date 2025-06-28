@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .num input {
+        width: 30px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="">
+      <fieldset>
+        <legend>회원가입</legend>
+        <p>
+          아 이 디 :
+          <input
+            type="text"
+            maxlength="10"
+            minlength="5"
+            size="10"
+            placeholder="아이디"
+            onfocus="this.placeholder=''"
+          />
+        </p>
+        <p>비밀번호 : <input type="password" /></p>
+        <p>검색 : <input type="search" /></p>
+        <p>이메일 : <input type="email" /></p>
+        <p>
+          전화번호 :
+          <input
+            type="tel"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+            placeholder="000-0000-0000"
+            size="30"
+          />
+        </p>
+        <p>color : <input type="color" /></p>
+        <p class="num">
+          number :
+          <input type="number" value="1" step="5" max="20" min="1" />
+        </p>
+        <p>range : <input type="range" max="10" /></p>
+        <p>
+          <label for="man">남자</label>
+          <input type="radio" name="gender" id="man" value="남" checked />
+          <label for="woman">여자</label>
+          <input type="radio" name="gender" id="woman" value="여" />
+        </p>
+        <p>
+          관심분야 : <input type="checkbox" name="web" value="html" /> html
+          <input type="checkbox" name="web" value="스타일" /> css
+        </p>
+        <p>
+          사는지역은 :
+          <select name="city" id="city">
+            <option value="">선택</option>
+            <option value="서울">서울</option>
+            <option value="대전">대전</option>
+            <option value="부산">부산</option>
+          </select>
+        </p>
+        <p>
+          <textarea name="qna" id="qna" cols="30" rows="10"></textarea>
+        </p>
+        <p>년월일 : <input type="date" /></p>
+        <p>년월일 시간: <input type="datetime-local" /></p>
+        <p>시간: <input type="time" /></p>
+        <p>월: <input type="month" /></p>
+        <p>주: <input type="week" /></p>
+        <p><input type="submit" value="보내기" /></p>
+        <p><input type="reset" /></p>
+        <p><input type="file" multiple /></p>
+        <p><input type="button" value="전송" /></p>
+        <p><input type="image" src="./images/img_search.JPG" /></p>
+      </fieldset>
+    </form>
+  </body>
+</html>

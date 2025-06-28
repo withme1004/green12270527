@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="on">Turn on the light</button>
+    <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="off" />
+    <button id="off">Turn off the light</button>
+    <script>
+      let light = document.querySelector("img").src;
+      document.getElementById("on").onclick = function () {
+        let txt = this.id;
+        console.log(txt);
+        // document.querySelector("img").src =
+        //   "https://www.w3schools.com/js/pic_bulboff.gif";
+        document.querySelector("img").src = light.replace(
+          light.slice(-7, -4),
+          txt
+        );
+        document.querySelector("img").alt = txt;
+      };
+      document.getElementById("off").onclick = function () {
+        document.querySelector("img").src =
+          "https://www.w3schools.com/js/pic_bulboff.gif";
+      };
+    </script>
+  </body>
+</html>

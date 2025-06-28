@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        width: 100%;
+        max-width: 1280px;
+        margin: 20px auto;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      section > div {
+        flex: 1 1 20%;
+      }
+      .con1 p {
+        height: 800px;
+        background: url(../Html5&CSS/images/photo1.jpg) center/cover;
+      }
+      .con2 p {
+        padding-top: 80%;
+        background: url(../Html5&CSS/images/photo2.jpg) center/cover;
+      }
+      .con3 p,
+      .con4 p {
+        height: 800px;
+      }
+      .con3 p img,
+      .con4 p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @media screen and (max-width: 1279px) {
+        .con1 p {
+          height: 500px;
+        }
+        .con3 p img {
+          height: 80%;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        section > div {
+          flex-basis: 40%;
+        }
+        .con1 p {
+          height: 300px;
+        }
+        .con3 p img {
+          height: 60%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .con1 p {
+          height: 100px;
+        }
+        .con3 p img {
+          height: 40%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        section > div {
+          flex-basis: 50%;
+        }
+        .con1 p {
+          height: 50px;
+        }
+        .con3 p img {
+          height: 20%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="con1">
+        <p></p>
+      </div>
+      <div class="con2">
+        <p></p>
+      </div>
+      <div class="con3">
+        <p><img src="../Html5&CSS/images/photo1.jpg" alt="photo" /></p>
+      </div>
+      <div class="con4">
+        <p><img src="../Html5&CSS/images/photo1.jpg" alt="" /></p>
+      </div>
+    </section>
+  </body>
+</html>

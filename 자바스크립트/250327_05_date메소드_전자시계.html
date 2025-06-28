@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="time"></p>
+    <script>
+      function clock() {
+        let x = new Date();
+        let hour = x.getHours();
+        let minute = x.getMinutes();
+        let second = x.getSeconds();
+        let milisecond = x.getMilliseconds();
+        let time =
+          hour.toString().padStart(2, "0") +
+          " : " +
+          minute.toString().padStart(2, "0") +
+          " : " +
+          second.toString().padStart(2, "0") +
+          " : " +
+          milisecond;
+        document.getElementById("time").innerText = time;
+      }
+
+      //setInterval
+      //setInterval(function(){실행문},시간(초))
+      /*setInterval(function () {
+        clock();
+      }, 1);*/
+      setInterval(clock, 1);
+    </script>
+  </body>
+</html>

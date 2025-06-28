@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      #wrap section#box {
+        height: 400px;
+        background: #aaa;
+      }
+      #wrap section:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      #wrap section:last-child > div {
+        /* width: 50%; */
+        flex: 1 1 40%;
+        height: 400px;
+      }
+      #wrap section:last-child > div:first-child {
+        background: #bbb;
+      }
+      #wrap section:last-child > div:last-child {
+        background: #ccc;
+      }
+      @media screen and (max-width: 1024px) {
+        #wrap {
+          width: 90%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        #wrap {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        #wrap section:last-child > div {
+          /* width: 100%; */
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <section id="box"></section>
+      <section>
+        <div></div>
+        <div></div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex {
+        background: #ccc;
+        margin: 20px;
+        padding: 20px;
+        display: flex;
+      }
+      .item {
+        background: #f00;
+        border: 1px solid;
+        /* width: 300px; */
+      }
+      .container1 {
+        justify-content: flex-start;
+      }
+      .container2 {
+        justify-content: flex-end;
+      }
+      .container3 {
+        justify-content: center;
+      }
+      .container4 {
+        justify-content: space-between;
+      }
+      .container5 {
+        justify-content: space-around;
+      }
+      .container6 {
+        justify-content: space-evenly;
+      }
+      .container7 {
+        height: 300px;
+        /* align-items: baseline; */
+        align-items: center;
+      }
+      .container8 {
+        padding: 0;
+        width: 500px;
+        height: 500px;
+        flex-wrap: wrap;
+        align-content: space-evenly;
+      }
+      .container8 .item {
+        width: 200px;
+        flex-shrink: 0;
+      }
+      .container9 {
+        height: 500px;
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: center; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex container1">
+      <div class="item">11111111</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container2">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container3">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container4">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container5">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container6">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container7">
+      <div class="item"><h1>1</h1></div>
+      <div class="item"><h6>2</h6></div>
+      <div class="item"><h2>3</h2></div>
+    </div>
+    <div class="flex container8">
+      <div class="item"><h1>1</h1></div>
+      <div class="item"><h6>2</h6></div>
+      <div class="item"><h2>3</h2></div>
+      <div class="item"><h1>4</h1></div>
+      <div class="item"><h6>5</h6></div>
+      <div class="item"><h2>6</h2></div>
+    </div>
+    <div class="flex container9">
+      <div class="item"><h1>1</h1></div>
+      <div class="item"><h6>2</h6></div>
+      <div class="item"><h2>3</h2></div>
+      <div class="item"><h1>4</h1></div>
+      <div class="item"><h6>5</h6></div>
+      <div class="item"><h2>6</h2></div>
+    </div>
+  </body>
+</html>

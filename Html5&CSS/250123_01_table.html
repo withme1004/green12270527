@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <style>
+      table {
+        /* border: 1px solid red; */
+        border-collapse: collapse;
+      }
+      /* tr {
+        border: 1px solid green;
+      } */
+      th,
+      td {
+        border: 1px solid blue;
+        padding: 20px;
+      }
+      table:nth-child(2) {
+        width: 500px;
+      }
+      table:nth-child(2) th,
+      table:nth-child(2) td {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>셀11</th>
+          <th>셀12</th>
+          <th>셀13</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>셀21</td>
+          <td>셀22</td>
+          <td>셀23</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>셀31</td>
+          <td>셀32</td>
+          <td>셀33</td>
+        </tr>
+      </tfoot>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>셀11</th>
+          <th>셀12</th>
+          <th>셀13</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">셀21셀22</td>
+          <td>셀23</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>셀31</td>
+          <td>셀32</td>
+          <td>셀33</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

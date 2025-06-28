@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>border</title>
+    <style>
+      p{height: 50px;margin: 50px;}
+      p:nth-child(1){border-width: 2px; border-style: none;border-color: black;}
+      p:nth-child(2){border: 2px hidden black;}
+      p:nth-child(3){border: 2px dotted black;}
+      p:nth-child(4){border: 2px dashed black;}
+      p:nth-child(5){border: 2px solid black;}
+      p:nth-child(6){border: 2px double black;}
+      p:nth-child(7){border: 5px groove #8ac007;}
+      p:nth-child(8){border: 5px ridge #8ac007;}
+      p:nth-child(9){border: 5px inset #8ac007;}
+      p:nth-child(10){border: 5px outset #8ac007;}
+      p:nth-child(11){border: 10px solid transparent;
+      border-image: url(./images/border.png) 35 round;}
+      p:nth-child(12){border: 10px solid transparent;
+      border-image: url(./images/border.png) 35 stretch;}
+      p:nth-child(13){width: 100px;height: 100px;border: 1px solid black;border-radius: 50%;}
+      p:nth-child(14){width: 100px;height: 100px;border: 1px solid black;border-radius: 10px/30px;}
+      p:nth-child(15){width: 500px;height: 500px;overflow: hidden;border-radius: 50%;}
+      p:nth-child(16){width: 120px;border: 1px solid #000;word-break: keep-all;}
+    </style>
+  </head>
+  <body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+    <p>9</p>
+    <p>10</p>
+    <p>11</p>
+    <p>12</p>
+    <p>13</p>
+    <p>14</p>
+    <p><img src="./images/photo1.jpg" alt=""></p>
+    <p>무궁화 꽃이 피었습니다</p>
+  </body>
+</html>

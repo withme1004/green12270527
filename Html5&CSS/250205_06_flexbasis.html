@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-between; */
+      }
+      div img {
+        width: 200px;
+      }
+      div p {
+        border: 1px solid;
+        /* width: 100px; */
+        flex-basis: 10px;
+        /* height: 10px; */
+        white-space: nowrap;
+      }
+      div p:nth-child(1) {
+        /* width: 100px; */
+      }
+      div p:nth-child(2) {
+        /* flex-basis: 100px; */
+      }
+      div p:nth-child(3) {
+        /* width: 100px; */
+      }
+      h1 {
+        display: flex;
+      }
+      h1 span {
+        background: #ff0;
+        /* flex-grow: 1; */
+      }
+      h1 span:first-child {
+        flex-grow: 0;
+      }
+      h1 span:nth-child(2) {
+        background: #f00;
+        flex-grow: 2;
+      }
+      h1 span:nth-child(3) {
+        flex-grow: 1;
+      }
+      h2 {
+        display: flex;
+        width: 600px;
+      }
+      h2 span {
+        width: 500px;
+        border: 1px solid;
+      }
+      h2 span:nth-child(2) {
+        flex-shrink: 0;
+      }
+      h3 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 700px;
+      }
+      h3 span {
+        /* flex: 0 0 300px; */
+        flex-shrink: 0;
+        flex-basis: 300px;
+        /*flex-grow flex-shrink flex-basis*/
+        border: 1px solid;
+      }
+      h3 span:last-child {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p><img src="./images/photo1.jpg" alt="img" /></p>
+      <p><img src="./images/photo2.jpg" alt="img" /></p>
+      <p><img src="./images/photo3.jpg" alt="img" /></p>
+    </div>
+    <div>
+      <p>무궁화 꽃이 피었습니다.</p>
+      <p>무궁화 꽃이 피었습니다.<br />무궁화 꽃이 피었습니다.</p>
+      <p>1</p>
+      <p></p>
+    </div>
+    <h1>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+    </h1>
+    <h2>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+    </h2>
+    <h3>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+    </h3>
+  </body>
+</html>

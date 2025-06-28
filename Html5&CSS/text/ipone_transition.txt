@@ -1,0 +1,18 @@
+iphone
+background-color:#1f81ac;
+background: linear-gradient(-90deg, #1a6c90, #14506b);  
+MacBook
+background-color:#bc003c;
+background: linear-gradient(-90deg, #9d0032, #7a0027);
+iPod
+background-color:#d98f23; 
+background: linear-gradient(-90deg, #b6781e, #916018);
+Cinema
+background-color:#7da864;
+background: linear-gradient(-90deg, #698d54, #506b40);
+Mac Mini
+background-color:#3f1150;
+background: linear-gradient(-90deg, #340e43, #1a0721); 
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      let wd = window.innerWidth;
+      let ht = window.innerHeight;
+      document.querySelector(
+        "#demo"
+      ).innerHTML = `window 가로크기 : ${wd}px<br>window세로크기 : ${ht}px`;
+      window.onresize = function () {
+        document.querySelector(
+          "#demo"
+        ).innerHTML = `window 가로크기 : ${window.innerWidth}px<br>window세로크기 : ${window.innerHeight}px`;
+        console.log(document.querySelector("#demo").clientWidth);
+        console.log(document.querySelector("#demo").clientHeight);
+      };
+      // "window 가로크기 :"+window.innerWidth+"px<br>window세로크기 : "+window.innerHeight+"px"
+      /* window.addEventListener("resize",function(){
+
+      })*/
+    </script>
+  </body>
+</html>

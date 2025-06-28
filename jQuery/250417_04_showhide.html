@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("a").click(function () {
+          $("p").toggle(1000, "linear", function () {
+            if ($("a").text() == "hide") {
+              $("a").text("show");
+            } else {
+              $("a").text("hide");
+            }
+          });
+
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>show()hide()</p>
+    <a href="#">hide</a>
+  </body>
+</html>

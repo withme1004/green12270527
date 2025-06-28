@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .menu {
+        width: 1400px;
+        margin: 50px auto;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      .menu li a {
+        display: block;
+        padding: 20px 60px;
+        border-radius: 100px;
+        background: rgba(51, 51, 51, 0.8);
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .menu li a.on {
+        background: #da291c;
+        color: #fff;
+      }
+      .con {
+        position: relative;
+      }
+      .con li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+      }
+      .con li.on {
+        opacity: 1;
+        transition: 1s;
+      }
+      .con li div h2,
+      .con li div p {
+        position: relative;
+        top: 20px;
+        opacity: 0;
+        transition: 1s;
+      }
+      .con li div h2.on,
+      .con li div p.on {
+        top: 0;
+        opacity: 1;
+      }
+      .con li div p {
+        transition-delay: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">연구개발</a></li>
+      <li><a href="#">기초연구</a></li>
+      <li><a href="#">패키지연구</a></li>
+      <li><a href="#">기술연구</a></li>
+      <li><a href="#">안전관리</a></li>
+      <li><a href="#">연구전략</a></li>
+    </ul>
+    <ul class="con">
+      <li>
+        <div>
+          <h2>연구개발</h2>
+          <p>
+            소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을
+            개선합니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h2>기초연구</h2>
+          <p>
+            바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을
+            개척합니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h2>패키지연구</h2>
+          <p>
+            제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를
+            이룹니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h2>기술연구</h2>
+          <p>첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h2>안전관리</h2>
+          <p>
+            위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을
+            책임집니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h2>연구전략</h2>
+          <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+        </div>
+      </li>
+    </ul>
+    <script>
+      document
+        .querySelectorAll(".menu li")[0]
+        .querySelector("a")
+        .classList.add("on");
+      document.querySelectorAll(".con li")[0].classList.add("on");
+      document
+        .querySelectorAll(".con li")[0]
+        .querySelector("h2")
+        .classList.add("on");
+      document
+        .querySelectorAll(".con li")[0]
+        .querySelector("p")
+        .classList.add("on");
+      document.querySelectorAll(".con li").forEach(function (v, k) {
+        v.style.background =
+          "url(https://www.lotternd.com/assets/images/sub/research/research-ban" +
+          (k + 1) +
+          ".jpg)";
+      });
+      function my() {
+        document.querySelectorAll(".menu li").forEach(function (v, k) {
+          v.querySelector("a").classList.remove("on");
+        });
+        document.querySelectorAll(".con li").forEach(function (v, k) {
+          v.classList.remove("on");
+          v.querySelector("div h2").classList.remove("on");
+          v.querySelector("div p").classList.remove("on");
+        });
+      }
+      document.querySelectorAll(".menu li").forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          my();
+          v.querySelector("a").classList.add("on");
+          document.querySelectorAll(".con li")[k].classList.add("on");
+          document
+            .querySelectorAll(".con li")
+            [k].querySelector("div h2")
+            .classList.add("on");
+          document
+            .querySelectorAll(".con li")
+            [k].querySelector("div p")
+            .classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

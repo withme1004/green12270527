@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box-sizing</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 500px;
+        height: 500px;
+        background: #ccc;
+        box-shadow: 10px 20px 10px 0 rgba(0, 0, 0, 0.5),
+          0 0 50px 0 rgba(255, 0, 0, 0.5), inset 0 0 10px 0 rgba(0, 255, 0, 0.5),
+          0 0 50px 20px inset rgba(0, 0, 255, 0.5);
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>1</p>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      let date = new Date();
+      let day = date.getDay(); // 0~6 0-->일요일 월,화,.....
+      let week;
+      if (day == 0) {
+        week = "일요일";
+      } else if (day == 1) {
+        week = "월요일";
+      } else if (day == 2) {
+        week = "화요일";
+      } else if (day == 3) {
+        week = "수요일";
+      } else if (day == 4) {
+        week = "목요일";
+      } else if (day == 5) {
+        week = "금요일";
+      } else {
+        week = "토요일";
+      }
+      document.write(
+        `오늘은 ${date.getFullYear()}년 ${
+          date.getMonth() + 1
+        }월${date.getDate()}일 ${week}입니다`
+      );
+    </script>
+  </body>
+</html>

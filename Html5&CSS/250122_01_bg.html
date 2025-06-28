@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        height: 200px;
+        /* background-image: url(./images/img_flwr.gif), url(./images/img_flwr.gif),
+          url(./images/paper.gif);
+        background-position: 0 0, right bottom;
+        background-size: 50px, 100px;
+        background-repeat: no-repeat, no-repeat, repeat; */
+        background: url(./images/img_flwr.gif) 0 0/50px no-repeat,
+          url(./images/img_flwr.gif) right bottom/100px no-repeat,
+          url(./images/paper.gif) repeat-x;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+  </body>
+</html>

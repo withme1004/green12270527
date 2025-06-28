@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .new {
+        color: #f00;
+      }
+      .size {
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="txt">하나</p>
+    <button>글자색바꾸기</button>
+    <button>글자크기바꾸기</button>
+    <button>toggle</button>
+    <script>
+      document.getElementsByTagName("button")[0].onclick = function () {
+        document.querySelector(".txt").classList.add("new");
+      };
+      document.getElementsByTagName("button")[1].onclick = function () {
+        document.querySelector(".txt").classList.add("size");
+      };
+      document.getElementsByTagName("button")[2].onclick = function () {
+        document.querySelector(".txt").classList.toggle("size");
+      };
+    </script>
+  </body>
+</html>

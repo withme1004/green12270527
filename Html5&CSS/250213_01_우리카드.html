@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .list1 {
+        background: #e2fdfe;
+      }
+      ul.card {
+        width: 1080px;
+        margin: 50px auto;
+        display: flex;
+      }
+      ul.card li {
+        flex: 1;
+        text-align: center;
+        position: relative;
+      }
+      ul.card li::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: #ccc;
+      }
+      ul.card li:last-child:after {
+        width: 0;
+      }
+      ul.card p:first-child {
+        position: relative;
+        background: #f00;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      ul.card span {
+        position: relative;
+        z-index: 1;
+      }
+      ul.card p:first-child:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #000;
+        /* z-index: -1; */
+      }
+      .list2 ul {
+        width: 1080px;
+        margin: 50px auto;
+        display: flex;
+      }
+      .list2 ul .up {
+        position: relative;
+      }
+      .list2 ul .up > p {
+        width: 192px;
+        height: 256px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .list2 ul .up > p img {
+        transition: 0.5s;
+      }
+      .list2 ul li:hover .up > p img {
+        transform: scale(1.2);
+      }
+      .list2 ul .icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 165px;
+        height: 145px;
+        /* background: #f00; */
+      }
+      .list2 ul .icon p {
+        position: absolute;
+      }
+      .list2 ul .icon p:first-child {
+        z-index: 1;
+      }
+      .list2 ul .down p {
+        word-break: keep-all;
+      }
+      .list3 ul {
+        width: 1080px;
+        margin: 50px auto;
+        display: flex;
+      }
+      .list3 ul li {
+        width: 25%;
+        text-align: center;
+        position: relative;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+      .list3 ul li:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 150px;
+        background: #ccc;
+      }
+      .list3 ul li:last-child:after {
+        width: 0;
+      }
+      .list3 ul li:first-child a > p {
+        position: relative;
+        left: -40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list1">
+      <ul class="card">
+        <li>
+          <a href="#">
+            <p>
+              <span
+                ><img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+                  alt=""
+              /></span>
+            </p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <span
+                ><img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+                  alt=""
+              /></span>
+            </p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <span
+                ><img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+                  alt=""
+              /></span>
+            </p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <span
+                ><img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+                  alt=""
+              /></span>
+            </p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <span
+                ><img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+                  alt=""
+              /></span>
+            </p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <span
+                ><img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+                  alt=""
+              /></span>
+            </p>
+            <p>이용대금명세서</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="list2">
+      <ul>
+        <li>
+          <a href="#">
+            <div class="up">
+              <p>
+                <img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_bg.png"
+                  alt=""
+                />
+              </p>
+              <div class="icon">
+                <p>
+                  <img
+                    src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_obj.png"
+                    alt=""
+                  />
+                </p>
+                <p>
+                  <img
+                    src="	https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_shd.png"
+                    alt=""
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="down">
+              <h1>단기카드대출</h1>
+              <p>(현금서비스)</p>
+              <p>현금이 급할 때 바로 찾아쓰는, 편리한 생활자금 마련방법</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="up">
+              <p>
+                <img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_bg.png"
+                  alt=""
+                />
+              </p>
+              <div class="icon">
+                <p>
+                  <img
+                    src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_obj.png"
+                    alt=""
+                  />
+                </p>
+                <p>
+                  <img
+                    src="	https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_shd.png"
+                    alt=""
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="down">
+              <h1>단기카드대출</h1>
+              <p>(현금서비스)</p>
+              <p>현금이 급할 때 바로 찾아쓰는, 편리한 생활자금 마련방법</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="up">
+              <p>
+                <img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_bg.png"
+                  alt=""
+                />
+              </p>
+              <div class="icon">
+                <p>
+                  <img
+                    src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_obj.png"
+                    alt=""
+                  />
+                </p>
+                <p>
+                  <img
+                    src="	https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_shd.png"
+                    alt=""
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="down">
+              <h1>단기카드대출</h1>
+              <p>(현금서비스)</p>
+              <p>현금이 급할 때 바로 찾아쓰는, 편리한 생활자금 마련방법</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="up">
+              <p>
+                <img
+                  src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_bg.png"
+                  alt=""
+                />
+              </p>
+              <div class="icon">
+                <p>
+                  <img
+                    src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_obj.png"
+                    alt=""
+                  />
+                </p>
+                <p>
+                  <img
+                    src="	https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_shd.png"
+                    alt=""
+                  />
+                </p>
+              </div>
+            </div>
+            <div class="down">
+              <h1>단기카드대출</h1>
+              <p>(현금서비스)</p>
+              <p>현금이 급할 때 바로 찾아쓰는, 편리한 생활자금 마련방법</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="list3">
+      <ul>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_1_obj.png"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <h1>해외이용의 정석</h1>
+              <p>여행, 직구, 항공<br />무엇이든 우리카드로</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_2_obj.png"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <h1>해외이용의 정석</h1>
+              <p>여행, 직구, 항공<br />무엇이든 우리카드로</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_3_obj.png"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <h1>해외이용의 정석</h1>
+              <p>여행, 직구, 항공<br />무엇이든 우리카드로</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://pc.wooricard.com/dcpc/img/pc/content/special_mbnf_4_obj.png"
+                alt=""
+              />
+            </p>
+            <div class="txt">
+              <h1>해외이용의 정석</h1>
+              <p>여행, 직구, 항공<br />무엇이든 우리카드로</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

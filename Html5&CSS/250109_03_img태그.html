@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #f1 {
+        width: 100px;
+      }
+      #f2 {
+        width: 200px;
+      }
+      img.f1 {
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://cdn.pixabay.com/photo/2024/11/17/12/46/flower-9203759_1280.png"
+      alt="꽃"
+      id="f1"
+    />
+    <img
+      src="https://cdn.pixabay.com/photo/2024/11/17/12/46/flower-9203759_1280.png"
+      alt="꽃"
+      id="f2"
+    />
+    <img
+      src="https://cdn.pixabay.com/photo/2024/11/17/12/46/flower-9203759_1280.png"
+      alt="꽃"
+      class="f1"
+    />
+    <img
+      src="https://cdn.pixabay.com/photo/2024/11/17/12/46/flower-9203759_1280.png"
+      alt="꽃"
+      class="f1"
+    />
+    <h1 class="f1">제목태그</h1>
+    <picture>
+      <source
+        media="(min-width:1280px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2024/12/28/13/30/city-9296128_1280.jpg
+        "
+      />
+      <source
+        media="(min-width:1024px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2023/10/04/13/37/lemon-8293727_1280.jpg
+        "
+      />
+      <source
+        media="(min-width:768px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2022/05/23/20/33/hot-air-balloon-7217175_1280.jpg
+        "
+      />
+      <source
+        media="(min-width:500px)"
+        srcset="
+          https://cdn.pixabay.com/photo/2024/03/17/12/58/canola-8638923_1280.jpg
+        "
+      />
+      <img
+        src="https://cdn.pixabay.com/photo/2024/12/30/13/06/moped-9300285_1280.jpg"
+        alt="Flowers"
+      />
+    </picture>
+  </body>
+</html>

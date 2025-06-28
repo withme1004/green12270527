@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      section#box_a {
+        width: 20%;
+        height: 100%;
+        background: #aaa;
+      }
+      section#box_b {
+        width: 80%;
+        height: 100%;
+      }
+      section#box_b div:first-child {
+        width: 100%;
+        height: 50%;
+        background: #bbb;
+      }
+      section#box_b div:last-child {
+        width: 100%;
+        height: 50%;
+        background: #ccc;
+      }
+      @media screen and (max-width: 1024px) {
+        section#box_a {
+          width: 100%;
+          height: 30%;
+        }
+        section#box_b {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        section#box_a {
+          height: 20%;
+        }
+        section#box_b div:first-child,
+        section#box_b div:last-child {
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <section id="box_a"></section>
+      <section id="box_b">
+        <div></div>
+        <div></div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Pretendard;
+        src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrap {
+        width: 100%;
+        padding: 0 54px;
+        box-sizing: border-box;
+        margin-top: 100px;
+      }
+      .wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+      }
+      .con1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+        margin: 20px 0;
+      }
+      .con1 div {
+        border-radius: 25px;
+        overflow: hidden;
+      }
+      .con1 div p {
+        /* width: 100%; */
+        height: 100%;
+      }
+      .con2 {
+        display: flex;
+        gap: 20px;
+      }
+      .con2 > div {
+        flex: 1;
+      }
+      .con2 .right {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <img
+          src="https://www.spc.co.kr/files/banner/2024/07/acaeb8ad-c255-4b81-afe8-9ba5683912c6.webp"
+          alt=""
+        />
+      </div>
+      <div class="con1">
+        <div>
+          <p>
+            <img
+              src="https://www.spc.co.kr//img/front/main/history.webp"
+              alt=""
+            />
+          </p>
+        </div>
+        <div>
+          <p>
+            <img
+              src="https://www.spc.co.kr/img/front/main/spcway.webp"
+              alt=""
+            />
+          </p>
+        </div>
+        <div>
+          <p>
+            <img
+              src="https://www.spc.co.kr/img/front/main/together.webp"
+              alt=""
+            />
+          </p>
+        </div>
+      </div>
+      <div class="con2">
+        <div class="left">
+          <p>
+            <img src="./eat.webp" alt="" />
+          </p>
+        </div>
+        <div class="right">
+          <div>
+            <h1>brand</h1>
+            <h4>SPC그룹의 다양한 브랜드를 만나보세요.</h4>
+            <h4>< 01/06 ></h4>
+          </div>
+          <div>
+            <p>
+              <img
+                src="https://www.spc.co.kr/files/brand/2024/06/2702a0a8-0b1e-42f7-a055-bd6749696c7c.png"
+                alt=""
+              />
+            </p>
+          </div>
+          <div>
+            <p>
+              <img
+                src="https://www.spc.co.kr/files/brand/2024/06/d96a9ce4-a1a7-42a1-836f-fa4580f21f58.jpg"
+                alt=""
+              />
+            </p>
+          </div>
+          <div>
+            <p>
+              <img
+                src="https://www.spc.co.kr/files/brand/2024/06/b59cd9b1-6acb-4deb-8d6a-7999988968bb.jpg"
+                alt=""
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

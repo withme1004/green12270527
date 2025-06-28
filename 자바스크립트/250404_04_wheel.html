@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 3000px;
+      }
+      #navbar {
+        width: 100%;
+        height: 50px;
+        background: #8ac007;
+        transition: 1s;
+        opacity: 0.5;
+      }
+      #navbar.on {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+      }
+      .contents {
+        height: 500px;
+        width: 100%;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="contents"></div>
+    <script>
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        console.log(ht);
+        if (ht > 20) {
+          document.getElementById("navbar").classList.add("on");
+        } else {
+          document.getElementById("navbar").classList.remove("on");
+        }
+      };
+    </script>
+  </body>
+</html>

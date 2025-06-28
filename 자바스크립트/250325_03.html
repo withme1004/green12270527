@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #111;
+      }
+      ul.menu {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      ul.menu li a {
+        display: block;
+        padding: 0 16px;
+        height: 44px;
+        line-height: 44px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+      ul.menu li.on a {
+        background: #211955;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li style="display: none"><a href="#">메뉴4</a></li>
+    </ul>
+    <script>
+      // console.log(document.querySelector("ul").innerText);
+      console.log(document.querySelector("ul").textContent);
+    </script>
+  </body>
+</html>

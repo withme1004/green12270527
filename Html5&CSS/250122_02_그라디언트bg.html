@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        height: 100px;
+        margin: 20px;
+      }
+      p:nth-child(1) {
+        background-image: linear-gradient(red, yellow, green);
+      }
+      p:nth-child(2) {
+        background: linear-gradient(to top, red, yellow, green);
+      }
+      p:nth-child(3) {
+        background: linear-gradient(to right, red, yellow, green);
+      }
+      p:nth-child(4) {
+        background: linear-gradient(to bottom right, red, yellow, green);
+      }
+      p:nth-child(5) {
+        background: linear-gradient(to left, red, yellow, green);
+      }
+      p:nth-child(6) {
+        background: linear-gradient(-45deg, red, yellow, green);
+      }
+      p:nth-child(7) {
+        background: linear-gradient(red, yellow 10%, green 20%);
+      }
+      p:nth-child(8) {
+        background: repeating-linear-gradient(red, yellow 10%, green 20%);
+      }
+      p:nth-child(9) {
+        background: radial-gradient(circle, red, yellow, green);
+      }
+      p:nth-child(10) {
+        background: repeating-radial-gradient(
+          circle,
+          red,
+          yellow 10%,
+          green 20%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>

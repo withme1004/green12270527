@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, 돋움, Dotum, sans-serif;
+      }
+      .wrap {
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(6, 200px);
+        grid-template-rows: 100px 300px 200px 100px;
+        grid-template-areas: "logo menu menu menu menu menu" "slide slide slide slide slide slide" "c1 c1 c3 c3 c4 c4" "ftlogo copy copy copy copy sns";
+      }
+      .wrap .logo {
+        grid-area: logo;
+      }
+      .wrap .menu {
+        grid-area: menu;
+      }
+      .wrap .slide {
+        grid-area: slide;
+      }
+      .wrap .c1 {
+        grid-area: c1;
+      }
+      .wrap .c3 {
+        grid-area: c3;
+      }
+      .wrap .c4 {
+        grid-area: c4;
+      }
+      .wrap .ftlogo {
+        grid-area: ftlogo;
+      }
+      .wrap .copy {
+        grid-area: copy;
+      }
+      .wrap .sns {
+        grid-area: sns;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="logo">logo</div>
+      <div class="menu">menu</div>
+      <div class="slide">slide</div>
+      <div class="c1">공지사항갤러리</div>
+      <div class="c3">배너</div>
+      <div class="c4">바로가기</div>
+      <div class="ftlogo">logo</div>
+      <div class="copy">copyright</div>
+      <div class="sns">sns</div>
+    </div>
+  </body>
+</html>

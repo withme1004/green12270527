@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        /* text-align: center; */
+        height: 100px;
+      }
+      .big {
+        width: 1280px;
+        border: 1px solid;
+      }
+      div.small {
+        width: 1000px;
+        border: 1px solid;
+        top: 50px;
+      }
+      .big p,
+      .small p {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        background-color: red;
+        top: 0;
+      }
+      p:first-child {
+        left: 0;
+      }
+      p:nth-child(2) {
+        left: calc(50% - (20% / 2));
+      }
+      /*div.small p:nth-child(2) {
+        /* display: inline-block; 
+        left: calc(50% - 100px);
+      }*/
+      p:last-child {
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="big">제목태그</h1>
+    <div class="big">
+      <p>왼쪽정렬</p>
+      <p>가운데정렬</p>
+      <p>오른쪽정렬</p>
+    </div>
+    <div class="small">
+      <p>왼쪽정렬</p>
+      <p>가운데정렬</p>
+      <p>오른쪽정렬</p>
+    </div>
+  </body>
+</html>

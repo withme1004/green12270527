@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 500px;
+        height: 500px;
+        margin: 20px;
+      }
+      p:nth-child(1) {
+        background: radial-gradient(at 30% 10%, red, blue);
+      }
+      p:nth-child(2) {
+        background: radial-gradient(closest-side at 30% 10%, red, blue);
+      }
+      p:nth-child(3) {
+        background: radial-gradient(closest-corner at 30% 10%, red, blue);
+      }
+      p:nth-child(4) {
+        background: radial-gradient(farthest-side at 30% 10%, red, blue);
+      }
+      p:nth-child(5) {
+        background: radial-gradient(farthest-corner at 30% 10%, red, blue);
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>instory</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        background: #d3222a;
+      }
+      #wrap {
+        /* width: 1000px;
+        margin: 0 auto; */
+      }
+      .top {
+        width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .top ul {
+        float: right;
+      }
+      .top ul li {
+        float: left;
+      }
+      .top ul li a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 20px;
+        font-size: 12px;
+        margin: 0 10px;
+      }
+      .top ul li:last-child a {
+        margin-right: 0;
+      }
+      .top ul li a:hover {
+        color: #fc0;
+        text-decoration: underline;
+      }
+      .pattern {
+        clear: both;
+        background: url(./images/pattern.gif);
+        height: 82px;
+      }
+      .pattern p {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .main {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .main > div {
+        float: left;
+        height: 625px;
+      }
+      .main > div:last-child {
+        width: 514px;
+        background: url(./images/index_main_02.gif);
+      }
+      .main ul {
+        position: relative;
+        top: -400px;
+        left: 50px;
+      }
+      .main ul li a {
+        color: #000;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 20px;
+      }
+      .foot {
+        clear: both;
+        height: 100px;
+        background: #fff;
+      }
+      .foot p {
+        width: 1000px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="top">
+        <ul>
+          <li><a href="#">korean</a></li>
+          <li><a href="#">english</a></li>
+          <li><a href="#">japanese</a></li>
+          <li><a href="#">chinese</a></li>
+          <li><a href="#">italian</a></li>
+        </ul>
+      </div>
+      <div class="pattern">
+        <p><img src="./images/index_pattern.gif" alt="pattern" /></p>
+      </div>
+      <div class="main">
+        <div>
+          <p><img src="./images/index_main_01.gif" alt="main" /></p>
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">instory</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">product</a></li>
+            <li><a href="#">illustrator</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p>Home 메인페이지입니다</p>
+        </div>
+      </div>
+      <div class="foot">
+        <p><img src="./images/copyright.gif" alt="카피라이트" /></p>
+      </div>
+    </div>
+  </body>
+</html>

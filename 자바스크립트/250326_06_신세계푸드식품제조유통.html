@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #business {
+        height: 450px;
+        background-position: center;
+        background-size: cover;
+      }
+      #business.bg1 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_food.jpg);
+      }
+      #business.bg2 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_foodService.jpg);
+      }
+      #business.bg3 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_premiumService.jpg);
+      }
+      #business.bg4 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_bakery.jpg);
+      }
+      #business.bg5 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_franchise.jpg);
+      }
+      #business.bg6 {
+        background-image: url(https://www.shinsegaefood.com/images/business/business_bg_subsidiary.jpg);
+      }
+      #business ul {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+      #business ul li {
+        width: 180px;
+        height: 180px;
+      }
+      #business ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #fff;
+        color: #444;
+        text-align: center;
+        font-size: 25px;
+        padding-top: 110px;
+        box-sizing: border-box;
+        background-position: center 0;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      #business ul li a.on::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 12px solid #da2128;
+      }
+      #business ul li a span {
+        display: block;
+        height: 50px;
+        line-height: 1.1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="business">
+      <ul>
+        <li>
+          <a href="#">
+            <span>식품제조/<br />유통</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"> <span>푸드서비스</span></a>
+        </li>
+        <li>
+          <a href="#">
+            <span>프리미엄<br />다이닝</span></a
+          >
+        </li>
+        <li>
+          <a href="#"> <span>베이커리</span></a>
+        </li>
+        <li>
+          <a href="#"> <span>프랜차이즈</span></a>
+        </li>
+        <li>
+          <a href="#"> <span>자회사</span></a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      document.querySelector("#business").classList.add("bg1");
+      document
+        .querySelectorAll("#business ul li")[0]
+        .querySelector("a")
+        .classList.add("on");
+
+      document.querySelectorAll("#business ul li").forEach(function (v, k) {
+        v.querySelector("a").style.backgroundImage =
+          "url(https://www.shinsegaefood.com/images/business/bg_business_tab0" +
+          (k + 1) +
+          ".png)";
+      });
+      document
+        .querySelectorAll("#business ul li")[0]
+        .querySelector("a").style.backgroundImage =
+        "url(https://www.shinsegaefood.com/images/business/bg_business_tab01_on.png)";
+
+      function business() {
+        document.querySelectorAll("#business ul li").forEach(function (v, k) {
+          v.querySelector("a").classList.remove("on");
+          v.querySelector("a").style.backgroundImage =
+            "url(https://www.shinsegaefood.com/images/business/bg_business_tab0" +
+            (k + 1) +
+            ".png)";
+          document.querySelector("#business").classList.remove("bg" + (k + 1));
+        });
+      }
+      document.querySelectorAll("#business ul li").forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          business();
+          v.querySelector("a").classList.add("on");
+          v.querySelector("a").style.backgroundImage =
+            "url(https://www.shinsegaefood.com/images/business/bg_business_tab0" +
+            (k + 1) +
+            "_on.png)";
+          document.querySelector("#business").classList.add("bg" + (k + 1));
+        };
+      });
+    </script>
+  </body>
+</html>

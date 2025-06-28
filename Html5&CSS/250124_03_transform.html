@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 500px;
+        margin: 0 auto;
+        border: 1px solid;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        margin: 20px 0;
+      }
+      p:first-child {
+        transform: scaleX(2);
+      }
+      p:nth-child(2) {
+        transform: scaleX(2) translate(200px);
+      }
+      p:nth-child(3) {
+        transform: translate(200px) scaleX(2);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const car = { name: "벤츠", price: 200, color: "white" };
+      const cars = ["Saab", "Volvo", "BMW", 100, 200, 300, true, false];
+      document.write(typeof car + "<br>");
+      document.write(typeof cars + "<br>");
+      //const car2 = [];
+      const car2 = new Array();
+      car2[0] = "aaa";
+      car2[1] = "bbb";
+      car2[2] = "ccc";
+      const car3 = new Array("aaa", "bbb", "ccc");
+      document.write(
+        (cars instanceof Array) + "<br>" + (car instanceof Object) + "<br>"
+      );
+
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(typeof fruits + "<br>");
+      document.write(typeof fruits.toString() + "<br>");
+      document.write(fruits.join(" * ") + "<br>");
+      document.write(typeof fruits.join(" * ") + "<br>");
+      fruits.pop();
+      document.write(fruits + "<br>");
+      //`${변수}<br>`
+      document.write(`${fruits}<br>`);
+      fruits.push("Kiwi");
+      document.write(`${fruits}<br>`);
+      fruits.shift();
+      document.write(`${fruits}<br>`);
+      fruits.unshift("Lemon");
+      document.write(`${fruits}<br>`);
+      document.write(`${fruits.length}<br>`);
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+      document.write(`${myChildren}<br>`);
+      fruits.splice(3, 1, "Lemon", "Kiwi");
+      document.write(`${fruits}<br>`);
+      document.write(`${fruits.slice(1, 3)}<br>`);
+      document.write(`${fruits.sort()}<br>`);
+      document.write(`${fruits.sort().reverse()}<br>`);
+    </script>
+  </body>
+</html>

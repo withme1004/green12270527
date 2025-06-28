@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      header {
+        padding: 6px;
+        height: 60px;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header ul {
+        display: flex;
+      }
+      header ul:first-child li a {
+        padding-left: 20px;
+      }
+      header ul:last-child li a {
+        padding-right: 20px;
+      }
+      header ul:last-child li a img {
+        width: 24px;
+      }
+      header ul li a:hover {
+        text-decoration: underline;
+      }
+      header ul li.login a {
+        background: #1a73e8;
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin-right: 20px;
+        color: #fff;
+      }
+      header ul li.login a:hover {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="head">
+
+    </div> -->
+    <header>
+      <ul>
+        <li><a href="#">Google 정보</a></li>
+        <li><a href="#">스토어</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Gmail</a></li>
+        <li><a href="#">이미지</a></li>
+        <li>
+          <a href="#"><img src="./images/app.svg" alt="app" /></a>
+        </li>
+        <li class="login"><a href="#">로그인</a></li>
+      </ul>
+    </header>
+  </body>
+</html>

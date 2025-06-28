@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1#one + p {
+        color: red;
+      }
+      h1#two ~ p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="one">인접선택자</h1>
+    <p class="first on">하나</p>
+    <p class="first-on">둘</p>
+    <p>셋</p>
+    <p>넷</p>
+    <h1 id="two">형제선택자</h1>
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+  </body>
+</html>

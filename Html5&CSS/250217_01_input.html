@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        display: none;
+      }
+      #menu1:checked ~ p.one img {
+        display: none;
+      }
+      #photo1:checked ~ p:nth-of-type(2) img {
+        display: none;
+      }
+      p.you {
+        display: none;
+      }
+      #man:checked ~ div p.you:first-child,
+      #woman:checked ~ div p.you:last-child {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" name="menu" id="menu1" />
+    <input type="checkbox" name="photo" id="photo1" />
+    <input type="radio" name="gender" id="man" />
+    <input type="radio" name="gender" id="woman" />
+    <label for="menu1">메뉴1</label>
+    <p class="one"><img src="./images/photo1.jpg" alt="photo1" /></p>
+    <label for="photo1">첫번째이미지</label>
+    <p><img src="./images/photo1.jpg" alt="" /></p>
+    <label for="man">남자</label>
+    <label for="woman">여자</label>
+    <div>
+      <p class="you">당신은 남자입니다</p>
+      <p class="you">당신은 여자입니다</p>
+    </div>
+  </body>
+</html>

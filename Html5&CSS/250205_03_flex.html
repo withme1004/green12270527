@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex {
+        background: #ccc;
+        margin: 20px;
+        padding: 20px;
+        display: flex;
+        width: 500px;
+      }
+      .item {
+        background: #f00;
+        border: 1px solid;
+        width: 300px;
+        flex-shrink: 0;
+      }
+      .container1 {
+        flex-wrap: nowrap;
+      }
+      .container2 {
+        flex-wrap: wrap;
+      }
+      .container3 {
+        flex-wrap: wrap-reverse;
+      }
+      .container4 {
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        /* flex-flow: row-reverse wrap; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex container1">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container2">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container3">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <div class="flex container4">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>

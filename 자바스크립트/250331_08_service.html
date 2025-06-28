@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .con {
+        height: 676px;
+        background: url(https://www.samsungshi.com/images/sub/sVisual_01.jpg);
+      }
+      .con ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .con ul li a {
+        font-size: 22px;
+        color: rgba(255, 255, 255, 0.3);
+        display: block;
+        width: 180px;
+        height: 80px;
+        border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+        line-height: 80px;
+        white-space: nowrap;
+        transition: 0.5s;
+        position: relative;
+      }
+      .con ul li a.on {
+        border-bottom: 4px solid rgba(255, 255, 255, 1);
+      }
+      .con ul li a p {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.5s;
+        letter-spacing: -3px;
+      }
+      .con ul li a p.on {
+        left: 0;
+        color: rgba(255, 255, 255, 1);
+        transform: translateX(0);
+      }
+      .con ul li a span {
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        transform: rotate(0deg);
+        transition: 0.5s;
+      }
+      .con ul li a span.on {
+        opacity: 1;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <ul>
+        <li>
+          <a href="#" class="on"
+            ><p class="on">제품|서비스</p>
+            <span class="on"
+              ><img
+                src="	https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="arrow" /></span
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><p>그린솔루션</p>
+            <span
+              ><img
+                src="	https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="arrow" /></span
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><p>디지털솔루선</p>
+            <span
+              ><img
+                src="	https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="arrow" /></span
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><p>스마트야드 솔루션</p>
+            <span
+              ><img
+                src="	https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="arrow" /></span
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      document.querySelectorAll(".con ul li").forEach(function (v, k) {
+        v.onmouseenter = function () {
+          if (k == 0) {
+            return;
+          } else {
+            v.querySelector("a").classList.add("on");
+            v.querySelector("p").classList.add("on");
+            v.querySelector("span").classList.add("on");
+          }
+        };
+        v.onmouseleave = function () {
+          if (k != 0) {
+            v.querySelector("a").classList.remove("on");
+            v.querySelector("p").classList.remove("on");
+            v.querySelector("span").classList.remove("on");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

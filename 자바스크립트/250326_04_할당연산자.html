@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <a href="#">클릭할때마다 콘솔에 1씩증가</a>
+    <p>0</p>
+    <script>
+      let a = 0;
+      document.querySelector("a").onclick = function (e) {
+        e.preventDefault();
+        //console.log(a++);
+        //console.log((a += 2)); // a = a +2
+        document.querySelector("p").innerText = ++a;
+      };
+    </script>
+  </body>
+</html>

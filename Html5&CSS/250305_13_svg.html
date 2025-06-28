@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 일러스트 가로1픽셀 세로 1픽셀 육각형의 쉐입을 shift로 그림(stroke는 none)
+    속성창에 width=1 height=1 rotate 90도 Effect메뉴의 stylize의 Round corners 0.1px 파일 save a copy svg파일형식 선택 후 저장 svg code...옆에 아이콘 --미리보기 more options Decimal Places=3 -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+      section p {
+        clip-path: url(#path);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        animation: bg 2s infinite alternate;
+      }
+      @keyframes bg {
+        0% {
+          background-image: url(./images/photo1.jpg);
+        }
+        100% {
+          background-image: url(./images/photo2.jpg);
+        }
+      }
+      section p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <!-- <p><img src="./images/photo1.jpg" alt="photo" /></p> -->
+      <p></p>
+      <svg>
+        <clipPath id="path" clipPathUnits="objectBoundingBox">
+          <path
+            class="st0"
+            d="M0.089,0.205C0.04,0.23,0,0.295,0,0.35l0,0.3c0,0.055,0.04,0.12,0.089,0.145l0.321,0.161
+		c0.049,0.025,0.13,0.025,0.179,0l0.321-0.161C0.96,0.77,1,0.705,1,0.65v-0.3c0-0.055-0.04-0.12-0.089-0.145L0.589,0.045
+		c-0.049-0.025-0.13-0.025-0.179,0L0.089,0.205z"
+          />
+          <path
+            d="M0.5,0.026c-0.032,0-0.065,0.006-0.089,0.018L0.089,0.205C0.04,0.23,0,0.295,0,0.35v0.3c0,0.055,0.04,0.12,0.089,0.145
+		l0.321,0.161C0.435,0.968,0.468,0.974,0.5,0.974s0.065-0.006,0.089-0.018l0.321-0.161C0.96,0.77,1,0.705,1,0.65v-0.3
+		c0-0.055-0.04-0.12-0.089-0.145L0.589,0.045C0.565,0.032,0.532,0.026,0.5,0.026L0.5,0.026z"
+          />
+        </clipPath>
+      </svg>
+    </section>
+  </body>
+</html>

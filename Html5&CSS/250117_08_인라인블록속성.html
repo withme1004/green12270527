@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인라인블록속성</title>
+    <style>
+      div {
+        border: 1px solid;
+      }
+      .con1 {
+        display: inline-block;
+        padding: 20px;
+      }
+      .con2 {
+        float: left;
+      }
+      p {
+        clear: left;
+        display: inline-block;
+        border: 1px solid;
+        vertical-align: middle;
+      }
+      h1 {
+        height: 500px;
+        border: 1px solid;
+        text-align: center;
+        line-height: 500px;
+        text-indent: -9999px;
+      }
+      h2 {
+        text-shadow: 2px 2px 5px #f00, 
+                    -2px -2px 5px #0f0, 
+                    0 0 20px rgba(0,0,0,.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <div class="con1">블록(block)속성을 배우고 있습니다</div>
+    </div>
+    <div class="con2">float속성을 사용함</div>
+    <p>하나<br />둘<br />셋</p>
+    <span>인라인태그</span>
+    <h1>제목태그</h1>
+    <h2>그림자</h2>
+  </body>
+</html>

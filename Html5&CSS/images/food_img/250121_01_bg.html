@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드</title>
+    <style>
+      span,
+      p,
+      div,
+      ul {
+        background-color: aqua;
+        overflow: hidden;
+        list-style: none;
+      }
+      ul {
+        float: right;
+      }
+      ul li {
+        float: left;
+        background-color: #f00;
+      }
+      ul li:first-child a {
+        background-color: rgba(0, 0, 0, 1);
+      }
+      ul li:nth-child(2) a {
+        background-color: hsla(120, 100%, 50%, 1);
+      }
+      ul li:nth-child(3) a {
+        background-color: black;
+        opacity: 0.5;
+      }
+      ul li:nth-child(4) a {
+        background-color: pink;
+        width: 500px;
+        height: 500px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <span>인라인태그</span>
+    <p>문단태그</p>
+    <div>블록태그</div>
+    <ul>
+      <li><a href="#">링크1</a></li>
+      <li><a href="#">링크2</a></li>
+      <li><a href="#">링크3</a></li>
+      <li><a href="#">링크4</a></li>
+    </ul>
+  </body>
+</html>

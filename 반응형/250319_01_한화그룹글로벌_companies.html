@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .company {
+        padding: 0 80px;
+        box-sizing: border-box;
+      }
+      .company ul {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .company ul li {
+        width: calc((100% - 20px) / 3);
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        padding: 25px 22px;
+        box-sizing: border-box;
+      }
+      .company ul li p {
+        position: relative;
+      }
+      .company ul li p::after {
+        content: "\f061";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 1px solid #e5e5e5;
+        font-size: 10px;
+        text-align: center;
+        line-height: 26px;
+        transition: 0.3s;
+      }
+      .company ul li:hover p::after {
+        background: #f37321;
+        color: #fff;
+      }
+      .company ul li img {
+        width: 100%;
+      }
+      @media screen and (max-width: 1024px) {
+        .company ul li {
+          padding: 12px 18px;
+        }
+        .company ul li p::after {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .company {
+          padding: 0 30px;
+        }
+        .company ul li {
+          padding: 12px 16px;
+          width: calc((100% - 20px) / 2);
+        }
+      }
+      @media screen and (max-width: 670px) {
+        .company ul li {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="company">
+      <ul>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240422/1713775631479.jpg"
+              alt="01"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713869856042.jpg"
+              alt="02"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713874192354.jpg"
+              alt="03"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713874567467.jpg"
+              alt="04"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713874779700.jpg"
+              alt="05"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713874951317.jpg"
+              alt="06"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713871679059.jpg"
+              alt="07"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875088485.jpg"
+              alt="08"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875259067.jpg"
+              alt="09"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875384846.jpg"
+              alt="10"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240521/1716268151833.jpg"
+              alt="11"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875509763.jpg"
+              alt="12"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <img
+              src="https://www.hanwha.com/upload/company/20240423/1713875629246.jpg"
+              alt="13"
+            />
+          </p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+Flexible Folded Paper Effect
+Achieved with a mixture of CSS3 gradients and box-shadows.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sollicitudin sapien quis augue pellentesque pulvinar. Morbi non ligula eu justo posuere tincidunt sit amet id nulla. Praesent lectus lacus, tristique at dictum ac, porta at magna. Phasellus est nunc, pulvinar non tempor a, condimentum vitae eros. Aliquam auctor posuere lacinia. Praesent eu risus dolor, a mollis leo. Aliquam pharetra, risus vel rutrum volutpat. Aliquam auctor posuere lacinia. Praesent eu risus dolor, a mollis leo. 
+
+Aliquam pharetra, risus vel rutrum volutpat. Aliquam auctor posuere lacinia. Praesent eu risus dolor, a mollis leo. Aliquam pharetra, risus vel rutrum volutpat..

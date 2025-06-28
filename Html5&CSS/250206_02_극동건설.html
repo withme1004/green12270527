@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        margin: 50px;
+      }
+      ul li {
+        position: relative;
+        display: inline-block;
+        /* width: 300px;
+        height: 300px; */
+        background: #f0f0f0;
+        padding: 40px 30px;
+      }
+      ul li a {
+        text-decoration: none;
+        color: #222;
+      }
+      ul li a div p {
+        margin: 50px 0;
+      }
+      ul li a div h1 span {
+        font-weight: bold;
+        display: block;
+      }
+      ul li a .line {
+        position: absolute;
+        background: #07348c;
+        transition: 0.5s ease-in-out;
+      }
+      ul li a .top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        top: 0;
+        transform: scaleX(0);
+      }
+      ul li:hover a .top {
+        transform: scaleX(1);
+      }
+      ul li a .right {
+        width: 5px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        transform: scaleY(0);
+      }
+      ul li:hover a .right {
+        transform: scaleY(1);
+      }
+      ul li a .bottom {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+      }
+      ul li:hover a .bottom {
+        transform: scaleX(1);
+      }
+      ul li a .left {
+        width: 5px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform: scaleY(0);
+      }
+      ul li:hover a .left {
+        transform: scaleY(1);
+      }
+      section {
+        width: 500px;
+        height: 500px;
+        background: #000;
+      }
+      section p {
+        width: 300px;
+        height: 300px;
+        background: #f00;
+        transform: scaleX(0);
+        transition: 0.5s;
+      }
+      section:hover p {
+        transform: scaleX(1);
+      }
+      article p {
+        transition: 1s;
+      }
+      article p:hover {
+        content: url(./images/photo2.jpg);
+      }
+      h3 {
+        height: 300px;
+        background: url(./images/photo3.jpg);
+        transition: 1s;
+      }
+      h3:hover {
+        background: url(./images/photo4.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="">
+          <div>
+            <h1>언론속의 <span>극동</span></h1>
+            <p>언론에 소개되는 극동의 소식을 <br />안내해드립니다.</p>
+            <span>
+              <img
+                src="https://kukdong.co.kr/images/common/next_bar_bk.png"
+                alt="arrow"
+              />
+            </span>
+          </div>
+          <span class="line top"></span>
+          <span class="line right"></span>
+          <span class="line bottom"></span>
+          <span class="line left"></span>
+        </a>
+      </li>
+    </ul>
+    <section>
+      <p></p>
+    </section>
+    <article>
+      <p><img src="./images/photo1.jpg" alt="photo1" /></p>
+    </article>
+    <h3></h3>
+  </body>
+</html>

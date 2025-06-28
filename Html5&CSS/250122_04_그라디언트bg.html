@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+      }
+      p:nth-child(1) {
+        background: conic-gradient(red, yellow, green);
+      }
+      p:nth-child(2) {
+        background: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+      }
+      p:nth-child(3) {
+        background: conic-gradient(
+          red 0deg 45deg,
+          yellow 45deg 90deg,
+          green 210deg
+        );
+        border-radius: 50%;
+      }
+      p:nth-child(4) {
+        background: conic-gradient(
+          at 30% 20%,
+          red 45deg,
+          yellow 90deg,
+          green 210deg
+        );
+      }
+      p:nth-child(5) {
+        background: repeating-conic-gradient(red 10%, yellow 20%);
+      }
+      p:nth-child(6) {
+        background: repeating-conic-gradient(
+          red 0deg 10deg,
+          yellow 10deg 20deg,
+          blue 20deg 30deg
+        );
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>

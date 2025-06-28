@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .con {
+        width: 90%;
+        max-width: 1720px;
+        margin: 0 auto;
+      }
+      .con ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .con ul li {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3vw;
+        position: relative;
+      }
+      .con ul li::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: #ddd;
+      }
+      .con ul li:last-child::after {
+        width: 0;
+      }
+      .con ul li .txt {
+        flex: 1;
+      }
+      .con ul li .txt p {
+        word-break: keep-all;
+        margin: 20px 0 40px;
+      }
+      .con ul li div:last-child {
+        width: 100px;
+      }
+      .con ul li:nth-child(3) img {
+        width: 100px;
+      }
+      @media screen and (max-width: 1280px) {
+        .con ul li:first-child,
+        .con ul li:nth-child(2) {
+          flex-basis: 40%;
+          border-bottom: 1px solid #ddd;
+          padding: 20px;
+        }
+        .con ul li:nth-child(2)::after {
+          width: 0;
+        }
+        .con ul li:nth-child(3) {
+          flex-basis: 80%;
+          padding: 20px;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        .con ul li:first-child,
+        .con ul li:nth-child(2) {
+          flex-basis: 80%;
+          padding: 16px;
+        }
+        .con ul li:first-child::after {
+          width: 0;
+        }
+        .con ul li:nth-child(3) {
+          padding: 16px;
+        }
+        .con ul li:nth-child(odd) img {
+          width: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <ul>
+        <li>
+          <div class="txt">
+            <h1>오픈소싱</h1>
+            <p>
+              내부 심의를 통해 선정된 업체는 당사의 아웃소싱 데이터베이스로
+              관리합니다.
+            </p>
+            <a href="#">더보기</a>
+          </div>
+          <div>
+            <img
+              src="https://www.samsungshi.com/images/main/icon_source.png"
+              alt=""
+            />
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>오픈소싱</h1>
+            <p>
+              내부 심의를 통해 선정된 업체는 당사의 아웃소싱 데이터베이스로
+              관리합니다.
+            </p>
+            <a href="#">더보기</a>
+          </div>
+          <div>
+            <img
+              src="https://www.samsungshi.com/images/main/icon_visit.png"
+              alt=""
+            />
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>오픈소싱</h1>
+            <p>
+              내부 심의를 통해 선정된 업체는 당사의 아웃소싱 데이터베이스로
+              관리합니다.
+            </p>
+            <a href="#">더보기</a>
+          </div>
+          <div>
+            <img
+              src="https://www.samsungshi.com/images/main/icon_suggest.png"
+              alt=""
+            />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

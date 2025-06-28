@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        padding: 100px;
+        border: 10px solid;
+        margin: 50px;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("a").click(function (e) {
+          e.preventDefault();
+          $(this).text($("p").outerWidth(true));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <a href="#">클릭</a>
+  </body>
+</html>

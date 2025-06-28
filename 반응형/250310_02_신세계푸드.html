@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .food {
+        width: 98%;
+        max-width: 1280px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .food h1 {
+        font-size: 40px;
+      }
+      .food p {
+        font-size: 22px;
+      }
+      .food ul {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+      .food ul li {
+        /* flex: 1 0 40%; */
+        /* width: calc((100% - 40px) / 2); */
+        width: calc(50% - 20px);
+        border-radius: 40px;
+        overflow: hidden;
+      }
+      .food ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @media screen and (max-width: 1280px) {
+        .food ul {
+          gap: 30px;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .food h1 {
+          font-size: 20px;
+        }
+        .food h1 br {
+          display: none;
+        }
+        .food ul {
+          gap: 20px;
+        }
+        .food ul li {
+          border-radius: 20px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .food ul {
+          gap: 10px;
+        }
+        .food ul li {
+          border-radius: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="food">
+      <h1>
+        생활 속에서 함께하는<br />
+        식품 제조 선도 기업
+      </h1>
+      <p>
+        신세계푸드는 글로벌 수준의 R&D센터와 식품 제조 인프라를 갖추고
+        있습니다.<br />
+        프리미엄 가정 간편식, 베이커리, Fresh Food, 대안식품 등을<br />
+        직접 연구개발 및 생산하며 식품시장을 선도해 가고 있습니다.
+      </p>
+      <ul>
+        <li>
+          <a href="#"
+            ><img
+              src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+              alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="#"></a
+          ><img
+            src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+              alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+              alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+              alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+              alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+              alt=""
+          /></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

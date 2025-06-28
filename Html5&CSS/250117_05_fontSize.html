@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fontSize</title>
+    <style>
+      html {
+        font-size: 50px;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+      }
+      div:first-child p {
+        font-size: 50px;
+      }
+      div:nth-child(2) {
+        font-size: 32px;
+      }
+      div:nth-child(2) p {
+        font-size: 50%;
+      }
+      div:nth-child(3) {
+        font-size: 100px;
+      }
+      div:nth-child(3) p {
+        font-size: 1em;
+        width: 1em;
+        background-color: red;
+      }
+      div:nth-child(4) {
+        font-size: 100px;
+      }
+      div:nth-child(4) p {
+        font-size: 1rem;
+        width: 1rem;
+        background-color: red;
+      }
+      div:nth-child(5) p {
+        font-size: 1vw;
+      }
+      div:nth-child(6) p {
+        font-size: 10vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div><p>fontSize</p></div>
+    <div><p>fontSize</p></div>
+    <div><p>fontSize</p></div>
+    <div><p>fontSize</p></div>
+    <div><p>fontSize</p></div>
+    <div><p>fontSize</p></div>
+  </body>
+</html>

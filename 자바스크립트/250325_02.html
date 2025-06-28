@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #111;
+      }
+      ul.menu {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      ul.menu li a {
+        display: block;
+        padding: 0 16px;
+        height: 44px;
+        line-height: 44px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+      ul.menu li.on a {
+        background: #211955;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">메뉴1</a></li>
+      <li><a href="#">메뉴2</a></li>
+      <li><a href="#">메뉴3</a></li>
+      <li><a href="#">메뉴4</a></li>
+    </ul>
+    <p>메뉴<span></span>페이지입니다.</p>
+    <script>
+      document.querySelectorAll(".menu li")[0].classList.add("on");
+      document.querySelector("p span").innerText = 1;
+      function my() {
+        document.querySelectorAll(".menu li").forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+      document.querySelectorAll(".menu li").forEach(function (v, k) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          my();
+          v.classList.add("on");
+          document.querySelector("p span").innerText = k + 1;
+        };
+      });
+    </script>
+  </body>
+</html>

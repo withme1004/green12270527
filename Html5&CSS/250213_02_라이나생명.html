@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul.list {
+        width: 1140px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      ul.list li {
+        width: 96px;
+        /* width: 169px;
+        height: 168px; */
+      }
+      ul.list li p:first-child {
+        padding: 17px;
+        border-radius: 14px;
+        background: #f4f4fc;
+        border: 1px solid #f4f4fc;
+        box-sizing: border-box;
+      }
+      ul.list li:hover p:first-child {
+        border-color: #007aff;
+      }
+      ul.list li p:first-child img {
+        width: 100%;
+      }
+      ul.list li:nth-child(4):hover p:first-child,
+      ul.list li:nth-child(6):hover p:first-child {
+        background: transparent;
+      }
+      ul.list li:nth-child(4):hover p:first-child img {
+        content: url(https://www.lina.co.kr/_nuxt/img/icon_cyber_home4_h.5cb36ad44edf9bb68e2e8b95c9329d2f.png);
+      }
+      ul.list li:nth-child(6):hover p:first-child img {
+        content: url(https://www.lina.co.kr/_nuxt/img/icon_cyber_home6_h.e4e1b9aa17c953a0bd42256b3b8c2580.png);
+      }
+      ul.list li p:last-child {
+        margin-top: 18px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home1.2cec58f55482ea015198eb33efd2f802.png"
+              alt=""
+            />
+          </p>
+          <p>계약조회</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home2.d04206837d8569110aca77dfcb252236.png"
+              alt=""
+            />
+          </p>
+          <p>보험료납입</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home3.626594ef57b2ee5eef8121e0115202a5.png"
+              alt=""
+            />
+          </p>
+          <p>고객정보변경</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home4.3e0e96c2a849af2e86e5c686985f080b.png"
+              alt=""
+            />
+          </p>
+          <p>지급/변경<br />구비서류</p></a
+        >
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home5.1dd9e3a4beafadbe1f49bf27095905ce.png"
+              alt=""
+            />
+          </p>
+          <p>완전판매<br />해피콜</p></a
+        >
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home6_h.e4e1b9aa17c953a0bd42256b3b8c2580.png"
+              alt=""
+            />
+          </p>
+          <p>보험계약<br />대출신청</p></a
+        >
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home7.96600eb2af93bef8e49d213a6bfd40fc.png"
+              alt=""
+            />
+          </p>
+          <p>만기보험금<br />조회/신청</p></a
+        >
+      </li>
+      <li>
+        <a href="#">
+          <p>
+            <img
+              src="https://www.lina.co.kr/_nuxt/img/icon_cyber_home8.3e82122b41dc126a019ea5b689671969.png"
+              alt=""
+            />
+          </p>
+          <p>증명서<br />발행신청</p></a
+        >
+      </li>
+    </ul>
+  </body>
+</html>

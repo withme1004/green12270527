@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .program {
+        width: 100%;
+        max-width: 1800px;
+        margin: 0 auto;
+      }
+      .program ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+      .program ul li {
+        border-radius: 12px;
+        overflow: hidden;
+        width: calc(25% - 18px);
+      }
+      .program ul li:first-child,
+      .program ul li:nth-child(4) {
+        width: calc((25% - 18px) * 2);
+      }
+      .program ul li p:first-child {
+        height: 100%;
+      }
+      .program ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.4s;
+      }
+      .program ul li:not(:nth-child(5)):hover img {
+        transform: scale(1.16);
+      }
+      .program ul li:nth-child(1) a,
+      .program ul li:nth-child(5) a {
+        cursor: default;
+      }
+      .program ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .program ul li:not(:first-child, :nth-child(5)) a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.4;
+        z-index: 1;
+        transition: 0.4s;
+      }
+      .program ul li:hover a::before {
+        opacity: 0;
+      }
+      .program ul li a p:last-child {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: #fff;
+        z-index: 2;
+      }
+      @media screen and (max-width: 1840px) {
+        .program {
+          padding: 0 30px;
+          box-sizing: border-box;
+        }
+      }
+      @media screen and (max-width: 1440px) {
+      }
+      @media screen and (max-width: 1140px) {
+        .program ul li {
+          width: calc(50% - 12px);
+        }
+        .program ul li:not(:first-child) {
+          height: 240px;
+        }
+        .program ul li:first-child {
+          width: 100%;
+        }
+        .program ul li:nth-child(4) {
+          width: calc(50% - 12px);
+        }
+        .program ul li:nth-child(5) {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .program {
+          padding: 0 24px;
+        }
+      }
+      @media screen and (max-width: 560px) {
+        .program ul li:not(:first-child) {
+          height: 160px;
+        }
+      }
+      @media screen and (max-width: 460px) {
+        .program ul li h4 br {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 420px) {
+        .program ul li,
+        .program ul li:nth-child(4) {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="program">
+      <ul>
+        <li>
+          <a href="">
+            <h1>PROGRAM</h1>
+            <h4>
+              KAIST GGGS에서는 녹색성장과 지속가능성 문제해결을 위해<br />
+              탄소중립기후기술 및 정책·금융에 대한 통섭적인 이해를 갖춘
+              <br />국가 핵심인재를 양성합니다.
+            </h4>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab01.png"
+                alt=""
+              />
+            </p>
+            <p>박사과정</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab02.png"
+                alt=""
+              />
+            </p>
+            <p>군학 프로그램</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab03.png"
+                alt=""
+              />
+            </p>
+            <p>석사과정</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://gggs.kaist.ac.kr/html/images/main/sec03_thumb.png"
+                alt=""
+              />
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <p>
+              <img
+                src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab04.png"
+                alt=""
+              />
+            </p>
+            <p>외국인 전형</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

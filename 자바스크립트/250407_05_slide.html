@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #slide {
+        position: relative;
+        width: 1200px;
+        height: 300px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      #slide .slides {
+        position: absolute;
+        left: 0;
+        display: flex;
+        /* transition: 0.5s; */
+      }
+      #slide .slides img {
+        width: 1200px;
+        height: 300px;
+        object-fit: cover;
+      }
+      .btn li {
+        cursor: pointer;
+      }
+      .page li.on {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slide">
+      <ul class="slides">
+        <li><img src="../Html5&CSS/images/photo1.jpg" alt="photo1" /></li>
+        <li><img src="../Html5&CSS/images/photo2.jpg" alt="photo2" /></li>
+        <li><img src="../Html5&CSS/images/photo3.jpg" alt="photo3" /></li>
+        <li><img src="../Html5&CSS/images/photo4.jpg" alt="photo3" /></li>
+        <li><img src="../Html5&CSS/images/photo5.jpg" alt="photo3" /></li>
+        <li><img src="../Html5&CSS/images/photo6.jpg" alt="photo3" /></li>
+      </ul>
+    </div>
+    <div class="controller">
+      <ul class="btn">
+        <li id="prev">이전으로</li>
+        <li id="next">다음으로</li>
+      </ul>
+      <ul class="page">
+        <li>photo1</li>
+        <li>photo2</li>
+        <li>photo3</li>
+        <li>photo4</li>
+        <li>photo5</li>
+        <li>photo6</li>
+      </ul>
+    </div>
+    <script>
+      let slide = document.querySelector("#slide");
+      let slides = document.querySelector(".slides");
+      let slideLi = document.querySelectorAll(".slides li");
+      let page = document.querySelectorAll(".page li");
+      let current = 0;
+      let slidewidth = slide.offsetWidth;
+      page[0].classList.add("on");
+      let len = slideLi.length;
+      //console.log(len);
+      function makeClone() {
+        let clone_first = slideLi[0].cloneNode(true);
+        slides.append(clone_first);
+        let clone_last = slideLi[len - 1].cloneNode(true);
+        slides.prepend(clone_last);
+      }
+      makeClone();
+      //slides.style.left = "-1200px";
+      slides.style.left = -slidewidth + "px";
+      document.querySelector("#next").onclick = function () {
+        if (current <= 5) {
+          slides.style.left = -(current + 2) * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (current == 5) {
+          setTimeout(function () {
+            slides.style.left = -slidewidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          current = -1;
+        }
+        current++; //current = current +1
+      };
+      //console.log(current);
+      document.querySelector("#prev").onclick = function () {
+        //console.log(current);
+        if (current >= 0) {
+          slides.style.left = -current * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (current == 0) {
+          setTimeout(function () {
+            //slides.style.left = "-7200px";
+            slides.style.left = -slidewidth * len + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          current = 6;
+        }
+        current--; //current = current-1;
+      };
+      page.forEach(function (v, k) {
+        v.onclick = function () {
+          console.log(k);
+          if (k == 5) {
+            slides.style.left = -(k + 1) * slidewidth + "px";
+            slides.style.transition = "0.5s";
+            page[0].onclick = function () {
+              //slides.style.left = "-8400px";
+              slides.style.left = -(len + 1) * slidewidth + "px";
+              slides.style.transition = "0.5s";
+              page[5].classList.remove("on");
+              page[0].classList.add("on");
+              setTimeout(function () {
+                slides.style.left = -slidewidth + "px";
+                slides.style.transition = "0s";
+              }, 500);
+            };
+          } else {
+            slides.style.left = -(k + 1) * slidewidth + "px";
+            slides.style.transition = "0.5s";
+          }
+          for (let i = 0; i < 6; i++) {
+            page[i].classList.remove("on");
+          }
+          page[k].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

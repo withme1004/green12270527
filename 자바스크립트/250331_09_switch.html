@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let day = new Date().getDay();
+      let week;
+      console.log(day);
+      /*if (day == 0) {
+        week = "일요일";
+      } else if (day == 1) {
+        week = "월요일";
+      } else if (day == 2) {
+        week = "화요일";
+      } else if (day == 3) {
+        week = "수요일";
+      } else if (day == 4) {
+        week = "목요일";
+      } else if (day == 5) {
+        week = "금요일";
+      } else {
+        week = "토요일";
+      }*/
+      switch (day) {
+        case 0:
+          week = "일요일";
+          break;
+        case 1:
+          week = "월요일";
+          break;
+        case 2:
+          week = "화요일";
+          break;
+        case 3:
+          week = "수요일";
+          break;
+        case 4:
+          week = "목요일";
+          break;
+        case 5:
+          week = "금요일";
+          break;
+        default:
+          week = "토요일";
+      }
+      document.write(`오늘은 ${week}입니다`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .one {
+        font-size: 16px;
+      }
+      .two {
+        font-size: 32px;
+      }
+      .three {
+        font-size: 48px;
+      }
+      .ladybug {
+        position: relative;
+        margin: 200px auto 0;
+        width: 18em;
+        height: 20em;
+        border: 1px solid #000;
+        /* border-radius */
+        border-radius: 50%;
+        background-image: radial-gradient(
+            rgba(0, 0, 0, 1) 30%,
+            transparent 33%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 50%,
+            transparent 55%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 50%,
+            transparent 55%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 40%,
+            transparent 43%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 40%,
+            transparent 43%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 45%,
+            transparent 50%,
+            transparent 100%
+          ),
+          radial-gradient(
+            rgba(0, 0, 0, 1) 45%,
+            transparent 50%,
+            transparent 100%
+          );
+        background-color: #e11;
+        background-size: 5em 5em;
+        background-repeat: no-repeat;
+        background-position: 6.56em 2em, 3em 6em, 10em 6em, 9em 11em, 4em 11em,
+          11em 15em, 2em 15em;
+      }
+      .ladybug::before {
+        content: "";
+        /* display: block; */
+        position: absolute;
+        left: 3em;
+        top: -2.38em;
+        width: 12em;
+        height: 5em;
+        background: #000;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0; /*
+             border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; border-bottom-left-radius: 0 0; border-bottom-right-radius: 0 0; */
+      }
+      .ladybug::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 5em;
+        top: -1em;
+        height: 1em;
+        width: 1em;
+        background: #000;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1em #fff, 0 0 0 1.25em #000, 7em 0 0 0 #000,
+          7em 0 0 1em #fff, 7em 0 0 1.25em #000, 12em 5em 0 0.19em #000,
+          13.5em 11em 0 0.19em #000, 12em 16.5em 0 0.19em #000,
+          -5em 5em 0 0.19em #000, -6.5em 11em 0 0.19em #000,
+          -5em 16.5em 0 0.19em #000;
+      }
+      .ladybug:hover {
+        animation: ladybug 1s;
+      }
+      @keyframes ladybug {
+        0%,
+        100% {
+          background-position: 6.56em 2em, 3em 6em, 10em 6em, 9em 11em, 4em 11em,
+            11em 15em, 2em 15em;
+        }
+        50% {
+          background-position: 6.56em 8em, 6.56em 8em, 6.56em 8em, 6.56em 8em,
+            6.56em 8em, 6.56em 8em, 6.56em 8em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ladybug one"></div>
+    <div class="ladybug two"></div>
+    <div class="ladybug three"></div>
+  </body>
+</html>

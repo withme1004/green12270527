@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #con {
+        width: 630px;
+        height: 630px;
+        margin: 50px auto;
+      }
+      #clock {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      #clock > div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #clock > div#base {
+        background: url(./images/clock_bg.png);
+      }
+      #clock > div#hour {
+        background: url(./images/hour.png);
+        /* transform: rotate(30deg); */
+      }
+      #clock > div#minute {
+        background: url(./images/minute.png);
+      }
+      #clock > div#second {
+        background: url(./images/second.png) center/630px 630px;
+      }
+      #clock > div#center {
+        background: url(./images/center_bg.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="con">
+      <div id="clock">
+        <div id="base"></div>
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+        <div id="center"></div>
+      </div>
+    </div>
+    <script>
+      function clock() {
+        let x = new Date();
+        let hour = (360 / 12) * x.getHours() + x.getMinutes() * 0.5;
+        let minute = (360 / 60) * x.getMinutes();
+        let second = (360 / 60) * x.getSeconds();
+
+        document.getElementById("hour").style.transform =
+          "rotate(" + hour + "deg) ";
+        document.getElementById("minute").style.transform =
+          "rotate(" + minute + "deg) ";
+        document.getElementById("second").style.transform =
+          "rotate(" + second + "deg) ";
+      }
+
+      setInterval(clock, 1);
+    </script>
+  </body>
+</html>

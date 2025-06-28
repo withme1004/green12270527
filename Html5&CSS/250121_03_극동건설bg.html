@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .con {
+        margin-top: 3000px;
+        margin-bottom: 3000px;
+        background-image: url(https://kukdong.co.kr/images/main/mid_bg_img1.jpg);
+        padding: 120px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .con h1 {
+        font-size: 45px;
+        color: #fff;
+        width: 1280px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .con ul {
+        width: 1080px;
+        margin: 0 auto;
+        list-style: none;
+        overflow: hidden;
+        padding-top: 70px;
+      }
+      .con ul li {
+        float: left;
+        width: 25%; /*270px*/
+        padding: 30px;
+        box-sizing: border-box;
+        text-align: center;
+        letter-spacing: -2px;
+        word-break: keep-all;
+        color: #fff;
+        position: relative;
+        /* background-color: red; */
+      }
+      .con ul li::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 90px;
+        background-color: #fff;
+        top: 50%;
+        right: 0;
+        margin-top: -45px;
+        opacity: 0.5;
+      }
+      .con ul li:last-child:after {
+        width: 0;
+      }
+      .con ul li a {
+        display: block;
+      }
+      .con ul li h3 {
+        font-size: 25px;
+        font-weight: normal;
+        margin-bottom: 30px;
+        border: 1px solid #fff;
+        padding: 10px 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <h1>
+        개개인의 특성과 능력을 중시하는 극동건설은<br />
+        여러분의 성장의 터를 마련합니다.
+      </h1>
+      <ul>
+        <li>
+          <a href="">
+            <h3>인재상</h3>
+            <p>극동건설이 추구하는 인재상을 여러분께 소개합니다</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <h3>인사제도</h3>
+            <p>임직원의 역량향상과 동기부여를 위해 다양한 제도를 운영합니다</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <h3>채용안내</h3>
+            <p>극동건설의 채용제도 및 절차를 자세히 소개합니다.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <h3>채용공고</h3>
+            <p>극동건설의 채용공고를 소개합니다</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

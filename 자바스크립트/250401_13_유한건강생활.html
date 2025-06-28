@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .con .topImage {
+        width: 1200px;
+        height: 210px;
+        margin: 50px auto;
+        position: relative;
+      }
+      .con .topImage .mask {
+        position: absolute;
+        width: 1200px;
+        height: 210px;
+        left: 0;
+        top: 0;
+      }
+      .con .topImage .mask .zoom_circle {
+        background-size: 1200px;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        clip-path: circle(0%);
+        border-radius: 30px;
+      }
+      .con .topImage .mask .zoom_circle.on {
+        clip-path: circle(100%);
+        transition: clip-path 1s 800ms ease-out;
+      }
+      .con .topImage .mask .zoom_circle:first-child {
+        background: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/text_to_img1.jpg);
+      }
+      .con .topImage .mask .zoom_circle:nth-child(2) {
+        background: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/text_to_img2.jpg);
+      }
+      .con .topImage .mask .zoom_circle:nth-child(3) {
+        background: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/text_to_img3.jpg);
+      }
+      .con .topImage .item li {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 190px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 210px;
+        color: transparent;
+        transition: 0.5s;
+        opacity: 0;
+      }
+      .con .topImage .item li.on {
+        opacity: 1;
+      }
+      .con .topImage .item li:first-child {
+        background: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/text_to_img1.jpg);
+        background-clip: text;
+      }
+      .con .topImage .item li:nth-child(2) {
+        background: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/text_to_img2.jpg);
+        background-clip: text;
+      }
+      .con .topImage .item li:nth-child(3) {
+        background: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/text_to_img3.jpg);
+        background-clip: text;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <div class="topImage">
+        <div class="mask">
+          <span class="zoom_circle"></span>
+          <span class="zoom_circle"></span>
+          <span class="zoom_circle"></span>
+        </div>
+        <ul class="item">
+          <li>YUHANCARE</li>
+          <li>YUHANCARE</li>
+          <li>YUHANCARE</li>
+        </ul>
+      </div>
+      <ul class="btn">
+        <li>기업소개</li>
+        <li>사업소개</li>
+        <li>기업문화</li>
+      </ul>
+    </div>
+    <script>
+      let item = document.querySelectorAll(".con .topImage .item li");
+      let mask = document.querySelectorAll(".con .topImage .mask .zoom_circle");
+      let btn = document.querySelectorAll(".con .btn li");
+      item[0].classList.add("on");
+      function my() {
+        item.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        mask.forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+      }
+      btn.forEach(function (v, k) {
+        v.onclick = function () {
+          my();
+          item[k].classList.add("on");
+          mask[k].classList.add("on");
+        };
+      });
+      window.onload = function () {
+        setTimeout(function () {
+          btn[0].click();
+        }, 1000);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: Arial, 돋움, Dotum, sans-serif;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: 100px 300px 200px 100px;
+  grid-template-areas: "logo menu menu menu menu menu" " slide slide slide slide slide slide" "c1 c1 c3 c3 c4 c4" "ftlogo copy copy copy copy sns";
+}
+.wrap .logo {
+  grid-area: logo;
+  line-height: 100px;
+}
+.wrap .logo img {
+  vertical-align: middle;
+}
+.wrap .menu {
+  position: relative;
+  grid-area: menu;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.wrap .menu > ul {
+  display: flex;
+  width: 600px;
+  height: 50px;
+}
+.wrap .menu > ul > li {
+  position: relative;
+  width: 25%;
+}
+.wrap .menu > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #333;
+  border-left: none;
+  box-sizing: border-box;
+}
+.wrap .menu > ul > li:hover > a,
+.wrap .menu > ul > li .sub li a:hover {
+  background: #000;
+  color: #fff;
+}
+.wrap .menu > ul > li:nth-child(1) > a {
+  border-left: 1px solid #333;
+}
+.wrap .menu > ul > li .sub {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  /* background: #fff; */
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1;
+}
+.wrap .menu > ul:hover > li .sub {
+  height: 120px;
+  border-bottom: 1px solid #333;
+}
+.wrap .menu > ul > li:nth-child(1) .sub {
+  border-left: 1px solid #333;
+}
+.wrap .menu > ul > li:nth-child(4) .sub {
+  border-right: 1px solid #333;
+}
+.wrap .menu > ul > li .sub li a {
+  line-height: 30px;
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+.wrap .menu .bg {
+  position: absolute;
+  left: -200px;
+  top: 75px;
+  width: 1200px;
+  height: 0;
+  background: #000;
+  transition: 0.5s;
+}
+.wrap .menu > ul:hover ~ .bg {
+  height: 120px;
+}
+.wrap .slide {
+  grid-area: slide;
+}
+.wrap .c1 {
+  grid-area: c1;
+}
+.wrap .c1 .notice {
+  width: 90%;
+  margin: 10px auto 0;
+}
+.wrap .c1 .notice input {
+  display: none;
+}
+.wrap .c1 .notice .btn {
+  position: relative;
+  height: 40px;
+  z-index: 1;
+}
+.wrap .c1 .notice .btn li {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #333;
+  border-right: none;
+  background: #ccc;
+  box-sizing: border-box;
+}
+.wrap .c1 .notice .btn li label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.wrap .c1 .notice .btn li:first-child {
+  left: 10px;
+}
+.wrap .c1 .notice .btn li:last-child {
+  left: 110px;
+  border-right: 1px solid #333;
+}
+.wrap .c1 .notice .con {
+  position: relative;
+  height: 140px;
+  border: 1px solid #333;
+  top: -1px;
+}
+.wrap .c1 .notice .con li {
+  position: absolute;
+  display: none;
+}
+#notice:checked ~ .btn li:first-child,
+#gallery:checked ~ .btn li:last-child {
+  border-bottom: none;
+  background: #fff;
+}
+#notice:checked ~ .con li:first-child table {
+  font-size: 14px;
+  width: 95%;
+  table-layout: fixed;
+  margin: 0 auto;
+}
+#notice:checked ~ .con li:first-child table td {
+  padding: 2px;
+}
+#notice:checked ~ .con li:first-child table td:first-child {
+  width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#notice:checked ~ .con li:first-child table td:last-child {
+  text-align: right;
+}
+#notice:checked ~ .con li:first-child,
+#gallery:checked ~ .con li:last-child {
+  display: block;
+}
+.wrap .c1 .notice .con li div {
+  display: flex;
+  width: 360px;
+  height: 140px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.wrap .c1 .notice .con img {
+  width: 100px;
+}
+.wrap .c3 {
+  grid-area: c3;
+}
+.wrap .c4 {
+  grid-area: c4;
+}
+.wrap .ftlogo {
+  grid-area: ftlogo;
+}
+.wrap .copy {
+  grid-area: copy;
+}
+.wrap .sns {
+  grid-area: sns;
+}
+
+#popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: none;
+}
+#popup .inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 350px;
+  background: #fff;
+}
+#popup .inner h3 {
+  padding: 20px;
+  border-bottom: 1px solid #000;
+}
+#popup .inner p {
+  padding: 20px 20px 0;
+}
+#popup .inner p.close {
+  text-align: right;
+}
+#popup .inner p.close a {
+  border: 1px solid #333;
+  padding: 10px 20px;
+}
+#popup:target {
+  display: block;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .con {
+        width: 1200px;
+        margin: 50px auto;
+        background: #ccc;
+      }
+      .cssF header {
+        height: 100px;
+        background: #ddd;
+        margin-bottom: 20px;
+      }
+      .cssF section {
+        display: flex;
+        gap: 20px;
+        height: 200px;
+      }
+      .cssF section > div {
+        /* flex: 1; */
+        background: #ddd;
+      }
+      .cssF section > div:first-child {
+        flex: 1;
+      }
+      .cssF section > div:nth-child(2) {
+        flex: 2;
+      }
+      .cssF section > div:nth-child(3) {
+        flex: 1;
+      }
+      .cssF footer {
+        height: 200px;
+        margin-top: 20px;
+        background: #ddd;
+      }
+      .cssG {
+        display: grid;
+        /* grid-template-columns: 300px 600px 300px; */
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        grid-template-columns: 300px auto 300px;
+        grid-template-areas: "head head head" "a main b" ". . ." "foot foot foot";
+        grid-template-rows: 100px 200px;
+        grid-auto-rows: 100px;
+        gap: 20px;
+      }
+
+      .cssG header {
+        grid-area: head;
+        background: #ddd;
+      }
+      .cssG div:nth-child(2) {
+        grid-area: a;
+        background: #ddd;
+      }
+      .cssG div:nth-child(3) {
+        grid-area: main;
+        background: #ddd;
+      }
+      .cssG div:nth-child(4) {
+        grid-area: b;
+        background: #ddd;
+      }
+      .cssG footer {
+        grid-area: foot;
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con cssF">
+      <header>header</header>
+      <section>
+        <div>a</div>
+        <div>main</div>
+        <div>b</div>
+      </section>
+      <footer>footer</footer>
+    </div>
+    <div class="con cssG">
+      <header>header</header>
+      <div>a</div>
+      <div>main</div>
+      <div>b</div>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

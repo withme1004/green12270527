@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+      }
+      p {
+        width: 100%;
+        height: 100%;
+        background: #ccc;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("a:first-of-type").mouseenter(function (e) {
+          e.preventDefault();
+          $("p").animate(
+            { width: "0", height: "0" },
+            1000,
+            "linear",
+            function () {
+              alert("애니메이션완료");
+            }
+          );
+        });
+        $("a:nth-of-type(2)").click(function (e) {
+          e.preventDefault();
+          $("p").animate(
+            { width: "100%", height: "100%", backgroundColor: "#f00" },
+            1000,
+            "linear"
+          );
+        });
+        $("a:nth-of-type(3)").click(function (e) {
+          e.preventDefault();
+          let wd = $("p").width();
+          console.log(wd);
+          if (wd > 0) {
+            $("p").animate({ width: "0", height: "0" }, 1000, "linear");
+          } else {
+            $("p").animate({ width: "100%", height: "100%" }, 1000, "linear");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <p></p>
+    </div>
+    <a href="#">slideleft</a>
+    <a href="#">slideright</a>
+    <a href="#">slideToggle</a>
+  </body>
+</html>

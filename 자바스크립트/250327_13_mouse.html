@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .out {
+        width: 20%;
+        height: 120px;
+        margin: 20px;
+        background: #ccc;
+      }
+      .in {
+        width: 60%;
+        height: 60%;
+        background: #fc0;
+        margin: 10px auto;
+      }
+      p {
+        line-height: 16px;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="out overP">
+      <p class="overfirst">move your mouse</p>
+      <div class="in overC">
+        <p class="overlast">move your mouse</p>
+        <p class="overchild">0</p>
+      </div>
+      <p class="overparent">0</p>
+    </div>
+    <div class="out enterP">
+      <p class="enterfirst">move your mouse</p>
+      <div class="in enterC">
+        <p class="enterlast">move your mouse</p>
+        <p class="enterchild">0</p>
+      </div>
+      <p class="enterparent">0</p>
+    </div>
+
+    <script>
+      let i = 0;
+      document.querySelector(".overP").onmouseover = function () {
+        document.querySelector(".overlast").innerText = "mouseover";
+        document.querySelector(".overchild").innerText = i++;
+        document.querySelector(".overparent").innerText = i++;
+      };
+      document.querySelector(".overP").onmouseout = function () {
+        document.querySelector(".overfirst").innerText = "mouseout";
+        document.querySelector(".overlast").innerText = "mouseout";
+      };
+      let j = 0;
+      // document.querySelector(".enterP").onmouseenter = function () {
+      document
+        .querySelector(".enterP")
+        .addEventListener("mouseenter", function () {
+          document.querySelector(".enterlast").innerText = "mouseenter";
+          document.querySelector(".enterchild").innerText = j++;
+          document.querySelector(".enterparent").innerText = j++;
+        });
+      document.querySelector(".enterP").onmouseleave = function () {
+        document.querySelector(".enterfirst").innerText = "mouseleave";
+        document.querySelector(".enterlast").innerText = "mouseleave";
+      };
+    </script>
+  </body>
+</html>

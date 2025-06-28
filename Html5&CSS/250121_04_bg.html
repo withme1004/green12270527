@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        width: 200px;
+        height: 200px;
+        padding: 100px;
+        /*border-width: 20px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.3);*/
+        border: 20px solid rgba(0, 0, 0, 0.3);
+      }
+      .origin p {
+        background-image: url(./images/photo1.jpg);
+        background-repeat: no-repeat;
+      }
+      .origin p:first-child {
+        background-origin: border-box;
+      }
+      .origin p:nth-child(2) {
+        background-origin: padding-box;
+      }
+      .origin p:last-child {
+        background-origin: content-box;
+      }
+      .clip p {
+        background-color: red;
+      }
+      .clip p:first-child {
+        background-clip: border-box;
+      }
+      .clip p:nth-child(2) {
+        background-clip: padding-box;
+      }
+      .clip p:last-child {
+        background-clip: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="origin">
+      <p>border-box</p>
+      <p>padding-box</p>
+      <p>content-box</p>
+    </div>
+    <div class="clip">
+      <p>border-box</p>
+      <p>padding-box</p>
+      <p>content-box</p>
+    </div>
+  </body>
+</html>

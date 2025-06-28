@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .lush {
+        display: flex;
+        width: 100%;
+        height: 720px;
+        background-color: #fafafa;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+      }
+      .lush ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 94px 177px;
+      }
+      .lush ul li a {
+        display: block;
+        width: 180px;
+        height: 180px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #222;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lush">
+      <ul>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div>
+    <script>
+      // url(https://weare.lush.co.kr/images/ico_main_value01.svg)
+      // url(https://weare.lush.co.kr/images/main_value01.jpg)
+      function lush() {
+        document.querySelectorAll(".lush ul li").forEach(function (v, k) {
+          v.querySelector("a").style.backgroundColor = "transparent";
+        });
+      }
+      document.querySelectorAll(".lush ul li").forEach(function (v, k) {
+        v.querySelector(
+          "a"
+        ).style.backgroundImage = `url(https://weare.lush.co.kr/images/ico_main_value0${
+          k + 1
+        }.svg)`;
+        v.onmouseenter = function () {
+          console.log(v);
+          lush();
+          this.querySelector("a").style.backgroundColor = "#222";
+          document.querySelector(
+            ".lush"
+          ).style.backgroundImage = `url(https://weare.lush.co.kr/images/main_value0${
+            k + 1
+          }.jpg)`;
+        };
+        v.onmouseleave = function () {
+          document.querySelectorAll(".lush ul li").forEach(function (v, k) {
+            v.querySelector("a").style.backgroundColor = "#222";
+          });
+        };
+      });
+
+      document.querySelector(".lush").onmouseleave = function () {
+        this.style.backgroundImage = "none";
+      };
+    </script>
+  </body>
+</html>

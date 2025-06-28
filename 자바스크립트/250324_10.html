@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: relative;
+      }
+      div p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      div p.on {
+        display: block;
+      }
+      .active {
+        color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>photo1</li>
+      <li>photo2</li>
+      <li>photo3</li>
+      <li>photo4</li>
+      <li>photo5</li>
+    </ul>
+    <div>
+      <p><img src="../Html5&CSS/images/photo1.jpg" alt="" /></p>
+      <p><img src="../Html5&CSS/images/photo2.jpg" alt="" /></p>
+      <p><img src="../Html5&CSS/images/photo3.jpg" alt="" /></p>
+      <p><img src="../Html5&CSS/images/photo4.jpg" alt="" /></p>
+      <p><img src="../Html5&CSS/images/photo5.jpg" alt="" /></p>
+    </div>
+    <script>
+      function my() {
+        document.querySelectorAll("p").forEach(function (v, k) {
+          v.classList.remove("on");
+        });
+        document.querySelectorAll("ul li").forEach(function (v, k) {
+          v.classList.remove("active");
+        });
+      }
+      document.getElementsByTagName("p")[0].classList.add("on");
+      document.querySelectorAll("ul li")[0].classList.add("active");
+
+      document.querySelectorAll("ul li").forEach(function (value, key) {
+        value.onclick = function () {
+          my();
+          document.querySelectorAll("p")[key].classList.add("on");
+          value.classList.add("active");
+        };
+      });
+    </script>
+  </body>
+</html>

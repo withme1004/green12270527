@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      body {
+        font-family: "Pretendard";
+      }
+      .cj {
+        width: 100%;
+        max-width: 1420px;
+        margin: 0 auto;
+        padding: 0 60px;
+        box-sizing: border-box;
+      }
+      .cj > ul {
+        display: flex;
+        gap: 20px;
+      }
+      .cj > ul img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .cj > ul li.left {
+        width: 40%;
+      }
+      .cj > ul li.left a {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        height: 100%;
+      }
+      .cj > ul li.left a p {
+        flex: 2;
+      }
+      .cj > ul li.left a .txt {
+        flex: 1;
+        background: #21a100;
+      }
+      .cj > ul li.right {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .cj > ul li.right ul {
+        display: flex;
+        gap: 20px;
+      }
+      .cj > ul li.right ul li {
+        flex: 1;
+      }
+      .cj > ul li.right ul li p {
+        height: 100%;
+      }
+      .cj > ul li.right ul:nth-child(2) li:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .cj > ul li.right ul li a {
+        position: relative;
+        display: block;
+        height: 100%;
+        color: #fff;
+      }
+      .cj > ul li.right ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 212, 255, 0)
+        );
+      }
+      .cj > ul li.right .txt {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+      .cj > ul li.right .txt h1 {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cj">
+      <ul>
+        <li class="left">
+          <a href="">
+            <p>
+              <img
+                src="https://d10yximrhdxai4.cloudfront.net/news/3dd65217bdf34f638a4f254a167f3b5f.jpg"
+                alt=""
+              />
+            </p>
+
+            <div class="txt">
+              <p>보도자료</p>
+              <h1>CJ올리브영, 2025 상반기 신입사원 채용</h1>
+            </div>
+          </a>
+        </li>
+        <li class="right">
+          <ul>
+            <li>
+              <a href="">
+                <p>
+                  <img
+                    src="https://d10yximrhdxai4.cloudfront.net/news/27d81b37a05a4ad8b0c1a97e27c81c37.jpg"
+                    alt=""
+                  />
+                </p>
+
+                <div class="txt">
+                  <p>보도자료</p>
+                  <h1>CJ올리브영, 차병원과 ‘여성 건강 증진’ 업무협약 체결</h1>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>
+                  <img
+                    src="https://d10yximrhdxai4.cloudfront.net/main/ea1f1089487e4824bd19f1909dd5f657.png"
+                    alt=""
+                  />
+                </p>
+                <div class="txt">
+                  <p>보도자료</p>
+                  <h1>
+                    189개 국적 외국인 942만건 결제… 올리브영, ‘글로벌 K뷰티
+                    게이트웨이’ 자리매김
+                  </h1>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="">
+                <p>
+                  <img
+                    src="https://d10yximrhdxai4.cloudfront.net/main/cc48516239e44721a7581f99e233691b.jpg"
+                    alt=""
+                  />
+                </p>
+                <div class="txt">
+                  <p>테크블로그</p>
+                  <h1>올리브영 테크블로그 바로가기</h1>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>
+                  <img
+                    src="https://d10yximrhdxai4.cloudfront.net/main/47c4ba7410c54746a729b9e5fdaf4a8e.png"
+                    alt=""
+                  />
+                </p>
+                <div class="txt">
+                  <p>산업지원정보</p>
+                  <h1>화장품 산업 관련 정부지원사업 모아보기</h1>
+                </div>
+              </a>
+              <a href="">
+                <p>
+                  <img
+                    src="https://d10yximrhdxai4.cloudfront.net/main/0c6040745df847a4a40377f1dc573a19.png"
+                    alt=""
+                  />
+                </p>
+                <div class="txt">
+                  <p>채용 공고</p>
+                  <h1>올리브영 채용 공고 모아보기</h1>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

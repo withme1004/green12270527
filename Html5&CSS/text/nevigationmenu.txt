@@ -1,0 +1,25 @@
+home
+background-position: 0 0;
+background: #7da315;
+color:#3d4f0c;
+text-shadow:#99bf31;
+about
+background-position: -38px 0;
+background:#1e8bb4;
+color:#223a44;
+text-shadow:#44a8d0;
+services
+background-position: -76px 0;
+background:#c86c1f;
+color:#5a3517;
+text-shadow:#d28344;
+portfolio
+background-position: -114px 0;
+background: #d0a525;
+color: #604e18;
+text-shadow: 1px 1px 0 #d8b54b;
+contact
+background-position: -152px 0;
+background: #af1e83;
+color: #460f35;
+text-shadow: 1px 1px 0 #d244a6;

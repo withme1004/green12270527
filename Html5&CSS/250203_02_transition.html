@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 1200px;
+        margin: 50px auto;
+        height: 200px;
+      }
+      ul li {
+        float: left;
+        width: 25%;
+        height: 100%;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+      }
+      ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s;
+      }
+      ul:first-child li:hover img {
+        transform: scale(2);
+      }
+      ul:nth-child(2) li img {
+        transform-origin: right bottom;
+      }
+      ul:nth-child(2) li:hover img {
+        transform: rotate(360deg) scale(2);
+      }
+      ul:nth-child(3) li:hover img {
+        transform: rotateY(180deg);
+      }
+      .box {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #fff;
+        transition: 1s;
+      }
+      ul:nth-child(4) li:first-child .box {
+        left: 100%;
+      }
+      ul:nth-child(4) li:first-child:hover .box {
+        left: 0;
+      }
+      ul:nth-child(4) li:nth-child(2) .box {
+        top: -100%;
+      }
+      ul:nth-child(4) li:nth-child(2):hover .box {
+        top: 0;
+      }
+      ul:nth-child(4) li:nth-child(3) .box {
+        left: -100%;
+      }
+      ul:nth-child(4) li:nth-child(3):hover .box {
+        left: 0;
+      }
+      ul:nth-child(4) li:nth-child(4) .box {
+        transform: scale(0);
+      }
+      ul:nth-child(4) li:nth-child(4):hover .box {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><img src="./images/photo1.jpg" alt="photo" /></li>
+      <li><img src="./images/photo2.jpg" alt="photo" /></li>
+      <li><img src="./images/photo3.jpg" alt="photo" /></li>
+      <li><img src="./images/photo4.jpg" alt="photo" /></li>
+    </ul>
+    <ul>
+      <li><img src="./images/photo1.jpg" alt="photo" /></li>
+      <li><img src="./images/photo2.jpg" alt="photo" /></li>
+      <li><img src="./images/photo3.jpg" alt="photo" /></li>
+      <li><img src="./images/photo4.jpg" alt="photo" /></li>
+    </ul>
+    <ul>
+      <li><img src="./images/photo1.jpg" alt="photo" /></li>
+      <li><img src="./images/photo2.jpg" alt="photo" /></li>
+      <li><img src="./images/photo3.jpg" alt="photo" /></li>
+      <li><img src="./images/photo4.jpg" alt="photo" /></li>
+    </ul>
+    <ul>
+      <li>
+        <img src="./images/photo1.jpg" alt="photo" />
+        <div class="box">
+          <p>이미지제목</p>
+          <p>이미지설명</p>
+        </div>
+      </li>
+      <li>
+        <img src="./images/photo2.jpg" alt="photo" />
+        <div class="box">
+          <p>이미지제목</p>
+          <p>이미지설명</p>
+        </div>
+      </li>
+      <li>
+        <img src="./images/photo3.jpg" alt="photo" />
+        <div class="box">
+          <p>이미지제목</p>
+          <p>이미지설명</p>
+        </div>
+      </li>
+      <li>
+        <img src="./images/photo4.jpg" alt="photo" />
+        <div class="box">
+          <p>이미지제목</p>
+          <p>이미지설명</p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

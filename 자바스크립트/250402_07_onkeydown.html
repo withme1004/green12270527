@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.cubic {
+        width: 400px;
+        height: 400px;
+        margin: 100px auto;
+        position: relative;
+        perspective: 800px;
+      }
+      div.box {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: 1s;
+      }
+      div img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+      }
+      div img:first-child {
+        transform: translateZ(-200px);
+      }
+      div img:nth-child(2) {
+        transform: rotateX(90deg) translateZ(200px);
+      }
+      div img:nth-child(3) {
+        transform: rotateX(90deg) translateZ(-200px);
+      }
+      div img:nth-child(4) {
+        transform: rotateY(90deg) translateZ(-200px);
+      }
+      div img:nth-child(5) {
+        transform: rotateY(90deg) translateZ(200px);
+      }
+      div img:last-child {
+        transform: translateZ(200px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cubic">
+      <div class="box">
+        <img src="../Html5&CSS/images/cubic_css1.jpg" alt="cubic" />
+        <img src="../Html5&CSS/images/cubic_css2.jpg" alt="cubic" />
+        <img src="../Html5&CSS/images/cubic_css3.jpg" alt="cubic" />
+        <img src="../Html5&CSS/images/cubic_css4.jpg" alt="cubic" />
+        <img src="../Html5&CSS/images/cubic_css5.jpg" alt="cubic" />
+        <img src="../Html5&CSS/images/cubic_css6.jpg" alt="cubic" />
+      </div>
+    </div>
+    <button id="left">left</button>
+    <button id="right">right</button>
+    <button id="up">up</button>
+    <button id="down">down</button>
+    <script>
+      let x = 0;
+      let y = 0; //y= y -90  y-=90
+      document.querySelector("#left").onclick = function () {
+        document.querySelector(
+          "div.box"
+        ).style.transform = `rotateY(${(y -= 90)}deg)`;
+      };
+      document.querySelector("#right").onclick = function () {
+        document.querySelector(
+          "div.box"
+        ).style.transform = `rotateY(${(y += 90)}deg)`;
+      };
+      document.querySelector("#up").onclick = function () {
+        document.querySelector(
+          "div.box"
+        ).style.transform = `rotateX(${(x += 90)}deg)`;
+      };
+      document.querySelector("#down").onclick = function () {
+        document.querySelector(
+          "div.box"
+        ).style.transform = `rotateX(${(x -= 90)}deg)`;
+      };
+      document.onkeydown = function (event) {
+        console.log(event.keyCode);
+        if (event.keyCode == 37) {
+          document.querySelector(
+            "div.box"
+          ).style.transform = `rotateY(${(y -= 90)}deg)`;
+        } else if (event.keyCode == 39) {
+          document.querySelector(
+            "div.box"
+          ).style.transform = `rotateY(${(y += 90)}deg)`;
+        } else if (event.keyCode == 38) {
+          document.querySelector(
+            "div.box"
+          ).style.transform = `rotateX(${(x += 90)}deg)`;
+        } else if (event.keyCode == 40) {
+          document.querySelector(
+            "div.box"
+          ).style.transform = `rotateX(${(x -= 90)}deg)`;
+        }
+      };
+    </script>
+  </body>
+</html>

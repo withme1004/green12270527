@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .grid-container {
+        display: grid;
+        /* height: 700px; */
+        background-color: #ccc;
+        /* grid-template-columns: 100px 200px 500px; */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-columns: repeat(3, 1fr 2fr); */
+        /* grid-template-columns: 200px 1fr; */
+        grid-template-columns: 100px 200px 300px;
+        grid-template-rows: 100px 200px minmax(100px, auto);
+        /* grid-auto-rows: 100px 200px; */
+        /*column-gap: 10px;
+        row-gap: 20px;*/
+        gap: 10px 20px; /*row-gap column-gap*/
+      }
+      .grid-item {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>
+    </div>
+  </body>
+</html>

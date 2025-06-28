@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Pretendard";
+      }
+      #store,
+      #online,
+      #global {
+        /* padding-top: 200px; */
+        height: 200px;
+      }
+      .platform {
+        max-width: 1420px;
+        margin: 0 auto;
+        display: flex;
+        padding: 0 60px;
+        box-sizing: border-box;
+      }
+      .platform .left {
+        flex: 1;
+        position: sticky;
+        top: 200px;
+        left: 0;
+        height: 100%;
+      }
+      .platform .right {
+        flex: 2;
+      }
+      .platform .right ul li {
+        /* margin-top: 140px; */
+      }
+      .platform .right ul li .inner {
+        display: flex;
+      }
+      .platform .right ul li .inner p span:nth-child(2) {
+        display: none;
+      }
+      .platform .right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .platform .right .desc {
+        margin-left: 100px;
+      }
+      #store:target .right {
+        margin-top: 200px;
+      }
+      .menu li a:target @media screen and (max-width: 1439px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"></div>
+    <div class="platform">
+      <div class="left">
+        <h1>
+          OLIVE YOUNG<br />
+          Platforms
+        </h1>
+        <ul class="menu">
+          <li><a href="#store">올리브영 매장</a></li>
+          <li><a href="#online">올리브영 Online (국내)</a></li>
+          <li><a href="#global">올리브영 글로벌</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <div id="store"></div>
+            <div class="inner">
+              <p><span>01</span><span>올리브영 매장</span></p>
+              <div class="desc">
+                <p>
+                  <img
+                    src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg"
+                    alt=""
+                  />
+                </p>
+                <div class="txt">
+                  <h1>
+                    고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+                  </h1>
+                  <p>
+                    우리는 1,370여개의 매장을 기반으로 고객에게<br />뷰티&헬스
+                    상품을 큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의
+                    연계를 통해 파트너사들에게 매력적인 브랜딩, 마케팅 채널로
+                    진화하고 있습니다.
+                  </p>
+                </div>
+                <a href="#" class="text_link"
+                  ><span>올리브영 매장이 보고 싶다면?</span></a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <div id="online"></div>
+            <div class="inner">
+              <p><span>02</span><span>올리브영 Online (국내)</span></p>
+              <div class="desc">
+                <p>
+                  <img
+                    src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg"
+                    alt=""
+                  />
+                </p>
+                <div class="txt">
+                  <h1>
+                    고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+                  </h1>
+                  <p>
+                    우리는 1,370여개의 매장을 기반으로 고객에게<br />뷰티&헬스
+                    상품을 큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의
+                    연계를 통해 파트너사들에게 매력적인 브랜딩, 마케팅 채널로
+                    진화하고 있습니다.
+                  </p>
+                </div>
+                <a href="#" class="text_link"
+                  ><span>올리브영 매장이 보고 싶다면?</span></a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <div id="global"></div>
+            <div class="inner">
+              <p><span>03</span><span>올리브영 글로벌</span></p>
+              <div class="desc">
+                <p>
+                  <img
+                    src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform3-c78371c66bba75b227096ecd0f128e12.jpg"
+                    alt=""
+                  />
+                </p>
+                <div class="txt">
+                  <h1>
+                    고객과 가장 가까운 곳에서<br />건강한 아름다움을 제안합니다.
+                  </h1>
+                  <p>
+                    우리는 1,370여개의 매장을 기반으로 고객에게<br />뷰티&헬스
+                    상품을 큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의
+                    연계를 통해 파트너사들에게 매력적인 브랜딩, 마케팅 채널로
+                    진화하고 있습니다.
+                  </p>
+                </div>
+                <a href="#" class="text_link"
+                  ><span>올리브영 매장이 보고 싶다면?</span></a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

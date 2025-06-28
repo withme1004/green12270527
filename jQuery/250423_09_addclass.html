@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        transition: 1s;
+      }
+      p.on {
+        width: 0;
+        background: #f00;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        let bool = true;
+        $("a").click(function () {
+          //$("p").toggleClass("on");
+          if (bool) {
+            $("p").animate({ width: "0", backgroundColor: "#f00" }, 1000);
+          } else {
+            $("p").animate({ width: "100px", backgroundColor: "#ccc" }, 1000);
+          }
+          bool = !bool;
+        });
+        console.log($("p").height(300));
+        $("p").height(600);
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <a href="#">클릭</a>
+  </body>
+</html>
